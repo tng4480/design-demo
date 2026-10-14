@@ -2814,7 +2814,7 @@
     },
     {
       "id": "rb-aurora",
-      "title": "React Bits / Aurora",
+      "title": "Aurora",
       "effect": "rb-aurora",
       "source": "react-bits",
       "category": "Styles",
@@ -2825,11 +2825,12 @@
       "watch": "Runs actual React Bits Aurora from pinned commit 496968c. Native WebGL2; tune brightness and keep text on a readable layer.",
       "order": 71,
       "kind": "Runs React Bits",
-      "official": "https://reactbits.dev/backgrounds/aurora"
+      "official": "https://reactbits.dev/backgrounds/aurora",
+      "previewImage": "assets/previews/rb-aurora.jpg"
     },
     {
       "id": "rb-silk",
-      "title": "React Bits / Silk",
+      "title": "Silk",
       "effect": "rb-silk",
       "source": "react-bits",
       "category": "Styles",
@@ -2840,11 +2841,12 @@
       "watch": "Runs actual React Bits Silk from pinned commit 496968c. Native WebGL2; subtle motion works best behind concise content.",
       "order": 72,
       "kind": "Runs React Bits",
-      "official": "https://reactbits.dev/backgrounds/silk"
+      "official": "https://reactbits.dev/backgrounds/silk",
+      "previewImage": "assets/previews/rb-silk.jpg"
     },
     {
       "id": "rb-orb",
-      "title": "React Bits / Orb",
+      "title": "Orb",
       "effect": "rb-orb",
       "source": "react-bits",
       "category": "Styles",
@@ -2855,11 +2857,12 @@
       "watch": "Runs actual React Bits Orb from pinned commit 496968c. Native WebGL2; provide a static fallback for unsupported devices.",
       "order": 73,
       "kind": "Runs React Bits",
-      "official": "https://reactbits.dev/backgrounds/orb"
+      "official": "https://reactbits.dev/backgrounds/orb",
+      "previewImage": "assets/previews/rb-orb.jpg"
     },
     {
       "id": "rb-blur-text",
-      "title": "React Bits / Blur Text",
+      "title": "Blurred type",
       "effect": "rb-blur-text",
       "source": "react-bits",
       "category": "Motion",
@@ -2870,11 +2873,12 @@
       "watch": "Runs actual React Bits Blur Text from pinned commit 496968c. React + Motion; semantic text remains present, and reduced motion uses a clear reveal.",
       "order": 74,
       "kind": "Runs React Bits",
-      "official": "https://reactbits.dev/text-animations/blur-text"
+      "official": "https://reactbits.dev/text-animations/blur-text",
+      "previewImage": "assets/previews/rb-blur-text.jpg"
     },
     {
       "id": "rb-rotating-text",
-      "title": "React Bits / Rotating Text",
+      "title": "Rotating headline",
       "effect": "rb-rotating-text",
       "source": "react-bits",
       "category": "Motion",
@@ -2885,11 +2889,12 @@
       "watch": "Runs actual React Bits Rotating Text from pinned commit 496968c. React + Motion; keep essential information readable without waiting for a cycle.",
       "order": 75,
       "kind": "Runs React Bits",
-      "official": "https://reactbits.dev/text-animations/rotating-text"
+      "official": "https://reactbits.dev/text-animations/rotating-text",
+      "previewImage": "assets/previews/rb-rotating-text.jpg"
     },
     {
       "id": "rb-tilted-card",
-      "title": "React Bits / Tilted Card",
+      "title": "Tilted artwork",
       "effect": "rb-tilted-card",
       "source": "react-bits",
       "category": "Components",
@@ -2900,11 +2905,12 @@
       "watch": "Runs actual React Bits Tilted Card from pinned commit 496968c. React + Motion; upstream interaction is pointer-based. Touch receives a static readable card. Artwork is original.",
       "order": 76,
       "kind": "Runs React Bits",
-      "official": "https://reactbits.dev/components/tilted-card"
+      "official": "https://reactbits.dev/components/tilted-card",
+      "previewImage": "assets/previews/rb-tilted-card.jpg"
     },
     {
       "id": "rb-glass-icons",
-      "title": "React Bits / Glass Icons",
+      "title": "Glass icons",
       "effect": "rb-glass-icons",
       "source": "react-bits",
       "category": "Components",
@@ -2915,11 +2921,12 @@
       "watch": "Runs actual React Bits Glass Icons from pinned commit 496968c. React, canvas and optional WebGL; keep visible labels and test contrast. Icons and action feedback are original demo content.",
       "order": 77,
       "kind": "Runs React Bits",
-      "official": "https://reactbits.dev/components/glass-icons"
+      "official": "https://reactbits.dev/components/glass-icons",
+      "previewImage": "assets/previews/rb-glass-icons.jpg"
     },
     {
       "id": "rb-pixel-transition",
-      "title": "React Bits / Pixel Transition",
+      "title": "Pixel reveal",
       "effect": "rb-pixel-transition",
       "source": "react-bits",
       "category": "Components",
@@ -2930,11 +2937,12 @@
       "watch": "Runs actual React Bits Pixel Transition from pinned commit 496968c. React + canvas; click, tap or press Enter to switch. The artwork is original.",
       "order": 78,
       "kind": "Runs React Bits",
-      "official": "https://reactbits.dev/animations/pixel-transition"
+      "official": "https://reactbits.dev/animations/pixel-transition",
+      "previewImage": "assets/previews/rb-pixel-transition.jpg"
     },
     {
       "id": "sc-workspace",
-      "title": "Shadcn ecosystem / Resizable workspace",
+      "title": "Resizable workspace",
       "effect": "sc-workspace",
       "source": "shadcn-ui",
       "category": "Components",
@@ -2945,11 +2953,12 @@
       "watch": "Actual shadcn Resizable components with an original workspace composition. Try dragging the dividers or focusing them and using arrow keys.",
       "order": 79,
       "kind": "Runs shadcn/ui",
-      "official": "https://ui.shadcn.com/docs/components/resizable"
+      "official": "https://ui.shadcn.com/docs/components/resizable",
+      "previewImage": "assets/previews/sc-workspace.jpg"
     },
     {
       "id": "sc-animated-tabs",
-      "title": "Shadcn ecosystem / Animated tab panels",
+      "title": "Animated tabs",
       "effect": "sc-animated-tabs",
       "source": "animate-ui",
       "category": "Components",
@@ -2960,11 +2969,12 @@
       "watch": "Actual Animate UI Radix Tabs and auto-height primitives. Content and styling composition are original. Tabs support keyboard navigation.",
       "order": 80,
       "kind": "Runs Animate UI",
-      "official": "https://animate-ui.com/docs/components/radix/tabs"
+      "official": "https://animate-ui.com/docs/components/radix/tabs",
+      "previewImage": "assets/previews/sc-animated-tabs.jpg"
     },
     {
       "id": "sc-comparison",
-      "title": "Shadcn ecosystem / Before and after slider",
+      "title": "Image comparison",
       "effect": "sc-comparison",
       "source": "kibo-ui",
       "category": "Components",
@@ -2975,11 +2985,12 @@
       "watch": "Actual Kibo Comparison with an added keyboard handler for arrow, Home and End keys. Original SVG artwork; no remote images.",
       "order": 81,
       "kind": "Runs Kibo UI",
-      "official": "https://www.kibo-ui.com/components/comparison"
+      "official": "https://www.kibo-ui.com/components/comparison",
+      "previewImage": "assets/previews/sc-comparison.jpg"
     },
     {
       "id": "sc-themes",
-      "title": "Shadcn ecosystem / Theme sampler",
+      "title": "Theme sampler",
       "effect": "sc-themes",
       "source": "tweakcn",
       "category": "Components",
@@ -2990,11 +3001,12 @@
       "watch": "Actual tweakcn preset tokens on a small original composition using shadcn Button. This is a theme sampler, not the full tweakcn editor. Fonts use local fallbacks.",
       "order": 82,
       "kind": "Uses tweakcn tokens",
-      "official": "https://tweakcn.com/"
+      "official": "https://tweakcn.com/",
+      "previewImage": "assets/previews/sc-themes.jpg"
     },
     {
       "id": "paper-neuro-noise",
-      "title": "Paper / Neuro Noise",
+      "title": "Neuro noise",
       "effect": "neuro-noise",
       "source": "paper-shaders",
       "category": "Styles",
@@ -3009,7 +3021,7 @@
     },
     {
       "id": "componentry-hover",
-      "title": "Componentry / Hover Transition",
+      "title": "Hover transition",
       "effect": "cr-hover",
       "source": "componentry",
       "category": "Components",
@@ -3020,11 +3032,12 @@
       "watch": "Actual Componentry HoverTransition at b602c28. Original card content; pointer, focus and tap reveal.",
       "order": 84,
       "kind": "Runs Componentry",
-      "official": "https://componentry.dev/docs/components/hover-transition"
+      "official": "https://componentry.dev/docs/components/hover-transition",
+      "previewImage": "assets/previews/cr-hover.jpg"
     },
     {
       "id": "componentry-circuit",
-      "title": "Componentry / Circuit Board",
+      "title": "Circuit board",
       "effect": "cr-circuit",
       "source": "componentry",
       "category": "Components",
@@ -3035,11 +3048,12 @@
       "watch": "Actual Componentry CircuitBoard at b602c28. Original graph and controls for grid, theme, pulse speed, trace width and node status.",
       "order": 85,
       "kind": "Runs Componentry",
-      "official": "https://componentry.dev/docs/components/circuit-board"
+      "official": "https://componentry.dev/docs/components/circuit-board",
+      "previewImage": "assets/previews/cr-circuit.jpg"
     },
     {
       "id": "componentry-scroll",
-      "title": "Componentry / Scroll Choreography",
+      "title": "Scroll choreography",
       "effect": "cr-scroll",
       "source": "componentry",
       "category": "Motion",
@@ -3050,11 +3064,12 @@
       "watch": "Actual Componentry ScrollChoreography at b602c28, with the documented public Unsplash images. Use the phase buttons or open the full-page demo to scroll the complete sequence. Reduced motion shows a static image grid.",
       "order": 86,
       "kind": "Runs Componentry",
-      "official": "https://componentry.dev/docs/components/scroll-choreography"
+      "official": "https://componentry.dev/docs/components/scroll-choreography",
+      "previewImage": "assets/previews/cr-scroll.jpg"
     },
     {
       "id": "shadergradient-scroll",
-      "title": "Shader Gradient / Scroll system",
+      "title": "Gradient scroll story",
       "effect": "sg-scroll",
       "source": "shadergradient",
       "category": "Motion",
@@ -3065,11 +3080,12 @@
       "watch": "Runs actual @shadergradient/react 2.4.20. The four-chapter scroll system, layout and text choreography are original. Use the chapter buttons or open the full-page demo; reduced motion offers static chapter selection.",
       "order": 87,
       "kind": "Runs Shader Gradient",
-      "official": "https://shadergradient.co/"
+      "official": "https://shadergradient.co/",
+      "previewImage": "assets/previews/sg-scroll.jpg"
     },
     {
       "id": "dp-newsprint",
-      "title": "Design Prompts / Newsprint",
+      "title": "Newsprint",
       "effect": "dp-newsprint",
       "source": "design-prompts",
       "category": "Styles",
@@ -3080,11 +3096,12 @@
       "watch": "Original composition inspired by the Design Prompts style reference. Original copy and SVG artwork; no upstream prompt or implementation copied. Open the full-page study for the complete layout and interactions.",
       "order": 88,
       "kind": "Original study",
-      "official": "https://www.designprompts.dev/newsprint"
+      "official": "https://www.designprompts.dev/newsprint",
+      "previewImage": "assets/previews/dp-newsprint.jpg"
     },
     {
       "id": "dp-swiss",
-      "title": "Design Prompts / Swiss Minimalist",
+      "title": "Swiss minimalism",
       "effect": "dp-swiss",
       "source": "design-prompts",
       "category": "Styles",
@@ -3095,11 +3112,12 @@
       "watch": "Original composition inspired by the Design Prompts style reference. Original copy and SVG artwork; no upstream prompt or implementation copied. Open the full-page study for the complete layout and interactions.",
       "order": 89,
       "kind": "Original study",
-      "official": "https://www.designprompts.dev/swiss-minimalist"
+      "official": "https://www.designprompts.dev/swiss-minimalist",
+      "previewImage": "assets/previews/dp-swiss.jpg"
     },
     {
       "id": "dp-botanical",
-      "title": "Design Prompts / Botanical",
+      "title": "Botanical",
       "effect": "dp-botanical",
       "source": "design-prompts",
       "category": "Styles",
@@ -3110,11 +3128,12 @@
       "watch": "Original composition inspired by the Design Prompts style reference. Original copy and SVG artwork; no upstream prompt or implementation copied. Open the full-page study for the complete layout and interactions.",
       "order": 90,
       "kind": "Original study",
-      "official": "https://www.designprompts.dev/botanical"
+      "official": "https://www.designprompts.dev/botanical",
+      "previewImage": "assets/previews/dp-botanical.jpg"
     },
     {
       "id": "dp-maximalism",
-      "title": "Design Prompts / Maximalism",
+      "title": "Maximalism",
       "effect": "dp-maximalism",
       "source": "design-prompts",
       "category": "Styles",
@@ -3125,11 +3144,12 @@
       "watch": "Original composition inspired by the Design Prompts style reference. Original copy and SVG artwork; no upstream prompt or implementation copied. Open the full-page study for the complete layout and interactions.",
       "order": 91,
       "kind": "Original study",
-      "official": "https://www.designprompts.dev/maximalism"
+      "official": "https://www.designprompts.dev/maximalism",
+      "previewImage": "assets/previews/dp-maximalism.jpg"
     },
     {
       "id": "sk-impeccable",
-      "title": "Design skills / Impeccable",
+      "title": "Refined hierarchy",
       "effect": "sk-impeccable",
       "source": "impeccable",
       "category": "Styles",
@@ -3140,11 +3160,12 @@
       "watch": "Original selected-guidance demonstration. Same fictional brief, copy, workshops, prices and image set across treatments. Not a full upstream workflow run, automatic benchmark or guarantee of quality. The lab explains scope and links the exact source.",
       "order": 92,
       "kind": "Original study",
-      "official": "https://github.com/pbakaus/impeccable"
+      "official": "https://github.com/pbakaus/impeccable",
+      "previewImage": "assets/previews/sk-impeccable.jpg"
     },
     {
       "id": "sk-taste",
-      "title": "Design skills / Taste Skill",
+      "title": "Subject-led composition",
       "effect": "sk-taste",
       "source": "taste-skill",
       "category": "Styles",
@@ -3155,11 +3176,12 @@
       "watch": "Original selected-guidance demonstration. Same fictional brief, copy, workshops, prices and image set across treatments. Not a full upstream workflow run, automatic benchmark or guarantee of quality. The lab explains scope and links the exact source.",
       "order": 93,
       "kind": "Original study",
-      "official": "https://github.com/Leonxlnx/taste-skill"
+      "official": "https://github.com/Leonxlnx/taste-skill",
+      "previewImage": "assets/previews/sk-taste.jpg"
     },
     {
       "id": "sk-awesome",
-      "title": "Design skills / Awesome / Editorial",
+      "title": "Editorial recipe",
       "effect": "sk-awesome",
       "source": "awesome-design-skills",
       "category": "Styles",
@@ -3170,7 +3192,8 @@
       "watch": "Original selected-guidance demonstration. Same fictional brief, copy, workshops, prices and image set across treatments. Not a full upstream workflow run, automatic benchmark or guarantee of quality. The lab explains scope and links the exact source.",
       "order": 94,
       "kind": "Original study",
-      "official": "https://github.com/bergside/awesome-design-skills/tree/main/skills/editorial"
+      "official": "https://github.com/bergside/awesome-design-skills/tree/main/skills/editorial",
+      "previewImage": "assets/previews/sk-awesome.jpg"
     }
   ],
   "inspirations": [
