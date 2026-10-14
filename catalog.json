@@ -340,11 +340,14 @@
       "framework": "React; JS/TS; CSS or Tailwind",
       "effort": "Low for CSS; medium/high for WebGL",
       "standouts": [
-        "Holo Card",
-        "Fluid Glass",
-        "ASCII Text",
-        "CRT Warp",
-        "Scroll Stack"
+        "Aurora",
+        "Silk",
+        "Orb",
+        "Blur Text",
+        "Rotating Text",
+        "Tilted Card",
+        "Glass Icons",
+        "Pixel Transition"
       ],
       "styles": [
         "holographic",
@@ -353,30 +356,47 @@
         "retro",
         "scroll"
       ],
-      "caveat": "Commons Clause adds restrictions; preserve license and inspect component dependencies. WebGL effects need mobile performance checks.",
+      "caveat": "MIT + Commons Clause permits use within applications, websites and products; it prohibits redistributing the components themselves. This gallery bundles eight actual components into demo applications, retains the license and links to the pinned upstream source. WebGL2 backgrounds need a fallback; the Tilted Card interaction is pointer-based.",
       "demos": [
         {
-          "name": "Holo Card",
-          "url": "https://reactbits.dev/components/holo-card"
+          "name": "Aurora",
+          "url": "https://reactbits.dev/backgrounds/aurora"
         },
         {
-          "name": "Fluid Glass",
-          "url": "https://reactbits.dev/components/fluid-glass"
+          "name": "Silk",
+          "url": "https://reactbits.dev/backgrounds/silk"
         },
         {
-          "name": "ASCII Text",
-          "url": "https://reactbits.dev/text-animations/ascii-text"
+          "name": "Orb",
+          "url": "https://reactbits.dev/backgrounds/orb"
         },
         {
-          "name": "Scroll Stack",
-          "url": "https://reactbits.dev/components/scroll-stack"
+          "name": "Blur Text",
+          "url": "https://reactbits.dev/text-animations/blur-text"
+        },
+        {
+          "name": "Rotating Text",
+          "url": "https://reactbits.dev/text-animations/rotating-text"
+        },
+        {
+          "name": "Tilted Card",
+          "url": "https://reactbits.dev/components/tilted-card"
+        },
+        {
+          "name": "Glass Icons",
+          "url": "https://reactbits.dev/components/glass-icons"
+        },
+        {
+          "name": "Pixel Transition",
+          "url": "https://reactbits.dev/animations/pixel-transition"
         }
       ],
-      "install": "npx shadcn@latest add @react-bits/FluidGlass-TS-TW",
+      "install": "npx shadcn@latest add @react-bits/Aurora-JS-CSS",
+      "verifiedAt": "2026-10-14",
       "id": "react-bits",
       "github": "https://github.com/DavidHDev/react-bits",
       "githubStarsApprox": "49.1k",
-      "bestFor": "Holo Card, Fluid Glass, ASCII Text, CRT Warp, Scroll Stack"
+      "bestFor": "Aurora, Silk, Orb, Blur Text, Rotating Text, Tilted Card, Glass Icons, Pixel Transition"
     },
     {
       "name": "Magic UI",
@@ -1805,7 +1825,7 @@
       "watch": "Static offsets and mild motion, no rapid flashing.",
       "order": 23,
       "kind": "Original study",
-      "official": "https://reactbits.dev/components/holo-card"
+      "official": "https://reactbits.dev/backgrounds/crt-warp"
     },
     {
       "id": "halftone-poster",
@@ -2511,6 +2531,126 @@
       "order": 70,
       "kind": "Runs Three.js",
       "official": "https://landonorris.com/"
+    },
+    {
+      "id": "rb-aurora",
+      "title": "React Bits / Aurora",
+      "effect": "rb-aurora",
+      "source": "react-bits",
+      "category": "Styles",
+      "style": "mesh",
+      "effort": "Medium",
+      "summary": "Layered curtains of light drift across a dark hero.",
+      "use": "Expressive brand and launch heroes",
+      "watch": "Runs actual React Bits Aurora from pinned commit 496968c. Native WebGL2; tune brightness and keep text on a readable layer.",
+      "order": 71,
+      "kind": "Runs React Bits",
+      "official": "https://reactbits.dev/backgrounds/aurora"
+    },
+    {
+      "id": "rb-silk",
+      "title": "React Bits / Silk",
+      "effect": "rb-silk",
+      "source": "react-bits",
+      "category": "Styles",
+      "style": "liquid",
+      "effort": "Medium",
+      "summary": "A softly lit fabric surface ripples and responds to the pointer.",
+      "use": "Atmospheric editorial and premium product backgrounds",
+      "watch": "Runs actual React Bits Silk from pinned commit 496968c. Native WebGL2; subtle motion works best behind concise content.",
+      "order": 72,
+      "kind": "Runs React Bits",
+      "official": "https://reactbits.dev/backgrounds/silk"
+    },
+    {
+      "id": "rb-orb",
+      "title": "React Bits / Orb",
+      "effect": "rb-orb",
+      "source": "react-bits",
+      "category": "Styles",
+      "style": "holographic",
+      "effort": "Medium",
+      "summary": "A luminous energy orb bends and pulses with pointer interaction.",
+      "use": "AI entry points, assistants and focused hero moments",
+      "watch": "Runs actual React Bits Orb from pinned commit 496968c. Native WebGL2; provide a static fallback for unsupported devices.",
+      "order": 73,
+      "kind": "Runs React Bits",
+      "official": "https://reactbits.dev/backgrounds/orb"
+    },
+    {
+      "id": "rb-blur-text",
+      "title": "React Bits / Blur Text",
+      "effect": "rb-blur-text",
+      "source": "react-bits",
+      "category": "Motion",
+      "style": "kinetic",
+      "effort": "Low",
+      "summary": "Words resolve from a soft blur into a clear headline.",
+      "use": "Short introductory headings",
+      "watch": "Runs actual React Bits Blur Text from pinned commit 496968c. React + Motion; semantic text remains present, and reduced motion uses a clear reveal.",
+      "order": 74,
+      "kind": "Runs React Bits",
+      "official": "https://reactbits.dev/text-animations/blur-text"
+    },
+    {
+      "id": "rb-rotating-text",
+      "title": "React Bits / Rotating Text",
+      "effect": "rb-rotating-text",
+      "source": "react-bits",
+      "category": "Motion",
+      "style": "kinetic",
+      "effort": "Low",
+      "summary": "Spring-driven words cycle through a compact headline.",
+      "use": "Communicate several qualities in one headline",
+      "watch": "Runs actual React Bits Rotating Text from pinned commit 496968c. React + Motion; keep essential information readable without waiting for a cycle.",
+      "order": 75,
+      "kind": "Runs React Bits",
+      "official": "https://reactbits.dev/text-animations/rotating-text"
+    },
+    {
+      "id": "rb-tilted-card",
+      "title": "React Bits / Tilted Card",
+      "effect": "rb-tilted-card",
+      "source": "react-bits",
+      "category": "Components",
+      "style": "holographic",
+      "effort": "Low",
+      "summary": "A layered visual card tilts towards the pointer with spring motion.",
+      "use": "Featured work, products and collectible artwork",
+      "watch": "Runs actual React Bits Tilted Card from pinned commit 496968c. React + Motion; upstream interaction is pointer-based. Touch receives a static readable card. Artwork is original.",
+      "order": 76,
+      "kind": "Runs React Bits",
+      "official": "https://reactbits.dev/components/tilted-card"
+    },
+    {
+      "id": "rb-glass-icons",
+      "title": "React Bits / Glass Icons",
+      "effect": "rb-glass-icons",
+      "source": "react-bits",
+      "category": "Components",
+      "style": "glass",
+      "effort": "Medium",
+      "summary": "Translucent icon buttons combine refraction, coloured plates and responsive motion.",
+      "use": "A small set of expressive navigation or feature shortcuts",
+      "watch": "Runs actual React Bits Glass Icons from pinned commit 496968c. React, canvas and optional WebGL; keep visible labels and test contrast. Icons and action feedback are original demo content.",
+      "order": 77,
+      "kind": "Runs React Bits",
+      "official": "https://reactbits.dev/components/glass-icons"
+    },
+    {
+      "id": "rb-pixel-transition",
+      "title": "React Bits / Pixel Transition",
+      "effect": "rb-pixel-transition",
+      "source": "react-bits",
+      "category": "Components",
+      "style": "pixel",
+      "effort": "Low",
+      "summary": "A mosaic of pixels swaps between two original compositions.",
+      "use": "Reveals, before-and-after cards and playful interaction",
+      "watch": "Runs actual React Bits Pixel Transition from pinned commit 496968c. React + canvas; click, tap or press Enter to switch. The artwork is original.",
+      "order": 78,
+      "kind": "Runs React Bits",
+      "official": "https://reactbits.dev/animations/pixel-transition"
     }
   ],
   "inspirations": [
