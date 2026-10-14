@@ -1,0 +1,22 @@
+Skiper UI: https://skiper-ui.com/ — Gurvinder Singh / Gxuri.
+Free Skiper 52, 41, 64 and 106 registry snapshots accessed 14 October 2026.
+The selected free component detail pages explicitly permit personal/commercial use and modification with attribution. Attribution is displayed in each demo.
+Selected source stored in interaction-lab/upstream. No Pro source used.
+Skiper52 adaptations: original Atlas artwork, compact dimensions, omitted unused Swiper imports, focusable buttons and no intro delay.
+Skiper106: actual SmoothInput with fixed upstream default DialKit parameters instead of the tuning panel. Native input shown alongside. Experimental custom caret, not recommended upstream for accessibility-critical scenarios.
+Skiper64: actual SVG gooey filter with an original bounded drag/keyboard-toggle composition.
+Skiper41: actual ProgressiveBlur, original artwork and blur toggle. Inspired upstream by https://devouringdetails.com/.
+
+Amicro: https://amicro.dev/
+https://github.com/Subhan-code/Amicro--Micro-transitions-
+Pinned snapshot dc2a183f3a5e6e0ea1b0d75530ac084e3a4e0bd2.
+Actual AddToCartMorph and CardScatterSpread; MIT, copyright 2026 SYED SUBHAN UDDIN. Full license in AMICRO_LICENSE.txt. Original artwork and a controlled keyboard/touch fan wrapper.
+
+Spline: official Mini Home - Conditional Logic template, linked from spline.design/examples.
+Official app preview iframe:
+https://app.spline.design/file/8dca6daa-d77b-4c65-85a5-b220b8b66ba0?view=preview
+Scene and runtime remain hosted on Spline. No scene source or assets redistributed. Not a reusable asset license; open the template in Spline to make your own editable copy.
+Gallery poster is a captured reference of that exact scene; no login or remix performed.
+Pause unloads the third-party iframe and shows its poster.
+
+React, React DOM, Framer Motion, Motion and Lucide dependencies retain notices in THIRD_PARTY_NOTICES.txt / SHADCN_NOTICES.txt.
