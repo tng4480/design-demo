@@ -622,14 +622,16 @@
       "name": "shadcn/ui",
       "url": "https://ui.shadcn.com/docs/components",
       "repo": "https://github.com/shadcn-ui/ui",
-      "stars": "125.5k",
+      "stars": "126k",
       "license": "MIT",
-      "framework": "React + Tailwind; copied source",
+      "framework": "React, Tailwind CSS; Base UI or Radix foundations",
       "effort": "Low/medium",
       "standouts": [
-        "Command",
-        "Data Table",
-        "Sidebar"
+        "Resizable workspace",
+        "Dashboard and sidebar blocks",
+        "Interactive charts",
+        "Registry directory",
+        "Current style families"
       ],
       "styles": [
         "product UI",
@@ -648,12 +650,25 @@
         {
           "name": "Sidebar",
           "url": "https://ui.shadcn.com/docs/components/sidebar"
+        },
+        {
+          "name": "Resizable panels",
+          "url": "https://ui.shadcn.com/docs/components/resizable"
+        },
+        {
+          "name": "Building blocks",
+          "url": "https://ui.shadcn.com/blocks"
+        },
+        {
+          "name": "Registry directory",
+          "url": "https://ui.shadcn.com/docs/directory"
         }
       ],
+      "verifiedAt": "2026-10-14",
       "id": "shadcn-ui",
       "github": "https://github.com/shadcn-ui/ui",
-      "githubStarsApprox": "125.5k",
-      "bestFor": "Command, Data Table, Sidebar"
+      "githubStarsApprox": "126k",
+      "bestFor": "Resizable workspace, Dashboard and sidebar blocks, Interactive charts, Registry directory, Current style families"
     },
     {
       "name": "daisyUI",
@@ -1016,6 +1031,133 @@
       "id": "lando-norris",
       "github": null,
       "githubStarsApprox": null
+    },
+    {
+      "name": "Animate UI",
+      "url": "https://animate-ui.com/",
+      "repo": "https://github.com/imskyleen/animate-ui",
+      "framework": "React, Tailwind CSS, Motion; Radix, Base UI or Headless UI primitives",
+      "license": "MIT + Commons Clause; application use allowed, original components cannot be sold or redistributed as a kit",
+      "effort": "Low to medium",
+      "bestFor": "Polished motion on familiar product UI patterns",
+      "caveat": "The local tabs demo uses actual source with original content. Retain the license; choose the matching primitive family for your application.",
+      "install": "npx shadcn@latest add @animate-ui/components-radix-tabs",
+      "demos": [
+        {
+          "name": "Animated Radix tabs",
+          "url": "https://animate-ui.com/docs/components/radix/tabs"
+        },
+        {
+          "name": "Animated buttons",
+          "url": "https://animate-ui.com/docs/components/buttons"
+        }
+      ],
+      "evidence": [
+        "https://animate-ui.com/docs/components/radix/tabs",
+        "https://github.com/imskyleen/animate-ui"
+      ],
+      "verifiedAt": "2026-10-14",
+      "id": "animate-ui",
+      "github": "https://github.com/imskyleen/animate-ui"
+    },
+    {
+      "name": "Kibo UI",
+      "url": "https://www.kibo-ui.com/",
+      "repo": "https://github.com/shadcnblocks/kibo",
+      "framework": "React + shadcn/ui; dependencies vary by component",
+      "license": "MIT for the public component source",
+      "effort": "Low to high by component",
+      "bestFor": "Richer product interactions: comparison, kanban, Gantt, editors and colour picking",
+      "caveat": "Large components have additional dependencies. The local comparison demo uses actual Kibo source with a small keyboard adapter and original SVG artwork.",
+      "install": "npx shadcn@latest add @kibo-ui/comparison",
+      "demos": [
+        {
+          "name": "Image comparison",
+          "url": "https://www.kibo-ui.com/components/comparison"
+        },
+        {
+          "name": "Kanban",
+          "url": "https://www.kibo-ui.com/components/kanban"
+        },
+        {
+          "name": "Gantt",
+          "url": "https://www.kibo-ui.com/components/gantt"
+        }
+      ],
+      "evidence": [
+        "https://www.kibo-ui.com/",
+        "https://github.com/shadcnblocks/kibo"
+      ],
+      "verifiedAt": "2026-10-14",
+      "id": "kibo-ui",
+      "github": "https://github.com/shadcnblocks/kibo"
+    },
+    {
+      "name": "tweakcn",
+      "url": "https://tweakcn.com/",
+      "repo": "https://github.com/jnsahaj/tweakcn",
+      "framework": "Visual editor for Tailwind CSS and shadcn CSS tokens",
+      "license": "Apache-2.0 for the public editor source; exported presets are demonstrated with retained attribution",
+      "effort": "Low",
+      "bestFor": "Compare real colour, radius, typography and shadow systems before implementation",
+      "caveat": "Local demo samples six actual theme token sets; it is not the full editor. Custom fonts use system fallbacks until you supply them.",
+      "install": "Export a theme from the official editor or install its provided registry URL",
+      "demos": [
+        {
+          "name": "Visual theme editor",
+          "url": "https://tweakcn.com/editor/theme"
+        }
+      ],
+      "evidence": [
+        "https://tweakcn.com/",
+        "https://github.com/jnsahaj/tweakcn"
+      ],
+      "verifiedAt": "2026-10-14",
+      "id": "tweakcn",
+      "github": "https://github.com/jnsahaj/tweakcn"
+    },
+    {
+      "name": "coss ui",
+      "url": "https://coss.com/ui",
+      "framework": "React, Base UI and Tailwind CSS",
+      "license": "Open-source component library; verify the exact component license and dependency terms before reuse",
+      "effort": "Low to medium",
+      "bestFor": "Refined product controls, composed input and chat composer patterns",
+      "caveat": "Origin UI now redirects to coss ui. Source reference only in this gallery; its components are not reproduced locally.",
+      "install": "Follow the component installation instructions",
+      "demos": [
+        {
+          "name": "Component collection",
+          "url": "https://coss.com/ui"
+        }
+      ],
+      "evidence": [
+        "https://originui.com/",
+        "https://coss.com/ui"
+      ],
+      "verifiedAt": "2026-10-14",
+      "id": "coss-ui"
+    },
+    {
+      "name": "ReUI",
+      "url": "https://reui.io/",
+      "framework": "React, shadcn/ui and Tailwind CSS; data-grid dependencies vary",
+      "license": "Free component catalog plus separately paid Pro blocks; verify the terms of the selected item",
+      "effort": "Medium for advanced product patterns",
+      "bestFor": "Dense business UI: data grids, filters, schedules, kanban and application shells",
+      "caveat": "Free components and paid blocks have different scope. This is a linked source reference; no Pro block source is copied.",
+      "install": "Use the installation command on the selected free component page",
+      "demos": [
+        {
+          "name": "Component and block collection",
+          "url": "https://reui.io/"
+        }
+      ],
+      "evidence": [
+        "https://reui.io/"
+      ],
+      "verifiedAt": "2026-10-14",
+      "id": "reui"
     },
     {
       "id": "gsap",
@@ -2651,6 +2793,66 @@
       "order": 78,
       "kind": "Runs React Bits",
       "official": "https://reactbits.dev/animations/pixel-transition"
+    },
+    {
+      "id": "sc-workspace",
+      "title": "Shadcn ecosystem / Resizable workspace",
+      "effect": "sc-workspace",
+      "source": "shadcn-ui",
+      "category": "Components",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Resize an editor, preview and inspector with draggable or keyboard-controlled dividers.",
+      "use": "Editors, dashboards and inspection tools",
+      "watch": "Actual shadcn Resizable components with an original workspace composition. Try dragging the dividers or focusing them and using arrow keys.",
+      "order": 79,
+      "kind": "Runs shadcn/ui",
+      "official": "https://ui.shadcn.com/docs/components/resizable"
+    },
+    {
+      "id": "sc-animated-tabs",
+      "title": "Shadcn ecosystem / Animated tab panels",
+      "effect": "sc-animated-tabs",
+      "source": "animate-ui",
+      "category": "Components",
+      "style": "kinetic",
+      "effort": "Low",
+      "summary": "A sliding tab highlight and smooth changes in panel height.",
+      "use": "Settings, product panels and grouped information",
+      "watch": "Actual Animate UI Radix Tabs and auto-height primitives. Content and styling composition are original. Tabs support keyboard navigation.",
+      "order": 80,
+      "kind": "Runs Animate UI",
+      "official": "https://animate-ui.com/docs/components/radix/tabs"
+    },
+    {
+      "id": "sc-comparison",
+      "title": "Shadcn ecosystem / Before and after slider",
+      "effect": "sc-comparison",
+      "source": "kibo-ui",
+      "category": "Components",
+      "style": "",
+      "effort": "Low",
+      "summary": "Reveal two treatments of the same original artwork with a draggable divider.",
+      "use": "Image editing, visual comparisons and before-and-after showcases",
+      "watch": "Actual Kibo Comparison with an added keyboard handler for arrow, Home and End keys. Original SVG artwork; no remote images.",
+      "order": 81,
+      "kind": "Runs Kibo UI",
+      "official": "https://www.kibo-ui.com/components/comparison"
+    },
+    {
+      "id": "sc-themes",
+      "title": "Shadcn ecosystem / Theme sampler",
+      "effect": "sc-themes",
+      "source": "tweakcn",
+      "category": "Components",
+      "style": "",
+      "effort": "Low",
+      "summary": "Six real tweakcn themes applied to the same shadcn product card.",
+      "use": "Compare colour, radius, typography and shadow choices on real components",
+      "watch": "Actual tweakcn preset tokens on a small original composition using shadcn Button. This is a theme sampler, not the full tweakcn editor. Fonts use local fallbacks.",
+      "order": 82,
+      "kind": "Uses tweakcn tokens",
+      "official": "https://tweakcn.com/"
     }
   ],
   "inspirations": [

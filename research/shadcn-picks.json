@@ -1,0 +1,53 @@
+{
+  "directoryCount": 443,
+  "demos": [
+    {
+      "id": "workspace",
+      "title": "Resizable workspace",
+      "source": "shadcn-ui",
+      "kind": "Runs shadcn/ui",
+      "summary": "Resize an editor, preview and inspector with draggable or keyboard-controlled dividers.",
+      "use": "Editors, dashboards and inspection tools",
+      "watch": "Actual shadcn Resizable components with an original workspace composition. Try dragging the dividers or focusing them and using arrow keys.",
+      "effort": "Medium",
+      "style": "",
+      "official": "https://ui.shadcn.com/docs/components/resizable"
+    },
+    {
+      "id": "animated-tabs",
+      "title": "Animated tab panels",
+      "source": "animate-ui",
+      "kind": "Runs Animate UI",
+      "summary": "A sliding tab highlight and smooth changes in panel height.",
+      "use": "Settings, product panels and grouped information",
+      "watch": "Actual Animate UI Radix Tabs and auto-height primitives. Content and styling composition are original. Tabs support keyboard navigation.",
+      "effort": "Low",
+      "style": "kinetic",
+      "official": "https://animate-ui.com/docs/components/radix/tabs"
+    },
+    {
+      "id": "comparison",
+      "title": "Before and after slider",
+      "source": "kibo-ui",
+      "kind": "Runs Kibo UI",
+      "summary": "Reveal two treatments of the same original artwork with a draggable divider.",
+      "use": "Image editing, visual comparisons and before-and-after showcases",
+      "watch": "Actual Kibo Comparison with an added keyboard handler for arrow, Home and End keys. Original SVG artwork; no remote images.",
+      "effort": "Low",
+      "style": "",
+      "official": "https://www.kibo-ui.com/components/comparison"
+    },
+    {
+      "id": "themes",
+      "title": "Theme sampler",
+      "source": "tweakcn",
+      "kind": "Uses tweakcn tokens",
+      "summary": "Six real tweakcn themes applied to the same shadcn product card.",
+      "use": "Compare colour, radius, typography and shadow choices on real components",
+      "watch": "Actual tweakcn preset tokens on a small original composition using shadcn Button. This is a theme sampler, not the full tweakcn editor. Fonts use local fallbacks.",
+      "effort": "Low",
+      "style": "",
+      "official": "https://tweakcn.com/"
+    }
+  ]
+}

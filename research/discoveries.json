@@ -242,14 +242,16 @@
       "name": "shadcn/ui",
       "url": "https://ui.shadcn.com/docs/components",
       "repo": "https://github.com/shadcn-ui/ui",
-      "stars": "125.5k",
+      "stars": "126k",
       "license": "MIT",
-      "framework": "React + Tailwind; copied source",
+      "framework": "React, Tailwind CSS; Base UI or Radix foundations",
       "effort": "Low/medium",
       "standouts": [
-        "Command",
-        "Data Table",
-        "Sidebar"
+        "Resizable workspace",
+        "Dashboard and sidebar blocks",
+        "Interactive charts",
+        "Registry directory",
+        "Current style families"
       ],
       "styles": [
         "product UI",
@@ -268,8 +270,21 @@
         {
           "name": "Sidebar",
           "url": "https://ui.shadcn.com/docs/components/sidebar"
+        },
+        {
+          "name": "Resizable panels",
+          "url": "https://ui.shadcn.com/docs/components/resizable"
+        },
+        {
+          "name": "Building blocks",
+          "url": "https://ui.shadcn.com/blocks"
+        },
+        {
+          "name": "Registry directory",
+          "url": "https://ui.shadcn.com/docs/directory"
         }
-      ]
+      ],
+      "verifiedAt": "2026-10-14"
     },
     {
       "name": "daisyUI",
@@ -574,6 +589,125 @@
         "https://landonorris.com/"
       ],
       "visualInspection": "Observed ghost/wireframe helmet, coloured helmet patches revealed by pointer movement, pointer-dependent orientation, and tap-to-lock/back-to-scroll control. Tested default and desktop widths. Rendered DOM contained canvases and no videos."
+    },
+    {
+      "name": "Animate UI",
+      "url": "https://animate-ui.com/",
+      "repo": "https://github.com/imskyleen/animate-ui",
+      "framework": "React, Tailwind CSS, Motion; Radix, Base UI or Headless UI primitives",
+      "license": "MIT + Commons Clause; application use allowed, original components cannot be sold or redistributed as a kit",
+      "effort": "Low to medium",
+      "bestFor": "Polished motion on familiar product UI patterns",
+      "caveat": "The local tabs demo uses actual source with original content. Retain the license; choose the matching primitive family for your application.",
+      "install": "npx shadcn@latest add @animate-ui/components-radix-tabs",
+      "demos": [
+        {
+          "name": "Animated Radix tabs",
+          "url": "https://animate-ui.com/docs/components/radix/tabs"
+        },
+        {
+          "name": "Animated buttons",
+          "url": "https://animate-ui.com/docs/components/buttons"
+        }
+      ],
+      "evidence": [
+        "https://animate-ui.com/docs/components/radix/tabs",
+        "https://github.com/imskyleen/animate-ui"
+      ],
+      "verifiedAt": "2026-10-14"
+    },
+    {
+      "name": "Kibo UI",
+      "url": "https://www.kibo-ui.com/",
+      "repo": "https://github.com/shadcnblocks/kibo",
+      "framework": "React + shadcn/ui; dependencies vary by component",
+      "license": "MIT for the public component source",
+      "effort": "Low to high by component",
+      "bestFor": "Richer product interactions: comparison, kanban, Gantt, editors and colour picking",
+      "caveat": "Large components have additional dependencies. The local comparison demo uses actual Kibo source with a small keyboard adapter and original SVG artwork.",
+      "install": "npx shadcn@latest add @kibo-ui/comparison",
+      "demos": [
+        {
+          "name": "Image comparison",
+          "url": "https://www.kibo-ui.com/components/comparison"
+        },
+        {
+          "name": "Kanban",
+          "url": "https://www.kibo-ui.com/components/kanban"
+        },
+        {
+          "name": "Gantt",
+          "url": "https://www.kibo-ui.com/components/gantt"
+        }
+      ],
+      "evidence": [
+        "https://www.kibo-ui.com/",
+        "https://github.com/shadcnblocks/kibo"
+      ],
+      "verifiedAt": "2026-10-14"
+    },
+    {
+      "name": "tweakcn",
+      "url": "https://tweakcn.com/",
+      "repo": "https://github.com/jnsahaj/tweakcn",
+      "framework": "Visual editor for Tailwind CSS and shadcn CSS tokens",
+      "license": "Apache-2.0 for the public editor source; exported presets are demonstrated with retained attribution",
+      "effort": "Low",
+      "bestFor": "Compare real colour, radius, typography and shadow systems before implementation",
+      "caveat": "Local demo samples six actual theme token sets; it is not the full editor. Custom fonts use system fallbacks until you supply them.",
+      "install": "Export a theme from the official editor or install its provided registry URL",
+      "demos": [
+        {
+          "name": "Visual theme editor",
+          "url": "https://tweakcn.com/editor/theme"
+        }
+      ],
+      "evidence": [
+        "https://tweakcn.com/",
+        "https://github.com/jnsahaj/tweakcn"
+      ],
+      "verifiedAt": "2026-10-14"
+    },
+    {
+      "name": "coss ui",
+      "url": "https://coss.com/ui",
+      "framework": "React, Base UI and Tailwind CSS",
+      "license": "Open-source component library; verify the exact component license and dependency terms before reuse",
+      "effort": "Low to medium",
+      "bestFor": "Refined product controls, composed input and chat composer patterns",
+      "caveat": "Origin UI now redirects to coss ui. Source reference only in this gallery; its components are not reproduced locally.",
+      "install": "Follow the component installation instructions",
+      "demos": [
+        {
+          "name": "Component collection",
+          "url": "https://coss.com/ui"
+        }
+      ],
+      "evidence": [
+        "https://originui.com/",
+        "https://coss.com/ui"
+      ],
+      "verifiedAt": "2026-10-14"
+    },
+    {
+      "name": "ReUI",
+      "url": "https://reui.io/",
+      "framework": "React, shadcn/ui and Tailwind CSS; data-grid dependencies vary",
+      "license": "Free component catalog plus separately paid Pro blocks; verify the terms of the selected item",
+      "effort": "Medium for advanced product patterns",
+      "bestFor": "Dense business UI: data grids, filters, schedules, kanban and application shells",
+      "caveat": "Free components and paid blocks have different scope. This is a linked source reference; no Pro block source is copied.",
+      "install": "Use the installation command on the selected free component page",
+      "demos": [
+        {
+          "name": "Component and block collection",
+          "url": "https://reui.io/"
+        }
+      ],
+      "evidence": [
+        "https://reui.io/"
+      ],
+      "verifiedAt": "2026-10-14"
     }
   ],
   "excludedOrDeferred": [

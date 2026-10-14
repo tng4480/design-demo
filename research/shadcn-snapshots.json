@@ -1,0 +1,43 @@
+{
+  "animate": {
+    "repo": "imskyleen/animate-ui",
+    "commit": "efeb96ffd7a3b7a4868667e4ac3c346620fb3044",
+    "files": [
+      "apps/www/registry/components/radix/tabs/index.tsx",
+      "apps/www/registry/primitives/radix/tabs/index.tsx",
+      "LICENSE.md",
+      "apps/www/registry/primitives/effects/highlight/index.tsx",
+      "apps/www/registry/lib/get-strict-context/index.tsx",
+      "apps/www/registry/hooks/use-controlled-state/index.tsx",
+      "apps/www/registry/primitives/effects/auto-height/index.tsx",
+      "apps/www/registry/hooks/use-auto-height/index.tsx",
+      "apps/www/registry/primitives/animate/slot/index.tsx"
+    ]
+  },
+  "kibo": {
+    "repo": "shadcnblocks/kibo",
+    "commit": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "files": [
+      "packages/comparison/index.tsx",
+      "license.md"
+    ]
+  },
+  "tweak": {
+    "repo": "jnsahaj/tweakcn",
+    "commit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
+    "files": [
+      "utils/theme-presets.ts",
+      "LICENSE"
+    ]
+  },
+  "core": {
+    "repo": "shadcn-ui/ui",
+    "commit": "30a58d4498f270af1c1e981a7d78a15cf5740841",
+    "files": [
+      "apps/v4/registry/bases/radix/ui/resizable.tsx",
+      "apps/v4/registry/bases/radix/ui/button.tsx",
+      "apps/v4/registry/styles/style-nova.css",
+      "LICENSE.md"
+    ]
+  }
+}

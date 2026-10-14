@@ -8,7 +8,7 @@ const pixels=['00111100','01111110','11011011','11111111','00111100','01111110',
 const btn=(text,action='feedback',cls='demo-button')=>`<button class="${cls}" data-action="${action}">${text}</button>`;
 const label=t=>`<span class="effect-label">${t}</span>`;
 const card=(title,sub,body='')=>`<div class="mini-card"><small>${sub}</small><h3>${title}</h3>${body}</div>`;
-export function markup(effect){if(effect.startsWith('rb-'))return '<div class="react-bits-preview"></div>'; switch(effect){
+export function markup(effect){if(effect.startsWith('sc-'))return '<div class="shadcn-preview"></div>'; if(effect.startsWith('rb-'))return '<div class="react-bits-preview"></div>'; switch(effect){
 case 'vanta-topology':return `<div class="vanta-foreground"><small>ACTUAL VANTA.JS / TOPOLOGY</small><h3>Find your flow.</h3>${btn('New pattern ↻','topology-reset')}</div>`;
 case 'vanta-net':case 'vanta-fog':case 'vanta-waves':case 'vanta-globe':return `<div class="vanta-foreground"><small>ACTUAL VANTA.JS / ${effect.slice(6).toUpperCase()}</small><h3>${({'vanta-net':'Everything connects.','vanta-fog':'A softer atmosphere.','vanta-waves':'Go with the flow.','vanta-globe':'A connected world.'})[effect]}</h3></div>`;
 case 'icons':return '<div class="icon-explorer"></div>';
@@ -75,10 +75,11 @@ default:return '<b class="effect-word">Explore.</b>';}}
 
 function canvasLoop(el,draw,paused){let frame,dead=false;const canvas=el.querySelector('canvas'),ctx=canvas.getContext('2d');const size=()=>{const r=el.getBoundingClientRect();const dpr=Math.min(devicePixelRatio||1,2);canvas.width=r.width*dpr;canvas.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);return[r.width,r.height];};let [w,h]=size();const ro=new ResizeObserver(()=>{[w,h]=size();draw(ctx,w,h,0);});ro.observe(el);let last=0;const tick=t=>{if(dead)return;if(!paused()&&t-last>32){draw(ctx,w,h,t);last=t;}frame=requestAnimationFrame(tick);};draw(ctx,w,h,0);frame=requestAnimationFrame(tick);return()=>{dead=true;cancelAnimationFrame(frame);ro.disconnect();};}
 export function mount(el,effect,paused=()=>false,onMessage=()=>{}){
-if(effect.startsWith('rb-')){
-const container=el.querySelector('.react-bits-preview'),frame=document.createElement('iframe');
-frame.title='Actual React Bits '+effect.slice(3).replaceAll('-',' ')+' demo';frame.src=new URL('react-bits-frame.html?v=rb-eight-1&embedded=1&demo='+effect.slice(3)+(paused()?'&paused=1':''),document.baseURI).href;frame.className='react-bits-frame';container.append(frame);
-const resize=()=>{const r=el.getBoundingClientRect();frame.style.transform=`scale(${Math.min(r.width/480,r.height/320)})`;};const ro=new ResizeObserver(resize);ro.observe(el);resize();let previous=paused();const send=()=>frame.contentWindow?.postMessage({type:'atlas-motion',paused:paused()},location.origin);frame.addEventListener('load',send);const timer=setInterval(()=>{if(previous!==paused()){previous=paused();send();}},150);
+if(effect.startsWith('rb-')||effect.startsWith('sc-')){
+const sc=effect.startsWith('sc-'),width=sc?640:480,height=sc?440:320;
+const container=el.querySelector(sc?'.shadcn-preview':'.react-bits-preview'),frame=document.createElement('iframe');
+frame.title=(sc?'Shadcn ecosystem ':'Actual React Bits ')+effect.slice(3).replaceAll('-',' ')+' demo';frame.src=new URL((sc?'shadcn.html?v=shadcn-four-1':'react-bits-frame.html?v=rb-eight-1')+'&embedded=1&demo='+effect.slice(3)+(paused()?'&paused=1':''),document.baseURI).href;frame.className=sc?'shadcn-frame':'react-bits-frame';container.append(frame);
+const resize=()=>{const r=el.getBoundingClientRect();frame.style.transform=`scale(${Math.min(r.width/width,r.height/height)})`;};const ro=new ResizeObserver(resize);ro.observe(el);resize();let previous=paused();const send=()=>frame.contentWindow?.postMessage({type:'atlas-motion',paused:paused()},location.origin);frame.addEventListener('load',send);const timer=setInterval(()=>{if(previous!==paused()){previous=paused();send();}},150);
 return{replay(){frame.src=frame.src;},dispose(){clearInterval(timer);ro.disconnect();frame.remove();}};
 }
 const cleanup=[],timers=new Set();const listen=(node,event,fn)=>{node.addEventListener(event,fn);cleanup.push(()=>node.removeEventListener(event,fn));};const delay=(fn,ms)=>{const t=setTimeout(()=>{timers.delete(t);fn();},ms);timers.add(t);};const pointer={x:-1000,y:-1000};listen(el,'pointermove',e=>{const r=el.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;el.style.setProperty('--px',pointer.x+'px');el.style.setProperty('--py',pointer.y+'px');el.style.setProperty('--x',(pointer.x/r.width-.5)*2);el.style.setProperty('--y',(pointer.y/r.height-.5)*2);});listen(el,'pointerleave',()=>{pointer.x=pointer.y=-1000;el.style.setProperty('--x',0);el.style.setProperty('--y',0);});
