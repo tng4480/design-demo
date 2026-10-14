@@ -221,15 +221,20 @@
       "category": "3D backgrounds",
       "framework": "React + React Three Fiber + Three.js; Vue/TresJS; Framer and Figma integrations",
       "license": "MIT upstream",
-      "install": "npm i @shadergradient/react @react-three/fiber three three-stdlib camera-controls",
+      "install": "npm install @shadergradient/react@2.4.20 @react-three/fiber@9.3.0 three@0.180.0",
       "bestFor": "Fluid 3D hero surfaces, gradient mesh and atmospheric backgrounds",
-      "caveat": "GPU load and React/R3F compatibility matter; avoid mounting many simultaneous canvases",
+      "caveat": "GPU load and React/R3F compatibility matter; avoid mounting many simultaneous canvases The local scroll system now runs the actual 2.4.20 renderer. Its choreography is original, and it uses no Framer/Figma screen captures. The earlier Atmospheric Mesh remains a CSS study.",
       "github": "https://github.com/ruucm/shadergradient",
       "githubStarsApprox": "2.8k",
       "evidence": [
         "https://github.com/ruucm/shadergradient"
       ],
       "demos": [
+        {
+          "name": "Scroll-driven gradient storytelling",
+          "url": "https://shadergradient.co/",
+          "description": "Coordinated framing, typography and gradient scene transitions"
+        },
         {
           "name": "Gradient customizer",
           "url": "https://www.shadergradient.co/customize",
@@ -1776,7 +1781,7 @@
       "watch": "CSS study; does not run the Shadergradient renderer.",
       "order": 6,
       "kind": "Original study",
-      "official": "https://www.shadergradient.co/customize"
+      "official": "https://shadergradient.co/"
     },
     {
       "id": "vanta-topology",
@@ -2977,6 +2982,21 @@
       "order": 86,
       "kind": "Runs Componentry",
       "official": "https://componentry.dev/docs/components/scroll-choreography"
+    },
+    {
+      "id": "shadergradient-scroll",
+      "title": "Shader Gradient / Scroll system",
+      "effect": "sg-scroll",
+      "source": "shadergradient",
+      "category": "Motion",
+      "style": "mesh",
+      "effort": "High",
+      "summary": "A pinned gradient changes frame, colour, camera and geometry while text reveals in sync with scrolling.",
+      "use": "Immersive launch pages, creative portfolios and product storytelling",
+      "watch": "Runs actual @shadergradient/react 2.4.20. The four-chapter scroll system, layout and text choreography are original. Use the chapter buttons or open the full-page demo; reduced motion offers static chapter selection.",
+      "order": 87,
+      "kind": "Runs Shader Gradient",
+      "official": "https://shadergradient.co/"
     }
   ],
   "inspirations": [
