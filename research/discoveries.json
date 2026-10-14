@@ -751,6 +751,69 @@
       ],
       "verifiedAt": "2026-10-14",
       "inspection": "Reviewed the 30-style list and visually inspected Monochrome, Industrial, Botanical, Newsprint, Swiss Minimalist, Academia, Organic, Maximalism and Retro. Shortlist is an editorial judgement."
+    },
+    {
+      "name": "Impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "repo": "https://github.com/pbakaus/impeccable",
+      "license": "See the upstream repository; local example markup and styles are original",
+      "framework": "Agent instructions; illustrative local HTML/CSS/JavaScript study",
+      "effort": "Low/medium",
+      "standouts": [
+        "Hierarchy and polish",
+        "Accessibility and interaction",
+        "Context-aware refinement"
+      ],
+      "bestFor": "Refine an existing UI while preserving the chosen visual identity",
+      "caveat": "The local lab demonstrates selected guidance; it is not a complete skill workflow or measured benchmark. Upstream includes CLI tools and optional hooks.",
+      "demos": [
+        {
+          "name": "Local controlled comparison",
+          "url": "https://tng4480.github.io/design-demo/skills.html?mode=impeccable"
+        }
+      ]
+    },
+    {
+      "name": "Taste Skill",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "license": "See the upstream repository; local example markup and styles are original",
+      "framework": "Agent instructions; illustrative local HTML/CSS/JavaScript study",
+      "effort": "Low/medium",
+      "standouts": [
+        "Subject-led composition",
+        "Photography and typography",
+        "Strict anti-pattern rules"
+      ],
+      "bestFor": "Explore distinctive public-facing pages and creative sites",
+      "caveat": "The local lab shows selected v2 guidance only. Upstream has strict style bans, direction-draw scripts, imagery and motion floors, and an inspector; the full workflow was not executed.",
+      "demos": [
+        {
+          "name": "Local controlled comparison",
+          "url": "https://tng4480.github.io/design-demo/skills.html?mode=taste"
+        }
+      ]
+    },
+    {
+      "name": "Awesome Design Skills",
+      "url": "https://github.com/bergside/awesome-design-skills",
+      "repo": "https://github.com/bergside/awesome-design-skills",
+      "license": "See the upstream repository; local example markup and styles are original",
+      "framework": "Agent instructions; illustrative local HTML/CSS/JavaScript study",
+      "effort": "Low/medium",
+      "standouts": [
+        "Editorial recipe",
+        "Style tokens",
+        "Style-specific component guidance"
+      ],
+      "bestFor": "Choose a single style recipe before implementing a page",
+      "caveat": "The local demo selects the Editorial recipe. It does not represent all recipes or promise automatic quality improvements.",
+      "demos": [
+        {
+          "name": "Local controlled comparison",
+          "url": "https://tng4480.github.io/design-demo/skills.html?mode=awesome"
+        }
+      ]
     }
   ],
   "excludedOrDeferred": [

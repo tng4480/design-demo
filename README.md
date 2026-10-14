@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **92 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **95 live studies, 53 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -104,3 +104,7 @@ The earlier Atmospheric Mesh is still labelled as an original CSS study. `npm ru
 ## Mobile drawer
 
 `drawer.html` and the gallery Mobile drawer preview run actual Vaul 1.1.2, replacing the earlier CSS approximation. Supports gesture-driven dismissal, overlay dismissal, Escape, focus containment and reduced motion. The full-page example preserves native touch dimensions; the embedded preview stays inside its card. Build with `npm run build:drawer`. Retained licenses are in `dist/VAUL_NOTICES.txt`. Upstream currently marks Vaul unmaintained.
+
+## Design skill comparison lab
+
+`skills.html` compares a conventional baseline and selected guidance from Impeccable, Taste Skill and the Awesome Design Skills Editorial recipe. Same fictional workshop brief, copy, schedule, prices and reference imagery; differences in hierarchy, composition and visual language are intentional. Each treatment is available in the gallery. These are original illustrative guidance studies, not complete upstream workflow runs or quality benchmarks. No skills were installed globally. See `dist/skill-lab/NOTES.txt` for the exact scope and sources. Remote Unsplash reference photos require network access.

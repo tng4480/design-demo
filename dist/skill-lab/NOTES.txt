@@ -1,0 +1,13 @@
+Design skill guidance comparison — 14 October 2026
+
+This is an original visual demonstration of selected instructions, not a claim to have executed each skill's entire workflow or deterministic checks. No third-party skill scripts, installers or hooks run in this app. No global skill installation was made.
+
+Controlled fictional brief: Fieldwork, London creative weekends, three workshops. All four treatments retain identical workshop titles, descriptions, schedules, prices, primary action and photographs. Presentation changes intentionally. Baseline is a competent conventional layout, not an intentionally broken example.
+
+Impeccable: hierarchy, contrast, meaningful spacing, existing identity preservation, clear control labels. Source: https://github.com/pbakaus/impeccable and .agents/skills/impeccable/reference/craft-floor.md. This is a focused selected-guidance study; the full context launcher, skill workflow and hook were not executed.
+
+Taste Skill: public-page composition, subject-led visual material, stronger type, varied section layouts, flat palette, no gradient/glass/glow/eyebrow treatment. Source: https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md. The direction draw, imagery-floor requirement, full motion layer and upstream inspector were not executed; this example does not claim complete v2 compliance.
+
+Awesome Design Skills: one selected Editorial recipe. Source: https://github.com/bergside/awesome-design-skills/blob/main/skills/editorial/SKILL.md. This is a style-specific example, not the appearance of all 67 recipes.
+
+All app markup and CSS are original. No upstream skill text is redistributed. Reference photographs are delivered from images.unsplash.com, with a source link on every treatment; they do not represent an actual workshop or client. Images may require internet access. This controlled comparison is illustrative, not proof of measured quality improvements.

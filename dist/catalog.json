@@ -1229,6 +1229,75 @@
       "capture": true
     },
     {
+      "name": "Impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "repo": "https://github.com/pbakaus/impeccable",
+      "license": "See the upstream repository; local example markup and styles are original",
+      "framework": "Agent instructions; illustrative local HTML/CSS/JavaScript study",
+      "effort": "Low/medium",
+      "standouts": [
+        "Hierarchy and polish",
+        "Accessibility and interaction",
+        "Context-aware refinement"
+      ],
+      "bestFor": "Refine an existing UI while preserving the chosen visual identity",
+      "caveat": "The local lab demonstrates selected guidance; it is not a complete skill workflow or measured benchmark. Upstream includes CLI tools and optional hooks.",
+      "demos": [
+        {
+          "name": "Local controlled comparison",
+          "url": "https://tng4480.github.io/design-demo/skills.html?mode=impeccable"
+        }
+      ],
+      "id": "impeccable",
+      "github": "https://github.com/pbakaus/impeccable"
+    },
+    {
+      "name": "Taste Skill",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "license": "See the upstream repository; local example markup and styles are original",
+      "framework": "Agent instructions; illustrative local HTML/CSS/JavaScript study",
+      "effort": "Low/medium",
+      "standouts": [
+        "Subject-led composition",
+        "Photography and typography",
+        "Strict anti-pattern rules"
+      ],
+      "bestFor": "Explore distinctive public-facing pages and creative sites",
+      "caveat": "The local lab shows selected v2 guidance only. Upstream has strict style bans, direction-draw scripts, imagery and motion floors, and an inspector; the full workflow was not executed.",
+      "demos": [
+        {
+          "name": "Local controlled comparison",
+          "url": "https://tng4480.github.io/design-demo/skills.html?mode=taste"
+        }
+      ],
+      "id": "taste-skill",
+      "github": "https://github.com/Leonxlnx/taste-skill"
+    },
+    {
+      "name": "Awesome Design Skills",
+      "url": "https://github.com/bergside/awesome-design-skills",
+      "repo": "https://github.com/bergside/awesome-design-skills",
+      "license": "See the upstream repository; local example markup and styles are original",
+      "framework": "Agent instructions; illustrative local HTML/CSS/JavaScript study",
+      "effort": "Low/medium",
+      "standouts": [
+        "Editorial recipe",
+        "Style tokens",
+        "Style-specific component guidance"
+      ],
+      "bestFor": "Choose a single style recipe before implementing a page",
+      "caveat": "The local demo selects the Editorial recipe. It does not represent all recipes or promise automatic quality improvements.",
+      "demos": [
+        {
+          "name": "Local controlled comparison",
+          "url": "https://tng4480.github.io/design-demo/skills.html?mode=awesome"
+        }
+      ],
+      "id": "awesome-design-skills",
+      "github": "https://github.com/bergside/awesome-design-skills"
+    },
+    {
       "id": "gsap",
       "name": "GSAP + ScrollTrigger",
       "url": "https://gsap.com/",
@@ -3057,6 +3126,51 @@
       "order": 91,
       "kind": "Original study",
       "official": "https://www.designprompts.dev/maximalism"
+    },
+    {
+      "id": "sk-impeccable",
+      "title": "Design skills / Impeccable",
+      "effect": "sk-impeccable",
+      "source": "impeccable",
+      "category": "Styles",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Compare selected hierarchy, spacing and interaction guidance against a conventional baseline.",
+      "use": "Choose design guidance by inspecting representative visual differences",
+      "watch": "Original selected-guidance demonstration. Same fictional brief, copy, workshops, prices and image set across treatments. Not a full upstream workflow run, automatic benchmark or guarantee of quality. The lab explains scope and links the exact source.",
+      "order": 92,
+      "kind": "Original study",
+      "official": "https://github.com/pbakaus/impeccable"
+    },
+    {
+      "id": "sk-taste",
+      "title": "Design skills / Taste Skill",
+      "effect": "sk-taste",
+      "source": "taste-skill",
+      "category": "Styles",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Compare larger subject imagery, flat colour and varied composition against the same baseline.",
+      "use": "Choose design guidance by inspecting representative visual differences",
+      "watch": "Original selected-guidance demonstration. Same fictional brief, copy, workshops, prices and image set across treatments. Not a full upstream workflow run, automatic benchmark or guarantee of quality. The lab explains scope and links the exact source.",
+      "order": 93,
+      "kind": "Original study",
+      "official": "https://github.com/Leonxlnx/taste-skill"
+    },
+    {
+      "id": "sk-awesome",
+      "title": "Design skills / Awesome / Editorial",
+      "effect": "sk-awesome",
+      "source": "awesome-design-skills",
+      "category": "Styles",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Compare a selected Editorial style recipe against the same content and baseline.",
+      "use": "Choose design guidance by inspecting representative visual differences",
+      "watch": "Original selected-guidance demonstration. Same fictional brief, copy, workshops, prices and image set across treatments. Not a full upstream workflow run, automatic benchmark or guarantee of quality. The lab explains scope and links the exact source.",
+      "order": 94,
+      "kind": "Original study",
+      "official": "https://github.com/bergside/awesome-design-skills/tree/main/skills/editorial"
     }
   ],
   "inspirations": [
