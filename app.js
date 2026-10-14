@@ -1,6 +1,6 @@
-import {markup,mount} from './engines.js?v=shadcn-four-1';
+import {markup,mount} from './engines.js?v=design-prompts-1';
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const catalog=await fetch('catalog.json?v=shadcn-four-1').then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json();});
+const catalog=await fetch('catalog.json?v=design-prompts-1').then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json();});
 const {demos,sources,styles,inspirations}=catalog;
 const getSaved=()=>{try{return JSON.parse(localStorage.getItem('atlas-shortlist')||'[]').filter(id=>demos.some(d=>d.id===id));}catch{return[];}};
 const state={view:'explore',category:'All',source:'',style:'',effort:'',sort:'curated',query:'',saved:new Set(getSaved()),compare:new Set(),paused:matchMedia('(prefers-reduced-motion: reduce)').matches};
