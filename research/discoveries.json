@@ -488,6 +488,68 @@
       ],
       "verifiedAt": "2026-10-14",
       "visualInspection": "Observed chapters 01 and 02, wheel/click transitions, camera travel and fading content cards; native browser DOM contained two muted video elements and zero canvases."
+    },
+    {
+      "name": "Tabler Icons",
+      "url": "https://tabler.io/icons",
+      "repo": "https://github.com/tabler/tabler-icons",
+      "stars": "22.3k",
+      "license": "MIT",
+      "framework": "Plain SVG plus React, Vue, Svelte, Angular and other official packages",
+      "effort": "Low",
+      "standouts": [
+        "Outline icons",
+        "Filled icons",
+        "Stroke and size customization",
+        "Framework-specific components"
+      ],
+      "bestFor": "Consistent icons for navigation, actions, dashboards and product controls",
+      "caveat": "Use accessible labels on icon-only buttons; decorative icons should be hidden from assistive technology. Ship the icons you use instead of bundling the complete collection in a product.",
+      "install": "npm install @tabler/icons@3.49.0",
+      "demos": [
+        {
+          "name": "Official icon browser",
+          "url": "https://tabler.io/icons"
+        },
+        {
+          "name": "Official icon documentation",
+          "url": "https://tabler.io/docs/icons"
+        }
+      ],
+      "verifiedAt": "2026-10-14",
+      "evidence": [
+        "https://github.com/tabler/tabler-icons",
+        "https://tabler.io/icons"
+      ]
+    },
+    {
+      "name": "Lando Norris",
+      "url": "https://landonorris.com/",
+      "repo": null,
+      "stars": null,
+      "license": "Inspiration only; source models, photography, branding and code are not licensed for reuse",
+      "framework": "Observed WebGL/canvas helmet interaction and Webflow-style DOM; exact animation implementation not confirmed",
+      "effort": "High",
+      "standouts": [
+        "Pointer-responsive helmet reveal",
+        "Wireframe-to-coloured surface interaction",
+        "Pointer lock mode",
+        "Scroll-led editorial sections"
+      ],
+      "bestFor": "A distinctive interactive 3D product or personality hero",
+      "caveat": "Requires model/material production, hit testing or a reveal mask, pointer/touch handling, reduced motion and performance fallbacks. The local study uses original procedural geometry and a screen-space reveal shader.",
+      "install": "No component package; this is a bespoke website reference",
+      "demos": [
+        {
+          "name": "Interactive helmet hero",
+          "url": "https://landonorris.com/"
+        }
+      ],
+      "verifiedAt": "2026-10-14",
+      "evidence": [
+        "https://landonorris.com/"
+      ],
+      "visualInspection": "Observed ghost/wireframe helmet, coloured helmet patches revealed by pointer movement, pointer-dependent orientation, and tap-to-lock/back-to-scroll control. Tested default and desktop widths. Rendered DOM contained canvases and no videos."
     }
   ],
   "excludedOrDeferred": [

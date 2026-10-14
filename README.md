@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **68 live studies, 42 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **70 live studies, 44 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -62,3 +62,9 @@ After committing a change to `main`, run `npm run publish` to update the live si
 ## Interactive 3D studies
 
 The isometric playground supports building on empty plots, dragging to rotate, quarter-turn controls, and resetting the town. The cinematic chapter preview embeds the actual three-scene camera journey, including chapter navigation, wheel/swipe/keyboard input and reduced motion. Both are original Three.js demonstrations.
+
+## Tabler Icons and helmet hover
+
+The icon explorer uses 6,238 actual Tabler SVGs from pinned version 3.49.0, with outline/filled search, category filters, size/stroke/color controls and SVG copy/download. Tabler’s MIT license is retained in `dist/TABLER_LICENSE.txt`. Refresh the icon catalog with `node scripts/tabler-assets.mjs` after installing dependencies.
+
+The helmet hover demo uses an original procedural Three.js model and a screen-space material reveal. Pointer motion reveals coloured surfaces through a wireframe; Show full, Lock reveal and Reset provide keyboard/touch alternatives. The reference site and its asset rights remain in the source directory.
