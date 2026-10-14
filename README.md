@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **83 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **84 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -84,3 +84,7 @@ Registry metadata, official components and blocks were reviewed on 14 October 20
 ## Design Prompts reference
 
 Design Prompts is included as an art-direction source with selected Newsprint, Swiss Minimalist, Botanical and Maximalism references. These are links to the official full-page previews, not additional local implementations or copied prompt text.
+
+## Paper Neuro Noise
+
+An actual Paper Neuro Noise shader is integrated into the gallery and `neuro-noise.html`. The playground offers the four official Default, Sensation, Bloodstream and Ghost presets; colour, brightness, contrast, scale, speed and rotation controls; pause/reset; an optional original headline; and copying the current React usage. Vanilla package `@paper-design/shaders@0.0.81` is pinned. Run `npm run build:paper` to refresh the selected shader bundle and retained LICENSE/NOTICE. It requires WebGL2 and disposes offscreen instances.

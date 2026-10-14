@@ -6,3 +6,5 @@ let notices='# Third-party libraries\n\nThese files are pinned local copies. Loc
 for(const name of ['motion','gsap','lenis','three','@barba/core','vanta','three-vanta','p5','react','react-dom']){const pkg=JSON.parse(await readFile('node_modules/'+name+'/package.json','utf8'));notices+=`## ${name} ${pkg.version}\n\n`;for(const f of ['LICENSE','LICENSE.md','LICENSE.txt','license.md'])try{notices+=await readFile('node_modules/'+name+'/'+f,'utf8');break;}catch{}notices+='\n\n';}
 await writeFile('dist/THIRD_PARTY_NOTICES.txt',notices);
 console.log('Vendored library files and preserved license notices.');
+
+await import('./paper-shaders-build.mjs');

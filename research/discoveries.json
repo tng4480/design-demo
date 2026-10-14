@@ -115,12 +115,14 @@
       "framework": "Vanilla JS or React; WebGL",
       "effort": "Medium",
       "standouts": [
+        "Neuro Noise",
         "Liquid Metal",
         "Fluted Glass",
         "Halftone Dots",
         "Mesh Gradient"
       ],
       "previews": [
+        "https://shaders.paper.design/neuro-noise",
         "https://shaders.paper.design/liquid-metal",
         "https://shaders.paper.design/fluted-glass",
         "https://shaders.paper.design/halftone-dots"
@@ -131,7 +133,9 @@
         "halftone",
         "gradient mesh"
       ],
-      "caveat": "README explicitly asks to pin dependency: breaking changes can occur under 0.0.x versions. Keep LICENSE/NOTICE when redistributing library code."
+      "caveat": "README explicitly asks to pin dependency: breaking changes can occur under 0.0.x versions. Keep LICENSE/NOTICE when redistributing library code. Neuro Noise runs the actual 0.0.81 vanilla shader locally, with official preset values observed in the Paper customizer. WebGL2 is required; offscreen instances are disposed and global pause stops animation.",
+      "install": "npm install @paper-design/shaders@0.0.81",
+      "verifiedAt": "2026-10-14"
     },
     {
       "name": "Drei / React Three Fiber",

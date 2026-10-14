@@ -1,3 +1,4 @@
+import {mountNeuroPreview} from './neuro-noise.js';
 import * as THREE from './vendor/three.module.js';
 import {mountPlayground} from './playground.js';
 import {mountHelmet} from './helmet.js';
@@ -9,6 +10,7 @@ const btn=(text,action='feedback',cls='demo-button')=>`<button class="${cls}" da
 const label=t=>`<span class="effect-label">${t}</span>`;
 const card=(title,sub,body='')=>`<div class="mini-card"><small>${sub}</small><h3>${title}</h3>${body}</div>`;
 export function markup(effect){if(effect.startsWith('sc-'))return '<div class="shadcn-preview"></div>'; if(effect.startsWith('rb-'))return '<div class="react-bits-preview"></div>'; switch(effect){
+case 'neuro-noise':return '<div class="neuro-surface"></div><div class="neuro-copy"><small>ACTUAL PAPER SHADERS / NEURO NOISE</small><h3>Signal from<br>the noise.</h3><div class="neuro-preview-presets">'+['Default','Sensation','Bloodstream','Ghost'].map(name=>`<button data-neuro-preset="${name}" aria-pressed="${name==='Default'}">${name}</button>`).join('')+'</div></div>';
 case 'vanta-topology':return `<div class="vanta-foreground"><small>ACTUAL VANTA.JS / TOPOLOGY</small><h3>Find your flow.</h3>${btn('New pattern ↻','topology-reset')}</div>`;
 case 'vanta-net':case 'vanta-fog':case 'vanta-waves':case 'vanta-globe':return `<div class="vanta-foreground"><small>ACTUAL VANTA.JS / ${effect.slice(6).toUpperCase()}</small><h3>${({'vanta-net':'Everything connects.','vanta-fog':'A softer atmosphere.','vanta-waves':'Go with the flow.','vanta-globe':'A connected world.'})[effect]}</h3></div>`;
 case 'icons':return '<div class="icon-explorer"></div>';
@@ -75,6 +77,7 @@ default:return '<b class="effect-word">Explore.</b>';}}
 
 function canvasLoop(el,draw,paused){let frame,dead=false;const canvas=el.querySelector('canvas'),ctx=canvas.getContext('2d');const size=()=>{const r=el.getBoundingClientRect();const dpr=Math.min(devicePixelRatio||1,2);canvas.width=r.width*dpr;canvas.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);return[r.width,r.height];};let [w,h]=size();const ro=new ResizeObserver(()=>{[w,h]=size();draw(ctx,w,h,0);});ro.observe(el);let last=0;const tick=t=>{if(dead)return;if(!paused()&&t-last>32){draw(ctx,w,h,t);last=t;}frame=requestAnimationFrame(tick);};draw(ctx,w,h,0);frame=requestAnimationFrame(tick);return()=>{dead=true;cancelAnimationFrame(frame);ro.disconnect();};}
 export function mount(el,effect,paused=()=>false,onMessage=()=>{}){
+if(effect==='neuro-noise')return mountNeuroPreview(el,paused);
 if(effect.startsWith('rb-')||effect.startsWith('sc-')){
 const sc=effect.startsWith('sc-'),width=sc?640:480,height=sc?440:320;
 const container=el.querySelector(sc?'.shadcn-preview':'.react-bits-preview'),frame=document.createElement('iframe');

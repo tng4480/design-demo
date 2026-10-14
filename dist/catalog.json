@@ -452,12 +452,14 @@
       "framework": "Vanilla JS or React; WebGL",
       "effort": "Medium",
       "standouts": [
+        "Neuro Noise",
         "Liquid Metal",
         "Fluted Glass",
         "Halftone Dots",
         "Mesh Gradient"
       ],
       "previews": [
+        "https://shaders.paper.design/neuro-noise",
         "https://shaders.paper.design/liquid-metal",
         "https://shaders.paper.design/fluted-glass",
         "https://shaders.paper.design/halftone-dots"
@@ -468,12 +470,18 @@
         "halftone",
         "gradient mesh"
       ],
-      "caveat": "README explicitly asks to pin dependency: breaking changes can occur under 0.0.x versions. Keep LICENSE/NOTICE when redistributing library code.",
+      "caveat": "README explicitly asks to pin dependency: breaking changes can occur under 0.0.x versions. Keep LICENSE/NOTICE when redistributing library code. Neuro Noise runs the actual 0.0.81 vanilla shader locally, with official preset values observed in the Paper customizer. WebGL2 is required; offscreen instances are disposed and global pause stops animation.",
+      "install": "npm install @paper-design/shaders@0.0.81",
+      "verifiedAt": "2026-10-14",
       "id": "paper-shaders",
       "github": "https://github.com/paper-design/shaders",
       "githubStarsApprox": "3.6k",
-      "bestFor": "Liquid Metal, Fluted Glass, Halftone Dots, Mesh Gradient",
+      "bestFor": "Neuro Noise, Liquid Metal, Fluted Glass, Halftone Dots, Mesh Gradient",
       "demos": [
+        {
+          "name": "Neuro Noise",
+          "url": "https://shaders.paper.design/neuro-noise"
+        },
         {
           "name": "Liquid Metal",
           "url": "https://shaders.paper.design/liquid-metal"
@@ -1663,7 +1671,7 @@
       "watch": "Original procedural shader; not the Paper Liquid Metal component.",
       "order": 0,
       "kind": "Runs Three.js",
-      "official": "https://shaders.paper.design/liquid-metal"
+      "official": "https://shaders.paper.design/neuro-noise"
     },
     {
       "id": "particle-type",
@@ -2894,6 +2902,21 @@
       "order": 82,
       "kind": "Uses tweakcn tokens",
       "official": "https://tweakcn.com/"
+    },
+    {
+      "id": "paper-neuro-noise",
+      "title": "Paper / Neuro Noise",
+      "effect": "neuro-noise",
+      "source": "paper-shaders",
+      "category": "Styles",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Glowing neural-like threads flow and intersect across a living texture.",
+      "use": "Atmospheric hero backgrounds and futuristic visual surfaces",
+      "watch": "Runs the actual Paper Neuro Noise shader from pinned package 0.0.81, with four official presets. WebGL2 required; headline and controls are original.",
+      "order": 83,
+      "kind": "Runs Paper Shaders",
+      "official": "https://shaders.paper.design/neuro-noise"
     }
   ],
   "inspirations": [
