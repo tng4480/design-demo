@@ -1,0 +1,18 @@
+import {build} from 'esbuild';
+import {readFile,writeFile,rm} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {createHash} from 'node:crypto';
+await rm('dist/shadergradient-app',{recursive:true,force:true});
+const result=await build({entryPoints:['shadergradient/app.jsx'],outdir:'dist/shadergradient-app',bundle:true,format:'esm',minify:true,metafile:true,entryNames:'app-[hash]',jsx:'automatic',define:{'process.env.NODE_ENV':'"production"'},alias:{framer:resolve('shadergradient/framer-web.js')},legalComments:'eof'});
+const js=Object.keys(result.metafile.outputs).find(p=>p.endsWith('.js')).replace('dist/',''),css=await readFile('shadergradient/story.css'),hash=createHash('sha256').update(css).digest('hex').slice(0,12);
+await writeFile('dist/shadergradient-app/story.css',css);
+await writeFile('dist/shadergradient-scroll.html',`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shader Gradient — Scroll system study</title><link rel="stylesheet" href="shadergradient-app/story.css?v=${hash}"></head><body><div id="root"></div><script>if(new URLSearchParams(location.search).has('embedded'))document.body.classList.add('embedded')</script><script type="module" src="${js}"></script></body></html>`);
+const reactLicense=await readFile('node_modules/react/LICENSE','utf8');
+const standard=reactLicense.replace(/Copyright[^\n]+/,'Copyright (c) ruucm and stone-skipper');
+let notices='Shader Gradient scroll system demo\n\nRenderer: @shadergradient/react 2.4.20\nSource: https://github.com/ruucm/shadergradient\nUpstream package declares MIT; the upstream README attributes MIT to ruucm and stone-skipper. The standard MIT terms are retained below.\n\n'+standard+'\n\n';
+const fiber=JSON.parse(await readFile('node_modules/@react-three/fiber/package.json','utf8'));
+notices+=`React Three Fiber ${fiber.version}: ${fiber.license}. https://github.com/pmndrs/react-three-fiber\n\n`;
+notices+='React and Three.js full notices are retained in THIRD_PARTY_NOTICES.txt. Embedded third-party copyright notices are retained in the compiled JavaScript.\n\nThe renderer is actual Shader Gradient. The scroll choreography, text, framing and controls are original. A minimal web adapter disables Framer-only live reload; no Framer or Figma screen captures are reused.\n';
+await writeFile('dist/SHADERGRADIENT_NOTICES.txt',notices);
+await writeFile('dist/shadergradient-demo-source.txt',await readFile('shadergradient/app.jsx','utf8'));
+console.log('Built an actual Shader Gradient renderer with original scroll choreography.');

@@ -10,11 +10,14 @@
     "build:react-bits": "node scripts/react-bits-build.mjs",
     "build:shadcn": "node scripts/shadcn-build.mjs",
     "build:paper": "node scripts/paper-shaders-build.mjs",
-    "build:componentry": "node scripts/componentry-build.mjs"
+    "build:componentry": "node scripts/componentry-build.mjs",
+    "build:shadergradient": "node scripts/shadergradient-build.mjs"
   },
   "dependencies": {
     "@barba/core": "2.10.3",
     "@paper-design/shaders": "0.0.81",
+    "@react-three/fiber": "9.3.0",
+    "@shadergradient/react": "2.4.20",
     "@tabler/icons": "3.49.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",

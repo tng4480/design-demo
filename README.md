@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **87 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **88 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -94,3 +94,9 @@ An actual Paper Neuro Noise shader is integrated into the gallery and `neuro-noi
 Actual Hover Transition, Circuit Board and Scroll Choreography components run in `componentry.html` and isolated gallery previews. Hover supports all eight upstream effects and editable direction, timing and colour. The circuit graph supports theme/grid controls, pulse speed, trace width and an illustrative node-error state. Scroll Choreography runs the actual 300vh sequence, with Start/Move/Stack/Expand navigation and a static reduced-motion image grid.
 
 Source is pinned to `b602c2872fea85c9f2464016ce3bbe0af17b51b4`. `npm run build:componentry` rebuilds the compiled demo application from ignored source cache. The scroll gallery uses the upstream demo’s public Unsplash image URLs at a smaller delivery size; image availability depends on Unsplash. MIT attribution and image/source notes are retained in `dist/COMPONENTRY_LICENSE.txt` and `dist/COMPONENTRY_NOTES.txt`.
+
+## Shader Gradient scroll system
+
+`shadergradient-scroll.html` runs actual `@shadergradient/react@2.4.20` and React Three Fiber 9.3.0 in an original four-chapter scroll system: full-screen surface, framed browser, changing atmosphere and 3D volume. One scroll progress drives framing, colour/camera interpolation and word reveals. Chapter buttons, gradient pause, grain and camera orbit controls allow inspection. Reduced motion offers static chapter selection.
+
+The earlier Atmospheric Mesh is still labelled as an original CSS study. `npm run build:shadergradient` rebuilds the new demo. The small Framer web adapter disables Framer-only live reload. Renderer/dependency attribution is preserved in `dist/SHADERGRADIENT_NOTICES.txt`, and the original choreography source is published as `dist/shadergradient-demo-source.txt`.

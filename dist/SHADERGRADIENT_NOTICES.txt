@@ -1,0 +1,34 @@
+Shader Gradient scroll system demo
+
+Renderer: @shadergradient/react 2.4.20
+Source: https://github.com/ruucm/shadergradient
+Upstream package declares MIT; the upstream README attributes MIT to ruucm and stone-skipper. The standard MIT terms are retained below.
+
+MIT License
+
+Copyright (c) ruucm and stone-skipper
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+React Three Fiber 9.3.0: MIT. https://github.com/pmndrs/react-three-fiber
+
+React and Three.js full notices are retained in THIRD_PARTY_NOTICES.txt. Embedded third-party copyright notices are retained in the compiled JavaScript.
+
+The renderer is actual Shader Gradient. The scroll choreography, text, framing and controls are original. A minimal web adapter disables Framer-only live reload; no Framer or Figma screen captures are reused.
