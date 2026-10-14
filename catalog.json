@@ -1200,7 +1200,7 @@
         "Botanical",
         "Maximalism"
       ],
-      "caveat": "Source reference only. Its previews demonstrate art direction, rather than a reusable component library. Swiss and Newsprint can be built mostly with typography and CSS grids; Botanical depends on strong licensed imagery; Maximalism needs careful hierarchy and restraint. Some light/dark labels differ from the observed preview appearance.",
+      "caveat": "Four original local compositions demonstrate Newsprint, Swiss Minimalist, Botanical and Maximalism. Full-page references remain linked. These are art-direction studies, not an upstream component library or copied prompts. Botanical uses original SVG illustrations. Some source light/dark labels differ from the observed preview appearance.",
       "install": "Browse a style, inspect its full-page preview, then open Get Prompt",
       "demos": [
         {
@@ -2997,6 +2997,66 @@
       "order": 87,
       "kind": "Runs Shader Gradient",
       "official": "https://shadergradient.co/"
+    },
+    {
+      "id": "dp-newsprint",
+      "title": "Design Prompts / Newsprint",
+      "effect": "dp-newsprint",
+      "source": "design-prompts",
+      "category": "Styles",
+      "style": "",
+      "effort": "Low",
+      "summary": "A newspaper front page with strong editorial hierarchy, section filters and readable story dialogs.",
+      "use": "Editorial sites, publications and thoughtful portfolios",
+      "watch": "Original composition inspired by the Design Prompts style reference. Original copy and SVG artwork; no upstream prompt or implementation copied. Open the full-page study for the complete layout and interactions.",
+      "order": 88,
+      "kind": "Original study",
+      "official": "https://www.designprompts.dev/newsprint"
+    },
+    {
+      "id": "dp-swiss",
+      "title": "Design Prompts / Swiss Minimalist",
+      "effect": "dp-swiss",
+      "source": "design-prompts",
+      "category": "Styles",
+      "style": "",
+      "effort": "Low",
+      "summary": "Precise grids, oversized sans-serif type and an interactive geometric composition. Switch the project index between list and grid.",
+      "use": "Design studios, project indexes and clear information architecture",
+      "watch": "Original composition inspired by the Design Prompts style reference. Original copy and SVG artwork; no upstream prompt or implementation copied. Open the full-page study for the complete layout and interactions.",
+      "order": 89,
+      "kind": "Original study",
+      "official": "https://www.designprompts.dev/swiss-minimalist"
+    },
+    {
+      "id": "dp-botanical",
+      "title": "Design Prompts / Botanical",
+      "effect": "dp-botanical",
+      "source": "design-prompts",
+      "category": "Styles",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Warm paper, organic plant illustrations, specimen selection and expandable care notes.",
+      "use": "Lifestyle collections, wellness and independent shops",
+      "watch": "Original composition inspired by the Design Prompts style reference. Original copy and SVG artwork; no upstream prompt or implementation copied. Open the full-page study for the complete layout and interactions.",
+      "order": 90,
+      "kind": "Original study",
+      "official": "https://www.designprompts.dev/botanical"
+    },
+    {
+      "id": "dp-maximalism",
+      "title": "Design Prompts / Maximalism",
+      "effect": "dp-maximalism",
+      "source": "design-prompts",
+      "category": "Styles",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Layered saturated posters with pointer movement, colour remixes and an illustrative ticket builder.",
+      "use": "Creative events, campaigns and expressive brand launches",
+      "watch": "Original composition inspired by the Design Prompts style reference. Original copy and SVG artwork; no upstream prompt or implementation copied. Open the full-page study for the complete layout and interactions.",
+      "order": 91,
+      "kind": "Original study",
+      "official": "https://www.designprompts.dev/maximalism"
     }
   ],
   "inspirations": [
