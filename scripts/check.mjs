@@ -24,9 +24,11 @@ const localFrames=JSON.parse(await readFile('componentry/images.json','utf8'));f
 const rbPage=await readFile('dist/react-bits.html','utf8');assert(rbPage.includes('react-bits-app/app-'));
 console.log(`Validated ${catalog.demos.length} studies, ${catalog.sources.length} sources, all 20 styles, script syntax, local assets, and library notices.`);
 
-assert.equal(catalog.demos.filter(d=>d.kind==='Runs Skiper UI').length,3);
+assert.equal(catalog.demos.filter(d=>d.kind==='Runs Skiper UI').length,6);
 assert.equal(catalog.demos.filter(d=>d.kind==='Runs Amicro').length,1);
 
 
 for(const id of ["am-cart","su-gooey","sp-home"])assert(!catalog.demos.some(d=>d.id===id));
 for(const id of ["tx-clip","tx-zoom"])assert(catalog.demos.some(d=>d.id===id&&d.category==="Motion"&&d.kind==="Runs GSAP"));
+
+assert(catalog.demos.some(d=>d.id==="su-preloader"&&d.kind==="Original study"));

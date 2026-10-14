@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **101 studies, 56 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **105 studies, 56 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -123,11 +123,11 @@ Starfield and particle typography use a dedicated high-contrast treatment: dark,
 
 ## Skiper UI & Amicro
 
-Three actual free Skiper picks: expanding strips (52), progressive blur (41), and smooth caret (106). One actual MIT Amicro component: CardScatterSpread. Compact demos have immediate captured previews and mount live in the visible gallery. Original Atlas artwork, attribution and adaptation notes are included.
+Six actual free Skiper picks: expanding strips (52), progressive blur (41), smooth caret (106), animated icons (99), SVG follow scroll (19), and text scroll (31). A seventh Skiper selection is an independent stairs preloader study based on visible motion, with no paid source or assets used. One actual MIT Amicro component: CardScatterSpread. Compact demos have immediate captured previews and mount live in the visible gallery. Original Atlas artwork, attribution and adaptation notes are included.
 
 Spline remains in the source directory as a tool reference. Its Mini Home embed was removed because loading and GPU cost were too high for this atlas.
 
-`npm run build:interactions` rebuilds the four compact demos. Selected upstream source is retained in `interaction-lab/upstream/`; source snapshots, licenses and adaptations are recorded in `dist/INTERACTION_NOTICES.txt` and `dist/AMICRO_LICENSE.txt`.
+`npm run build:interactions` rebuilds the eight selected component and motion demos. Selected upstream source is retained in `interaction-lab/upstream/`; source snapshots, licenses and adaptations are recorded in `dist/INTERACTION_NOTICES.txt` and `dist/AMICRO_LICENSE.txt`.
 
 ## Transition studies
 

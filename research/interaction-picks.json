@@ -7,7 +7,7 @@
       "framework": "React + Tailwind + Framer Motion",
       "license": "Selected free components permit personal/commercial use and modification with attribution; Pro components have separate terms.",
       "bestFor": "Compact micro-interactions, expanding galleries and spatial motion",
-      "caveat": "Actual free Skiper41/52/106 components, attributed in every demo. No Pro code. Compact layout, original artwork, keyboard/touch controls and fixed caret defaults are documented.",
+      "caveat": "Runs selected free Skiper41/52/106/99/19/31 components with attribution. The stairs preloader is an independent study of visible Skiper9 behaviour. Adaptations, contained scroll and keyboard/touch wrappers are documented.",
       "install": "npx shadcn@latest add @skiper-ui/skiper52",
       "demos": [
         {
@@ -21,6 +21,22 @@
         {
           "name": "Smooth caret",
           "url": "https://skiper-ui.com/v1/skiper106"
+        },
+        {
+          "name": "Animated icons",
+          "url": "https://skiper-ui.com/v1/skiper99"
+        },
+        {
+          "name": "SVG follow scroll",
+          "url": "https://skiper-ui.com/v1/skiper19"
+        },
+        {
+          "name": "Text scroll animation",
+          "url": "https://skiper-ui.com/v1/skiper31"
+        },
+        {
+          "name": "Stairs preloader reference",
+          "url": "https://skiper-ui.com/v1/skiper9"
         }
       ]
     },
@@ -136,6 +152,58 @@
       "use": "Chapter transitions and spatial navigation",
       "watch": "Original GSAP portal composition with a masked SVG foreground and layered scale. Replay or scrub the progress slider. Reduced motion changes scenes instantly.",
       "official": "https://gsap.com/docs/v3/GSAP/Timeline/"
+    },
+    {
+      "id": "su-icons",
+      "title": "Animated icons",
+      "source": "skiper-ui",
+      "category": "Components",
+      "kind": "Runs Skiper UI",
+      "effort": "Low",
+      "summary": "An arrow extends, a menu crosses and volume switches states.",
+      "use": "Compact navigation and expressive action controls",
+      "watch": "Actual Skiper99 ArrowIcon, MenuIcon and VolumeIcon with labelled keyboard/touch wrappers. Illustrative states; no navigation or audio action.",
+      "official": "https://skiper-ui.com/v1/skiper99",
+      "style": ""
+    },
+    {
+      "id": "su-preloader",
+      "title": "Stairs preloader",
+      "source": "skiper-ui",
+      "category": "Motion",
+      "kind": "Original study",
+      "effort": "Low",
+      "summary": "A staggered curtain lifts to reveal the artwork.",
+      "use": "Short introductory reveals and page transitions",
+      "watch": "Independent Motion implementation studied from the visible Skiper9 preview. No Pro code or assets used. Replay runs the full sequence; gallery starts at a readable midpoint. This is a preloader animation study, not an actual network progress indicator.",
+      "official": "https://skiper-ui.com/v1/skiper9",
+      "style": ""
+    },
+    {
+      "id": "su-follow",
+      "title": "SVG follow scroll",
+      "source": "skiper-ui",
+      "category": "Motion",
+      "kind": "Runs Skiper UI",
+      "effort": "Medium",
+      "summary": "A drawn line traces a winding route as you scroll.",
+      "use": "Connected section stories and expressive scroll paths",
+      "watch": "Actual Skiper19 LinePath and its progress mapping in an original contained scroll viewport. Scroll inside, or use Start/Follow. Original coloured waypoints replace upstream page copy.",
+      "official": "https://skiper-ui.com/v1/skiper19",
+      "style": ""
+    },
+    {
+      "id": "su-text-scroll",
+      "title": "Text scroll",
+      "source": "skiper-ui",
+      "category": "Motion",
+      "kind": "Runs Skiper UI",
+      "effort": "Medium",
+      "summary": "Scattered letters turn and gather into a word.",
+      "use": "Short headlines and kinetic chapter changes",
+      "watch": "Actual Skiper31 CharacterV1 scroll transforms on original FORM text, with contained native scrolling. Upstream page layout, brands and unused Lenis wrapper omitted. Scroll inside or use Start/Gather.",
+      "official": "https://skiper-ui.com/v1/skiper31",
+      "style": "kinetic"
     }
   ]
 }
