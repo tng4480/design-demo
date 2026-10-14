@@ -7,7 +7,7 @@
       "framework": "React + Tailwind + Framer Motion",
       "license": "Selected free components permit personal/commercial use and modification with attribution; Pro components have separate terms.",
       "bestFor": "Compact micro-interactions, expanding galleries and spatial motion",
-      "caveat": "Actual free Skiper41/52/64/106 renderers or filter, attributed in every demo. No Pro code. Compact layout, original artwork, keyboard/touch controls and fixed caret defaults are documented.",
+      "caveat": "Actual free Skiper41/52/106 components, attributed in every demo. No Pro code. Compact layout, original artwork, keyboard/touch controls and fixed caret defaults are documented.",
       "install": "npx shadcn@latest add @skiper-ui/skiper52",
       "demos": [
         {
@@ -21,10 +21,6 @@
         {
           "name": "Smooth caret",
           "url": "https://skiper-ui.com/v1/skiper106"
-        },
-        {
-          "name": "Gooey effect",
-          "url": "https://skiper-ui.com/v1/skiper64"
         }
       ]
     },
@@ -36,13 +32,9 @@
       "framework": "React + Tailwind + Motion",
       "license": "MIT (2026 SYED SUBHAN UDDIN); retained in AMICRO_LICENSE.txt.",
       "bestFor": "Tactile card spreads, morphing controls and spring-based micro-interactions",
-      "caveat": "Actual components pinned to dc2a183. Cart state is local; it does not submit orders. Card fan adds a keyboard/touch wrapper with original artwork.",
+      "caveat": "Actual CardScatterSpread pinned to dc2a183, with original artwork and a keyboard/touch toggle.",
       "install": "Copy the selected MIT component from the repository",
       "demos": [
-        {
-          "name": "Morphing controls",
-          "url": "https://amicro.dev/morphing"
-        },
         {
           "name": "Card spreads",
           "url": "https://amicro.dev/cards"
@@ -56,16 +48,16 @@
       "framework": "Hosted visual 3D editor + Spline runtime",
       "license": "Hosted platform and scene-specific rights; an embed does not grant an asset reuse license.",
       "bestFor": "Interactive 3D objects, material studies, physical interactions and product scenes",
-      "caveat": "Actual Mini Home - Conditional Logic template linked from Spline\u2019s official library. Runs in an app preview iframe only after Play. Requires network and WebGL. No runtime or scene assets redistributed; pause unloads the frame.",
+      "caveat": "Reviewed the official library and Mini Home template. No local Spline scene is included: the runtime and scene loading were too heavy for this atlas. Retained as a tool reference; use your own exported scene and measure loading/GPU cost.",
       "install": "npm install @splinetool/runtime, then load your exported scene URL",
       "demos": [
         {
-          "name": "Mini Home \u2014 Conditional Logic",
-          "url": "https://app.spline.design/file/8dca6daa-d77b-4c65-85a5-b220b8b66ba0"
-        },
-        {
           "name": "3D example library",
           "url": "https://spline.design/examples"
+        },
+        {
+          "name": "Integration documentation",
+          "url": "https://docs.spline.design/"
         }
       ]
     }
@@ -108,18 +100,6 @@
       "official": "https://skiper-ui.com/v1/skiper106"
     },
     {
-      "id": "su-gooey",
-      "title": "Gooey drag",
-      "source": "skiper-ui",
-      "style": "liquid",
-      "kind": "Runs Skiper UI",
-      "effort": "Low",
-      "summary": "Drag a shape away and watch its surface merge back.",
-      "use": "Playful controls and fluid brand interactions",
-      "watch": "Actual Skiper64 SVG gooey filter with an original bounded Motion drag composition. Drag the small shape or use the Separate/Merge button for keyboard and touch.",
-      "official": "https://skiper-ui.com/v1/skiper64"
-    },
-    {
       "id": "am-spread",
       "title": "Card fan",
       "source": "amicro",
@@ -132,28 +112,30 @@
       "official": "https://amicro.dev/cards"
     },
     {
-      "id": "am-cart",
-      "title": "Cart morph",
-      "source": "amicro",
+      "id": "tx-clip",
+      "title": "Clip path reveal",
+      "source": "gsap",
       "style": "",
-      "kind": "Runs Amicro",
+      "kind": "Runs GSAP",
+      "category": "Motion",
       "effort": "Low",
-      "summary": "A button becomes confirmation as its count travels to the cart.",
-      "use": "Visible action feedback and compact shopping controls",
-      "watch": "Actual Amicro AddToCartMorph. Local count, shared-layout particle and reset. Does not connect to a shop or submit an order.",
-      "official": "https://amicro.dev/morphing"
+      "summary": "A circular mask opens one scene into another.",
+      "use": "Image reveals, section changes and page transitions",
+      "watch": "Original GSAP study, not an Amicro or Skiper component. Replay, scrub or click the scene to move the reveal origin. Reduced motion changes scenes instantly.",
+      "official": "https://gsap.com/docs/v3/GSAP/Timeline/"
     },
     {
-      "id": "sp-home",
-      "title": "Mini home",
-      "source": "spline",
-      "style": "clay",
-      "kind": "Runs Spline",
+      "id": "tx-zoom",
+      "title": "Zoom through",
+      "source": "gsap",
+      "style": "",
+      "kind": "Runs GSAP",
+      "category": "Motion",
       "effort": "Medium",
-      "summary": "Navigate a playful furnished house with conditional 3D interactions.",
-      "use": "Interactive environments, gamified navigation and spatial storytelling",
-      "watch": "Actual official Spline Mini Home template displayed through the app preview iframe. Press Play, click the scene and use arrow keys. Gallery uses an immediate capture. Pause unloads the scene. Requires network/WebGL; use your own editable copy for a product.",
-      "official": "https://app.spline.design/file/8dca6daa-d77b-4c65-85a5-b220b8b66ba0"
+      "summary": "Push through an opening into the next scene.",
+      "use": "Chapter transitions and spatial navigation",
+      "watch": "Original GSAP portal composition with a masked SVG foreground and layered scale. Replay or scrub the progress slider. Reduced motion changes scenes instantly.",
+      "official": "https://gsap.com/docs/v3/GSAP/Timeline/"
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **102 studies, 56 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **101 studies, 56 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -121,10 +121,14 @@ The later pastel colour shift has been rolled back. Original renderer palettes a
 
 Starfield and particle typography use a dedicated high-contrast treatment: dark, larger points on a light surface, with denser ATLAS lettering. This readability adjustment is independent of the colour rollback elsewhere.
 
-## Skiper UI, Amicro & Spline
+## Skiper UI & Amicro
 
-Four actual free Skiper picks: expanding strips (52), progressive blur (41), smooth caret (106), and a gooey drag composition using its SVG filter (64). Two actual MIT Amicro components: CardScatterSpread and AddToCartMorph. All compact demos have immediate captured previews and mount live in the visible gallery. Original Atlas artwork, attribution and adaptation notes are included.
+Three actual free Skiper picks: expanding strips (52), progressive blur (41), and smooth caret (106). One actual MIT Amicro component: CardScatterSpread. Compact demos have immediate captured previews and mount live in the visible gallery. Original Atlas artwork, attribution and adaptation notes are included.
 
-Spline’s official Mini Home template is displayed through its hosted app preview after pressing Play. Its gallery capture appears immediately. Pause unloads the third-party iframe; no Spline runtime or scene asset is redistributed. Network/WebGL is required. Open the template in Spline to make an editable copy for your own project.
+Spline remains in the source directory as a tool reference. Its Mini Home embed was removed because loading and GPU cost were too high for this atlas.
 
-`npm run build:interactions` rebuilds the six compact demos and Spline wrapper. Selected upstream source is retained in `interaction-lab/upstream/`; source snapshots, licenses and adaptations are recorded in `dist/INTERACTION_NOTICES.txt` and `dist/AMICRO_LICENSE.txt`.
+`npm run build:interactions` rebuilds the four compact demos. Selected upstream source is retained in `interaction-lab/upstream/`; source snapshots, licenses and adaptations are recorded in `dist/INTERACTION_NOTICES.txt` and `dist/AMICRO_LICENSE.txt`.
+
+## Transition studies
+
+`transition-studies.html` has two original GSAP demonstrations: a clip-path reveal with an adjustable origin, and a zoom-through portal. Both offer replay, a progress slider, immediate gallery previews and reduced-motion scene changes. They also appear under Scroll & motion. They are original transition studies, not upstream Amicro or Skiper components.
