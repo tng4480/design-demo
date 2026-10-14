@@ -2,3 +2,9 @@
 @media(max-width:760px){.showroom-header{font-size:10px}.showroom-header span{display:none}.showroom{padding:30px 20px}.showroom-layout{display:block}.showroom nav{position:static;display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:12px}.showroom nav section{margin-bottom:10px}.study-stage{height:430px}.hero-copy h1{font-size:50px}.type-composition h1,.blur-headline{font-size:43px}.study-notes dl{grid-template-columns:1fr;gap:4px}.study-notes dd{margin-bottom:15px}}
 
 .gallery .hero-copy>small,.gallery .orb-copy>small,.gallery .type-composition>small,.gallery .glass-composition>small{display:none}.gallery .card-composition>small,.gallery .pixel-composition>small{opacity:.65}.gallery .small-action{font-size:10px}
+
+/* Palette tuned to the Atlas gallery; light surfaces for UI, muted depth for light effects. */
+.stage-aurora{background:#56655c;color:#304437}.stage-silk{background:#b7c2ab;color:#20372c}.stage-orb{background:#373446;color:#f2eddf}.stage-blur-text{background:#eee8dc;color:#3c473b}.stage-rotating-text{background:#e0e7d7;color:#354a39}.stage-tilted-card{background:#e6e0ed;color:#4d435e}.stage-glass-icons{background:#e9e3ed;color:#473d55}.stage-pixel-transition{background:#e7dfd3;color:#5a493b}.card-composition{background:radial-gradient(ellipse at 60% 25%,#f3eff4,#ddd5e4 85%)}.glass-composition{background:radial-gradient(ellipse at 50% 55%,#f8f3f5,#e5dce9 85%)}.card-composition>small,.pixel-composition>small{color:inherit;opacity:.8}.small-action{color:#354a39;border-color:#a7b99a;background:#f6f8ee}.art-caption{color:#3c4c3c}.art-caption b{text-shadow:none}.pixel-face b{color:#3c4c3c}.pixel-face.alternate b{color:#654a45}.rotating-pill{color:#283e2d}.stage-silk .hero-copy p{opacity:1}.study-status{color:inherit}.stage-glass-icons .glass-icon-label{color:inherit}
+
+.stage-aurora .hero-copy p{opacity:.85}
+.stage-silk .silk-canvas{mix-blend-mode:soft-light;opacity:.45}
