@@ -56,13 +56,28 @@
       "license": "MIT; dependencies have separate terms",
       "install": "npx shadcn@latest add @componentry/cursor-driven-particle-typography",
       "bestFor": "Distinctive hero effects, experimental type, editorial portfolios",
-      "caveat": "Validate touch, reduced motion and performance per component; dense particles can be expensive",
+      "caveat": "Validate touch, reduced motion and performance per component; dense particles can be expensive The three selected demos run actual upstream React source at b602c28 with original control panels; Scroll Choreography uses its documented public Unsplash images.",
       "github": "https://github.com/harshjdhv/componentry",
       "githubStarsApprox": "604",
       "evidence": [
         "https://github.com/harshjdhv/componentry"
       ],
       "demos": [
+        {
+          "name": "Hover Transition",
+          "url": "https://componentry.dev/docs/components/hover-transition",
+          "description": "Eight transitions with custom content, focus interaction and direction controls"
+        },
+        {
+          "name": "Circuit Board",
+          "url": "https://componentry.dev/docs/components/circuit-board",
+          "description": "Animated SVG traces and labelled nodes"
+        },
+        {
+          "name": "Scroll Choreography",
+          "url": "https://componentry.dev/docs/components/scroll-choreography",
+          "description": "Four images move, stack, then expand to a full-screen hero"
+        },
         {
           "name": "Particle Typography",
           "url": "https://componentry.dev/docs/components/cursor-driven-particle-typography",
@@ -2181,7 +2196,7 @@
       "watch": "Original dock study. Touch uses normal-size targets.",
       "order": 34,
       "kind": "Original study",
-      "official": "https://componentry.dev/docs/components/cursor-driven-particle-typography"
+      "official": "https://componentry.dev/docs/components/hover-transition"
     },
     {
       "id": "fluted-glass",
@@ -2241,7 +2256,7 @@
       "watch": "Original CSS approximation. Blur-heavy on large surfaces.",
       "order": 38,
       "kind": "Original study",
-      "official": "https://componentry.dev/docs/components/cursor-driven-particle-typography"
+      "official": "https://componentry.dev/docs/components/hover-transition"
     },
     {
       "id": "beam-network",
@@ -2917,6 +2932,51 @@
       "order": 83,
       "kind": "Runs Paper Shaders",
       "official": "https://shaders.paper.design/neuro-noise"
+    },
+    {
+      "id": "componentry-hover",
+      "title": "Componentry / Hover Transition",
+      "effect": "cr-hover",
+      "source": "componentry",
+      "category": "Components",
+      "style": "",
+      "effort": "Low",
+      "summary": "Explore eight hover transitions with adjustable direction, duration and reveal content.",
+      "use": "Featured work, collection cards and content previews",
+      "watch": "Actual Componentry HoverTransition at b602c28. Original card content; pointer, focus and tap reveal.",
+      "order": 84,
+      "kind": "Runs Componentry",
+      "official": "https://componentry.dev/docs/components/hover-transition"
+    },
+    {
+      "id": "componentry-circuit",
+      "title": "Componentry / Circuit Board",
+      "effect": "cr-circuit",
+      "source": "componentry",
+      "category": "Components",
+      "style": "blueprint",
+      "effort": "Medium",
+      "summary": "Animated circuit traces connect labelled nodes in an illustrative workflow.",
+      "use": "Technology diagrams, system flows and integration stories",
+      "watch": "Actual Componentry CircuitBoard at b602c28. Original graph and controls for grid, theme, pulse speed, trace width and node status.",
+      "order": 85,
+      "kind": "Runs Componentry",
+      "official": "https://componentry.dev/docs/components/circuit-board"
+    },
+    {
+      "id": "componentry-scroll",
+      "title": "Componentry / Scroll Choreography",
+      "effect": "cr-scroll",
+      "source": "componentry",
+      "category": "Motion",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Four images trade positions, gather into a stack and expand into a full-screen hero.",
+      "use": "Editorial galleries, launches and immersive portfolio transitions",
+      "watch": "Actual Componentry ScrollChoreography at b602c28, with the documented public Unsplash images. Use the phase buttons or open the full-page demo to scroll the complete sequence. Reduced motion shows a static image grid.",
+      "order": 86,
+      "kind": "Runs Componentry",
+      "official": "https://componentry.dev/docs/components/scroll-choreography"
     }
   ],
   "inspirations": [

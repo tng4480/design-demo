@@ -9,7 +9,8 @@
     "publish": "node scripts/publish-pages.mjs",
     "build:react-bits": "node scripts/react-bits-build.mjs",
     "build:shadcn": "node scripts/shadcn-build.mjs",
-    "build:paper": "node scripts/paper-shaders-build.mjs"
+    "build:paper": "node scripts/paper-shaders-build.mjs",
+    "build:componentry": "node scripts/componentry-build.mjs"
   },
   "dependencies": {
     "@barba/core": "2.10.3",
@@ -17,6 +18,7 @@
     "@tabler/icons": "3.49.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
+    "framer-motion": "12.43.0",
     "gsap": "3.13.0",
     "lenis": "1.3.11",
     "lucide-react": "0.542.0",

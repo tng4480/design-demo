@@ -2,16 +2,340 @@
   "checkedAt": "2026-10-14",
   "notes": "Primary official docs and public GitHub repositories. Suitability assessments are editorial. Official preview links are references, not claims that local demos reproduce upstream code.",
   "sources": [
-    {"id":"watermelon","name":"Watermelon UI","url":"https://ui.watermelon.sh","category":"Product components","framework":"React 18/19, Tailwind CSS 4, shadcn/ui, Motion","license":"Free MIT; no Pro tier claimed by official docs","install":"npx shadcn@latest add https://registry.watermelon.sh/r/expandable-event-card.json","bestFor":"Practical SaaS interaction patterns and realistic dashboard compositions","caveat":"Copying source means maintaining it; animation-heavy SSR usage needs client boundaries","evidence":["https://ui.watermelon.sh/framework-support","https://ui.watermelon.sh/free/react-components","https://ui.watermelon.sh/api/catalog/summary"],"catalog":{"components":516,"animated":131,"blocks":189,"dashboards":12,"templates":1},"demos":[{"name":"Expandable Event Card","url":"https://ui.watermelon.sh/animated-components/expandable-event-card","description":"Card expands into a full-screen modal"},{"name":"Onboarding Checklist","url":"https://ui.watermelon.sh/animated-components/onboarding-checklist","description":"Progress tracking and completion feedback"},{"name":"Contextual AI Bar","url":"https://ui.watermelon.sh/animated-components/contextual-ai-bar","description":"Action icons morph into an AI input"},{"name":"Command Search","url":"https://ui.watermelon.sh/animated-components/command-search","description":"Sectioned command palette with keyboard navigation"}]},
-    {"id":"componentry","name":"Componentry","url":"https://componentry.dev","category":"Visual interactions","framework":"React, Tailwind CSS, Motion; some GSAP/WebGL components","license":"MIT; dependencies have separate terms","install":"npx shadcn@latest add @componentry/cursor-driven-particle-typography","bestFor":"Distinctive hero effects, experimental type, editorial portfolios","caveat":"Validate touch, reduced motion and performance per component; dense particles can be expensive","github":"https://github.com/harshjdhv/componentry","githubStarsApprox":"604","evidence":["https://github.com/harshjdhv/componentry"],"demos":[{"name":"Particle Typography","url":"https://componentry.dev/docs/components/cursor-driven-particle-typography","description":"Cursor disperses spring-driven particles that reassemble as text"},{"name":"Split Flap Display","url":"https://componentry.dev/docs/components/split-flap-display","description":"Mechanical departure-board type"},{"name":"Image Ripple Effect","url":"https://componentry.dev/docs/components/image-ripple-effect","description":"Fluid image interaction"},{"name":"WebGL Liquid","url":"https://componentry.dev/docs/components/webgl-liquid","description":"Shader-based liquid background"}]},
-    {"id":"kokonut","name":"Kokonut UI","url":"https://kokonutui.com","category":"Animated product components","framework":"React, Tailwind CSS, Motion, shadcn/ui","license":"Free catalog MIT; Pro templates separately paid","install":"npx shadcn@latest add @kokonutui/particle-button","bestFor":"Polished controls, AI inputs, compact product cards","caveat":"Premium template access differs from free component license","github":"https://github.com/kokonut-labs/kokonutui","githubStarsApprox":"2.2k","evidence":["https://github.com/kokonut-labs/kokonutui","https://kokonutui.com"],"demos":[{"name":"Apple Activity Card","url":"https://kokonutui.com/docs/cards/apple-activity-card","description":"Animated concentric progress rings"},{"name":"Liquid Glass","url":"https://kokonutui.com/docs/cards/liquid-glass-card","description":"Refractive glass card"},{"name":"Particle Button","url":"https://kokonutui.com/docs/buttons/particle-button","description":"Playful particle click feedback"},{"name":"Morphic Navbar","url":"https://kokonutui.com/docs/navigation/morphic-navbar","description":"Animated navigation transformations"}]},
-    {"id":"bklit","name":"Bklit UI","url":"https://bklit.com","category":"Data visualization","framework":"React, Visx, Motion, shadcn/ui","license":"Chart source MIT; Studio proprietary and cannot be reused/resold/redistributed without permission","install":"npx shadcn@latest add @bklit/line-chart","bestFor":"Expressive dashboards and animated data storytelling","caveat":"Chart library and hosted Studio have different licenses","github":"https://github.com/bklit/bklit-ui","githubStarsApprox":"1.7k","evidence":["https://github.com/bklit/bklit-ui","https://bklit.com/docs/installation"],"demos":[{"name":"Live Line Chart","url":"https://bklit.com/docs/components/live-line-chart","description":"Streaming chart with scrolling, crosshair and animated axes"},{"name":"Bar Chart","url":"https://bklit.com/docs/components/bar-chart","description":"Composable bars, orientations and animations"},{"name":"Heatmap Chart","url":"https://bklit.com/docs/components/heatmap-chart","description":"Contribution-style animated cells"},{"name":"Sankey Chart","url":"https://bklit.com/docs/components/sankey-chart","description":"Flow diagram"}]},
-    {"id":"motion","name":"Motion","url":"https://motion.dev","category":"Animation engine","framework":"React, JavaScript, Vue","license":"Core MIT; Motion+ examples and UI separately paid","install":"npm install motion","bestFor":"Shared layout transitions, gestures, state-driven UI animation","caveat":"Public live previews do not imply premium source is free","evidence":["https://motion.dev","https://motion.dev/docs/react"],"demos":[{"name":"Layout animation","url":"https://motion.dev/examples/react-layout-animation","description":"Animated layout changes"},{"name":"iOS App Folder","url":"https://motion.dev/examples/react-ios-app-folder","description":"Expanding folder interaction"},{"name":"Parallax","url":"https://motion.dev/examples/react-parallax","description":"Scroll-linked layered movement"}]},
-    {"id":"shadergradient","name":"Shader Gradient","url":"https://shadergradient.co","category":"3D backgrounds","framework":"React + React Three Fiber + Three.js; Vue/TresJS; Framer and Figma integrations","license":"MIT upstream","install":"npm i @shadergradient/react @react-three/fiber three three-stdlib camera-controls","bestFor":"Fluid 3D hero surfaces, gradient mesh and atmospheric backgrounds","caveat":"GPU load and React/R3F compatibility matter; avoid mounting many simultaneous canvases","github":"https://github.com/ruucm/shadergradient","githubStarsApprox":"2.8k","evidence":["https://github.com/ruucm/shadergradient"],"demos":[{"name":"Gradient customizer","url":"https://www.shadergradient.co/customize","description":"Plane, sphere, waterPlane; colors, grain, lighting and motion"}]},
-    {"id":"framer","name":"Framer Marketplace","url":"https://www.framer.com/marketplace/components/","category":"No-code assets","framework":"Framer canvas/components","license":"Per-asset; free and paid; selected shaders Single-Use","install":"Copy asset URL into Framer canvas","bestFor":"Rapid site composition with designer-editable assets","caveat":"A Framer asset is not automatically reusable React source outside Framer","evidence":["https://www.framer.com/marketplace/components/liquid-shader/","https://www.framer.com/marketplace/components/fluid-scroll-shader/"],"demos":[{"name":"Liquid Shader","url":"https://www.framer.com/marketplace/components/liquid-shader/","description":"WebGL fluid colors, cursor distortion, optional chromatic aberration; listed $5"},{"name":"Fluid Scroll Shader","url":"https://www.framer.com/marketplace/components/fluid-scroll-shader/","description":"Scroll interpolates staged 4-color palettes; listed $5"}]},
-    {"id":"manus","name":"Manus","url":"https://manus.im","category":"AI website builder","framework":"Hosted conversational full-stack builder; full code export advertised","license":"Commercial service; generated application ownership advertised; inspect export dependencies separately","install":"Use Manus web app","bestFor":"Rapid whole-site prototyping and app exploration","caveat":"A building tool rather than a component library; public pricing page did not expose plan amounts to crawler","evidence":["https://manus.im/features/webapp","https://manus.im/pricing"],"demos":[{"name":"Awesome Manus web-app showcase","url":"https://awesome.manus.space/?category=web-app","description":"Official linked gallery of built websites"}]},
-    {"id":"khroma","name":"Khroma","url":"https://www.khroma.co/","category":"Color exploration","framework":"Browser tool; export CSS/hex/RGB","license":"Hosted tool; code license not established","install":"Choose preferred colors to train the browser-based generator","bestFor":"Personalized palette, typography and gradient comparisons","caveat":"Color proposals still need contextual accessibility testing","evidence":["https://www.khroma.co/"],"demos":[{"name":"Khroma generator","url":"https://www.khroma.co/","description":"Train color preferences; inspect typography, gradients, palettes and WCAG pair ratings"}]},
-    {"id":"colorkit","name":"ColorKit.io","url":"https://colorkit.io/","category":"Color blending","framework":"Browser tool","license":"Hosted tool; code license and pricing not established","install":"Enter start/end colors and blend-step count","bestFor":"Constructing stepped color scales for tokens and charts","caveat":"This exact domain is a color blender; do not conflate it with colorkit.tools or colorkit.app","evidence":["https://colorkit.io/"],"demos":[{"name":"Color Blender","url":"https://colorkit.io/","description":"Intermediate shades; URL and SVG export, CSS export described as coming soon"}]},
-    {"id":"colors-requested","name":"colors.co — unresolved","url":"https://colors.co","category":"Needs domain verification","framework":"Unknown","license":"Unknown","install":"None verified","bestFor":"Preserved user-supplied source","caveat":"Exact domain could not be fetched. Coolors at coolors.co is a likely intended alternative but was not silently substituted","evidence":[],"demos":[]}
+    {
+      "id": "watermelon",
+      "name": "Watermelon UI",
+      "url": "https://ui.watermelon.sh",
+      "category": "Product components",
+      "framework": "React 18/19, Tailwind CSS 4, shadcn/ui, Motion",
+      "license": "Free MIT; no Pro tier claimed by official docs",
+      "install": "npx shadcn@latest add https://registry.watermelon.sh/r/expandable-event-card.json",
+      "bestFor": "Practical SaaS interaction patterns and realistic dashboard compositions",
+      "caveat": "Copying source means maintaining it; animation-heavy SSR usage needs client boundaries",
+      "evidence": [
+        "https://ui.watermelon.sh/framework-support",
+        "https://ui.watermelon.sh/free/react-components",
+        "https://ui.watermelon.sh/api/catalog/summary"
+      ],
+      "catalog": {
+        "components": 516,
+        "animated": 131,
+        "blocks": 189,
+        "dashboards": 12,
+        "templates": 1
+      },
+      "demos": [
+        {
+          "name": "Expandable Event Card",
+          "url": "https://ui.watermelon.sh/animated-components/expandable-event-card",
+          "description": "Card expands into a full-screen modal"
+        },
+        {
+          "name": "Onboarding Checklist",
+          "url": "https://ui.watermelon.sh/animated-components/onboarding-checklist",
+          "description": "Progress tracking and completion feedback"
+        },
+        {
+          "name": "Contextual AI Bar",
+          "url": "https://ui.watermelon.sh/animated-components/contextual-ai-bar",
+          "description": "Action icons morph into an AI input"
+        },
+        {
+          "name": "Command Search",
+          "url": "https://ui.watermelon.sh/animated-components/command-search",
+          "description": "Sectioned command palette with keyboard navigation"
+        }
+      ]
+    },
+    {
+      "id": "componentry",
+      "name": "Componentry",
+      "url": "https://componentry.dev",
+      "category": "Visual interactions",
+      "framework": "React, Tailwind CSS, Motion; some GSAP/WebGL components",
+      "license": "MIT; dependencies have separate terms",
+      "install": "npx shadcn@latest add @componentry/cursor-driven-particle-typography",
+      "bestFor": "Distinctive hero effects, experimental type, editorial portfolios",
+      "caveat": "Validate touch, reduced motion and performance per component; dense particles can be expensive The three selected demos run actual upstream React source at b602c28 with original control panels; Scroll Choreography uses its documented public Unsplash images.",
+      "github": "https://github.com/harshjdhv/componentry",
+      "githubStarsApprox": "604",
+      "evidence": [
+        "https://github.com/harshjdhv/componentry"
+      ],
+      "demos": [
+        {
+          "name": "Hover Transition",
+          "url": "https://componentry.dev/docs/components/hover-transition",
+          "description": "Eight transitions with custom content, focus interaction and direction controls"
+        },
+        {
+          "name": "Circuit Board",
+          "url": "https://componentry.dev/docs/components/circuit-board",
+          "description": "Animated SVG traces and labelled nodes"
+        },
+        {
+          "name": "Scroll Choreography",
+          "url": "https://componentry.dev/docs/components/scroll-choreography",
+          "description": "Four images move, stack, then expand to a full-screen hero"
+        },
+        {
+          "name": "Particle Typography",
+          "url": "https://componentry.dev/docs/components/cursor-driven-particle-typography",
+          "description": "Cursor disperses spring-driven particles that reassemble as text"
+        },
+        {
+          "name": "Split Flap Display",
+          "url": "https://componentry.dev/docs/components/split-flap-display",
+          "description": "Mechanical departure-board type"
+        },
+        {
+          "name": "Image Ripple Effect",
+          "url": "https://componentry.dev/docs/components/image-ripple-effect",
+          "description": "Fluid image interaction"
+        },
+        {
+          "name": "WebGL Liquid",
+          "url": "https://componentry.dev/docs/components/webgl-liquid",
+          "description": "Shader-based liquid background"
+        }
+      ]
+    },
+    {
+      "id": "kokonut",
+      "name": "Kokonut UI",
+      "url": "https://kokonutui.com",
+      "category": "Animated product components",
+      "framework": "React, Tailwind CSS, Motion, shadcn/ui",
+      "license": "Free catalog MIT; Pro templates separately paid",
+      "install": "npx shadcn@latest add @kokonutui/particle-button",
+      "bestFor": "Polished controls, AI inputs, compact product cards",
+      "caveat": "Premium template access differs from free component license",
+      "github": "https://github.com/kokonut-labs/kokonutui",
+      "githubStarsApprox": "2.2k",
+      "evidence": [
+        "https://github.com/kokonut-labs/kokonutui",
+        "https://kokonutui.com"
+      ],
+      "demos": [
+        {
+          "name": "Apple Activity Card",
+          "url": "https://kokonutui.com/docs/cards/apple-activity-card",
+          "description": "Animated concentric progress rings"
+        },
+        {
+          "name": "Liquid Glass",
+          "url": "https://kokonutui.com/docs/cards/liquid-glass-card",
+          "description": "Refractive glass card"
+        },
+        {
+          "name": "Particle Button",
+          "url": "https://kokonutui.com/docs/buttons/particle-button",
+          "description": "Playful particle click feedback"
+        },
+        {
+          "name": "Morphic Navbar",
+          "url": "https://kokonutui.com/docs/navigation/morphic-navbar",
+          "description": "Animated navigation transformations"
+        }
+      ]
+    },
+    {
+      "id": "bklit",
+      "name": "Bklit UI",
+      "url": "https://bklit.com",
+      "category": "Data visualization",
+      "framework": "React, Visx, Motion, shadcn/ui",
+      "license": "Chart source MIT; Studio proprietary and cannot be reused/resold/redistributed without permission",
+      "install": "npx shadcn@latest add @bklit/line-chart",
+      "bestFor": "Expressive dashboards and animated data storytelling",
+      "caveat": "Chart library and hosted Studio have different licenses",
+      "github": "https://github.com/bklit/bklit-ui",
+      "githubStarsApprox": "1.7k",
+      "evidence": [
+        "https://github.com/bklit/bklit-ui",
+        "https://bklit.com/docs/installation"
+      ],
+      "demos": [
+        {
+          "name": "Live Line Chart",
+          "url": "https://bklit.com/docs/components/live-line-chart",
+          "description": "Streaming chart with scrolling, crosshair and animated axes"
+        },
+        {
+          "name": "Bar Chart",
+          "url": "https://bklit.com/docs/components/bar-chart",
+          "description": "Composable bars, orientations and animations"
+        },
+        {
+          "name": "Heatmap Chart",
+          "url": "https://bklit.com/docs/components/heatmap-chart",
+          "description": "Contribution-style animated cells"
+        },
+        {
+          "name": "Sankey Chart",
+          "url": "https://bklit.com/docs/components/sankey-chart",
+          "description": "Flow diagram"
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "name": "Motion",
+      "url": "https://motion.dev",
+      "category": "Animation engine",
+      "framework": "React, JavaScript, Vue",
+      "license": "Core MIT; Motion+ examples and UI separately paid",
+      "install": "npm install motion",
+      "bestFor": "Shared layout transitions, gestures, state-driven UI animation",
+      "caveat": "Public live previews do not imply premium source is free",
+      "evidence": [
+        "https://motion.dev",
+        "https://motion.dev/docs/react"
+      ],
+      "demos": [
+        {
+          "name": "Layout animation",
+          "url": "https://motion.dev/examples/react-layout-animation",
+          "description": "Animated layout changes"
+        },
+        {
+          "name": "iOS App Folder",
+          "url": "https://motion.dev/examples/react-ios-app-folder",
+          "description": "Expanding folder interaction"
+        },
+        {
+          "name": "Parallax",
+          "url": "https://motion.dev/examples/react-parallax",
+          "description": "Scroll-linked layered movement"
+        }
+      ]
+    },
+    {
+      "id": "shadergradient",
+      "name": "Shader Gradient",
+      "url": "https://shadergradient.co",
+      "category": "3D backgrounds",
+      "framework": "React + React Three Fiber + Three.js; Vue/TresJS; Framer and Figma integrations",
+      "license": "MIT upstream",
+      "install": "npm i @shadergradient/react @react-three/fiber three three-stdlib camera-controls",
+      "bestFor": "Fluid 3D hero surfaces, gradient mesh and atmospheric backgrounds",
+      "caveat": "GPU load and React/R3F compatibility matter; avoid mounting many simultaneous canvases",
+      "github": "https://github.com/ruucm/shadergradient",
+      "githubStarsApprox": "2.8k",
+      "evidence": [
+        "https://github.com/ruucm/shadergradient"
+      ],
+      "demos": [
+        {
+          "name": "Gradient customizer",
+          "url": "https://www.shadergradient.co/customize",
+          "description": "Plane, sphere, waterPlane; colors, grain, lighting and motion"
+        }
+      ]
+    },
+    {
+      "id": "framer",
+      "name": "Framer Marketplace",
+      "url": "https://www.framer.com/marketplace/components/",
+      "category": "No-code assets",
+      "framework": "Framer canvas/components",
+      "license": "Per-asset; free and paid; selected shaders Single-Use",
+      "install": "Copy asset URL into Framer canvas",
+      "bestFor": "Rapid site composition with designer-editable assets",
+      "caveat": "A Framer asset is not automatically reusable React source outside Framer",
+      "evidence": [
+        "https://www.framer.com/marketplace/components/liquid-shader/",
+        "https://www.framer.com/marketplace/components/fluid-scroll-shader/"
+      ],
+      "demos": [
+        {
+          "name": "Liquid Shader",
+          "url": "https://www.framer.com/marketplace/components/liquid-shader/",
+          "description": "WebGL fluid colors, cursor distortion, optional chromatic aberration; listed $5"
+        },
+        {
+          "name": "Fluid Scroll Shader",
+          "url": "https://www.framer.com/marketplace/components/fluid-scroll-shader/",
+          "description": "Scroll interpolates staged 4-color palettes; listed $5"
+        }
+      ]
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "url": "https://manus.im",
+      "category": "AI website builder",
+      "framework": "Hosted conversational full-stack builder; full code export advertised",
+      "license": "Commercial service; generated application ownership advertised; inspect export dependencies separately",
+      "install": "Use Manus web app",
+      "bestFor": "Rapid whole-site prototyping and app exploration",
+      "caveat": "A building tool rather than a component library; public pricing page did not expose plan amounts to crawler",
+      "evidence": [
+        "https://manus.im/features/webapp",
+        "https://manus.im/pricing"
+      ],
+      "demos": [
+        {
+          "name": "Awesome Manus web-app showcase",
+          "url": "https://awesome.manus.space/?category=web-app",
+          "description": "Official linked gallery of built websites"
+        }
+      ]
+    },
+    {
+      "id": "khroma",
+      "name": "Khroma",
+      "url": "https://www.khroma.co/",
+      "category": "Color exploration",
+      "framework": "Browser tool; export CSS/hex/RGB",
+      "license": "Hosted tool; code license not established",
+      "install": "Choose preferred colors to train the browser-based generator",
+      "bestFor": "Personalized palette, typography and gradient comparisons",
+      "caveat": "Color proposals still need contextual accessibility testing",
+      "evidence": [
+        "https://www.khroma.co/"
+      ],
+      "demos": [
+        {
+          "name": "Khroma generator",
+          "url": "https://www.khroma.co/",
+          "description": "Train color preferences; inspect typography, gradients, palettes and WCAG pair ratings"
+        }
+      ]
+    },
+    {
+      "id": "colorkit",
+      "name": "ColorKit.io",
+      "url": "https://colorkit.io/",
+      "category": "Color blending",
+      "framework": "Browser tool",
+      "license": "Hosted tool; code license and pricing not established",
+      "install": "Enter start/end colors and blend-step count",
+      "bestFor": "Constructing stepped color scales for tokens and charts",
+      "caveat": "This exact domain is a color blender; do not conflate it with colorkit.tools or colorkit.app",
+      "evidence": [
+        "https://colorkit.io/"
+      ],
+      "demos": [
+        {
+          "name": "Color Blender",
+          "url": "https://colorkit.io/",
+          "description": "Intermediate shades; URL and SVG export, CSS export described as coming soon"
+        }
+      ]
+    },
+    {
+      "id": "colors-requested",
+      "name": "colors.co \u2014 unresolved",
+      "url": "https://colors.co",
+      "category": "Needs domain verification",
+      "framework": "Unknown",
+      "license": "Unknown",
+      "install": "None verified",
+      "bestFor": "Preserved user-supplied source",
+      "caveat": "Exact domain could not be fetched. Coolors at coolors.co is a likely intended alternative but was not silently substituted",
+      "evidence": [],
+      "demos": []
+    }
   ]
 }

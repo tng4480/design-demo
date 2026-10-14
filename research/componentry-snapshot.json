@@ -1,0 +1,12 @@
+{
+  "repo": "harshjdhv/componentry",
+  "commit": "b602c2872fea85c9f2464016ce3bbe0af17b51b4",
+  "files": [
+    "LICENSE",
+    "packages/ui/src/components/hover-transition.tsx",
+    "packages/ui/src/components/circuit-board.tsx",
+    "packages/ui/src/components/scroll-choreography.tsx",
+    "apps/web/components/docs/previews/hover-transition-playground.tsx",
+    "apps/web/components/docs/previews/scroll-choreography-preview.tsx"
+  ]
+}

@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **84 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **87 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -88,3 +88,9 @@ Design Prompts is included as an art-direction source with selected Newsprint, S
 ## Paper Neuro Noise
 
 An actual Paper Neuro Noise shader is integrated into the gallery and `neuro-noise.html`. The playground offers the four official Default, Sensation, Bloodstream and Ghost presets; colour, brightness, contrast, scale, speed and rotation controls; pause/reset; an optional original headline; and copying the current React usage. Vanilla package `@paper-design/shaders@0.0.81` is pinned. Run `npm run build:paper` to refresh the selected shader bundle and retained LICENSE/NOTICE. It requires WebGL2 and disposes offscreen instances.
+
+## Componentry trio
+
+Actual Hover Transition, Circuit Board and Scroll Choreography components run in `componentry.html` and isolated gallery previews. Hover supports all eight upstream effects and editable direction, timing and colour. The circuit graph supports theme/grid controls, pulse speed, trace width and an illustrative node-error state. Scroll Choreography runs the actual 300vh sequence, with Start/Move/Stack/Expand navigation and a static reduced-motion image grid.
+
+Source is pinned to `b602c2872fea85c9f2464016ce3bbe0af17b51b4`. `npm run build:componentry` rebuilds the compiled demo application from ignored source cache. The scroll gallery uses the upstream demo’s public Unsplash image URLs at a smaller delivery size; image availability depends on Unsplash. MIT attribution and image/source notes are retained in `dist/COMPONENTRY_LICENSE.txt` and `dist/COMPONENTRY_NOTES.txt`.
