@@ -21,3 +21,7 @@
 .preview:has(.design-prompts-preview){padding:0;background:#f5f3eb}.design-prompts-preview{position:absolute;inset:0;overflow:hidden}.design-prompts-frame{position:absolute;left:50%;top:50%;width:800px;height:560px;border:0;margin-left:-400px;margin-top:-280px;transform-origin:center}.preview:has(.design-prompts-preview) .preview-caption{display:none}
 
 .demo-card .neuro-copy{display:none}
+
+/* These two particle studies use explicit contrast, independent of the renderer palettes. */
+.preview.stars,.preview.particle-type{background:#edf0e3;color:#263e29}.stars .effect-label,.particle-type .preview-caption{color:#3c5235;opacity:1;text-shadow:none}
+.stars .preview-caption{color:#3c5235;opacity:1;text-shadow:none}

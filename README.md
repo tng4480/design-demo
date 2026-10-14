@@ -118,3 +118,5 @@ Compact gallery effects and controls (React Bits, shadcn picks, Circuit Board an
 
 
 The later pastel colour shift has been rolled back. Original renderer palettes and surfaces are restored; current SVG artwork, layouts, focused gallery previews, stronger particle visibility and live-preview readiness remain in place. Neuro Noise uses its original official presets again.
+
+Starfield and particle typography use a dedicated high-contrast treatment: dark, larger points on a light surface, with denser ATLAS lettering. This readability adjustment is independent of the colour rollback elsewhere.
