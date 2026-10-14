@@ -1,0 +1,141 @@
+{
+  "commit": "496968c4117e21278f13917201b7d615bc5e7450",
+  "checkedAt": "2026-10-14",
+  "demos": [
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "title": "Aurora",
+      "group": "Backgrounds",
+      "path": "src/content/Backgrounds/Aurora/Aurora.jsx",
+      "style": "mesh",
+      "effort": "Medium",
+      "summary": "Layered curtains of light drift across a dark hero.",
+      "use": "Expressive brand and launch heroes",
+      "watch": "Native WebGL2; tune brightness and keep text on a readable layer.",
+      "official": "https://reactbits.dev/backgrounds/aurora",
+      "files": [
+        "Aurora.css",
+        "Aurora.jsx"
+      ]
+    },
+    {
+      "id": "silk",
+      "name": "Silk",
+      "title": "Silk",
+      "group": "Backgrounds",
+      "path": "src/content/Backgrounds/Silk/Silk.jsx",
+      "style": "liquid",
+      "effort": "Medium",
+      "summary": "A softly lit fabric surface ripples and responds to the pointer.",
+      "use": "Atmospheric editorial and premium product backgrounds",
+      "watch": "Native WebGL2; subtle motion works best behind concise content.",
+      "official": "https://reactbits.dev/backgrounds/silk",
+      "files": [
+        "Silk.css",
+        "Silk.jsx"
+      ]
+    },
+    {
+      "id": "orb",
+      "name": "Orb",
+      "title": "Orb",
+      "group": "Backgrounds",
+      "path": "src/content/Backgrounds/Orb/Orb.jsx",
+      "style": "holographic",
+      "effort": "Medium",
+      "summary": "A luminous energy orb bends and pulses with pointer interaction.",
+      "use": "AI entry points, assistants and focused hero moments",
+      "watch": "Native WebGL2; provide a static fallback for unsupported devices.",
+      "official": "https://reactbits.dev/backgrounds/orb",
+      "files": [
+        "Orb.css",
+        "Orb.jsx"
+      ]
+    },
+    {
+      "id": "blur-text",
+      "name": "BlurText",
+      "title": "Blur Text",
+      "group": "TextAnimations",
+      "path": "src/content/TextAnimations/BlurText/BlurText.jsx",
+      "style": "kinetic",
+      "effort": "Low",
+      "summary": "Words resolve from a soft blur into a clear headline.",
+      "use": "Short introductory headings",
+      "watch": "React + Motion; semantic text remains present, and reduced motion uses a clear reveal.",
+      "official": "https://reactbits.dev/text-animations/blur-text",
+      "files": [
+        "BlurText.jsx"
+      ]
+    },
+    {
+      "id": "rotating-text",
+      "name": "RotatingText",
+      "title": "Rotating Text",
+      "group": "TextAnimations",
+      "path": "src/content/TextAnimations/RotatingText/RotatingText.jsx",
+      "style": "kinetic",
+      "effort": "Low",
+      "summary": "Spring-driven words cycle through a compact headline.",
+      "use": "Communicate several qualities in one headline",
+      "watch": "React + Motion; keep essential information readable without waiting for a cycle.",
+      "official": "https://reactbits.dev/text-animations/rotating-text",
+      "files": [
+        "RotatingText.css",
+        "RotatingText.jsx"
+      ]
+    },
+    {
+      "id": "tilted-card",
+      "name": "TiltedCard",
+      "title": "Tilted Card",
+      "group": "Components",
+      "path": "src/content/Components/TiltedCard/TiltedCard.jsx",
+      "style": "holographic",
+      "effort": "Low",
+      "summary": "A layered visual card tilts towards the pointer with spring motion.",
+      "use": "Featured work, products and collectible artwork",
+      "watch": "React + Motion; upstream interaction is pointer-based. Touch receives a static readable card. Artwork is original.",
+      "official": "https://reactbits.dev/components/tilted-card",
+      "files": [
+        "TiltedCard.jsx",
+        "TiltedCard.css"
+      ]
+    },
+    {
+      "id": "glass-icons",
+      "name": "GlassIcons",
+      "title": "Glass Icons",
+      "group": "Components",
+      "path": "src/content/Components/GlassIcons/GlassIcons.jsx",
+      "style": "glass",
+      "effort": "Medium",
+      "summary": "Translucent icon buttons combine refraction, coloured plates and responsive motion.",
+      "use": "A small set of expressive navigation or feature shortcuts",
+      "watch": "React, canvas and optional WebGL; keep visible labels and test contrast. Icons and action feedback are original demo content.",
+      "official": "https://reactbits.dev/components/glass-icons",
+      "files": [
+        "GlassIcons.jsx",
+        "GlassIcons.css"
+      ]
+    },
+    {
+      "id": "pixel-transition",
+      "name": "PixelTransition",
+      "title": "Pixel Transition",
+      "group": "Animations",
+      "path": "src/content/Animations/PixelTransition/PixelTransition.jsx",
+      "style": "pixel",
+      "effort": "Low",
+      "summary": "A mosaic of pixels swaps between two original compositions.",
+      "use": "Reveals, before-and-after cards and playful interaction",
+      "watch": "React + canvas; click, tap or press Enter to switch. The artwork is original.",
+      "official": "https://reactbits.dev/animations/pixel-transition",
+      "files": [
+        "PixelTransition.css",
+        "PixelTransition.jsx"
+      ]
+    }
+  ]
+}

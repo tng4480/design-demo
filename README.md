@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **71 live studies, 44 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **79 live studies, 44 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -68,3 +68,9 @@ The isometric playground supports building on empty plots, dragging to rotate, q
 The icon explorer uses 6,238 actual Tabler SVGs from pinned version 3.49.0, with outline/filled search, category filters, size/stroke/color controls and SVG copy/download. Tabler’s MIT license is retained in `dist/TABLER_LICENSE.txt`. Refresh the icon catalog with `node scripts/tabler-assets.mjs` after installing dependencies.
 
 The helmet hover demo uses an original procedural Three.js model and a screen-space material reveal. Pointer motion reveals coloured surfaces through a wireframe; Show full, Lock reveal and Reset provide keyboard/touch alternatives. The reference site and its asset rights remain in the source directory.
+
+## React Bits shortlist
+
+Eight actual React Bits components run in isolated React previews: Aurora, Silk, Orb, Blur Text, Rotating Text, Tilted Card, Glass Icons and Pixel Transition. Open `react-bits.html` for the larger playground with replay, pause, alternate looks, colour/speed controls and usage examples. Text, SVG artwork and icons are original demo content.
+
+Upstream is pinned to commit `496968c4117e21278f13917201b7d615bc5e7450`. `npm run build:react-bits` fetches the selected source into ignored `.cache/` when absent, then builds the demo application. Raw upstream components are not redistributed as a kit. Preserve `dist/REACT_BITS_LICENSE.txt` and review its MIT + Commons Clause conditions.

@@ -11,11 +11,14 @@
       "framework": "React; JS/TS; CSS or Tailwind",
       "effort": "Low for CSS; medium/high for WebGL",
       "standouts": [
-        "Holo Card",
-        "Fluid Glass",
-        "ASCII Text",
-        "CRT Warp",
-        "Scroll Stack"
+        "Aurora",
+        "Silk",
+        "Orb",
+        "Blur Text",
+        "Rotating Text",
+        "Tilted Card",
+        "Glass Icons",
+        "Pixel Transition"
       ],
       "styles": [
         "holographic",
@@ -24,26 +27,43 @@
         "retro",
         "scroll"
       ],
-      "caveat": "Commons Clause adds restrictions; preserve license and inspect component dependencies. WebGL effects need mobile performance checks.",
+      "caveat": "MIT + Commons Clause permits use within applications, websites and products; it prohibits redistributing the components themselves. This gallery bundles eight actual components into demo applications, retains the license and links to the pinned upstream source. WebGL2 backgrounds need a fallback; the Tilted Card interaction is pointer-based.",
       "demos": [
         {
-          "name": "Holo Card",
-          "url": "https://reactbits.dev/components/holo-card"
+          "name": "Aurora",
+          "url": "https://reactbits.dev/backgrounds/aurora"
         },
         {
-          "name": "Fluid Glass",
-          "url": "https://reactbits.dev/components/fluid-glass"
+          "name": "Silk",
+          "url": "https://reactbits.dev/backgrounds/silk"
         },
         {
-          "name": "ASCII Text",
-          "url": "https://reactbits.dev/text-animations/ascii-text"
+          "name": "Orb",
+          "url": "https://reactbits.dev/backgrounds/orb"
         },
         {
-          "name": "Scroll Stack",
-          "url": "https://reactbits.dev/components/scroll-stack"
+          "name": "Blur Text",
+          "url": "https://reactbits.dev/text-animations/blur-text"
+        },
+        {
+          "name": "Rotating Text",
+          "url": "https://reactbits.dev/text-animations/rotating-text"
+        },
+        {
+          "name": "Tilted Card",
+          "url": "https://reactbits.dev/components/tilted-card"
+        },
+        {
+          "name": "Glass Icons",
+          "url": "https://reactbits.dev/components/glass-icons"
+        },
+        {
+          "name": "Pixel Transition",
+          "url": "https://reactbits.dev/animations/pixel-transition"
         }
       ],
-      "install": "npx shadcn@latest add @react-bits/FluidGlass-TS-TW"
+      "install": "npx shadcn@latest add @react-bits/Aurora-JS-CSS",
+      "verifiedAt": "2026-10-14"
     },
     {
       "name": "Magic UI",
