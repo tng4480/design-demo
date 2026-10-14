@@ -1,9 +1,13 @@
 Skiper UI: https://skiper-ui.com/ — Gurvinder Singh / Gxuri.
-Free Skiper 52, 41 and 106 registry snapshots accessed 14 October 2026.
+Free Skiper 52, 41, 106, 99, 19 and 31 registry snapshots accessed 14 October 2026.
 The selected free component detail pages explicitly permit personal/commercial use and modification with attribution. Attribution is displayed in each demo.
 Selected source stored in interaction-lab/upstream. No Pro source used.
 Skiper52 adaptations: original Atlas artwork, compact dimensions, omitted unused Swiper imports, focusable buttons and no intro delay.
 Skiper106: actual SmoothInput with fixed upstream default DialKit parameters instead of the tuning panel. Native input shown alongside. Experimental custom caret, not recommended upstream for accessibility-critical scenarios.
+Skiper99: actual ArrowIcon, MenuIcon and VolumeIcon exports with labelled keyboard/touch button wrappers.
+Skiper19: actual LinePath drawing with an original contained-scroll viewport.
+Skiper31: actual CharacterV1 transforms on original FORM text, driven by contained native scrolling. Unused Lenis page wrapper omitted.
+Stairs preloader: independent Motion composition studied from the visible Skiper9 preview; no paid source, assets or brand copy used. Gallery initially shows an inspectable midpoint; Replay runs the complete sequence.
 Skiper41: actual ProgressiveBlur, original artwork and blur toggle. Inspired upstream by https://devouringdetails.com/.
 
 Amicro: https://amicro.dev/
