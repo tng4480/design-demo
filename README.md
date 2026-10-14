@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **83 live studies, 49 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **83 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -80,3 +80,7 @@ Upstream is pinned to commit `496968c4117e21278f13917201b7d615bc5e7450`. `npm ru
 `shadcn.html` presents four focused demos: an actual shadcn resizable workspace, actual Animate UI tab transitions, an actual Kibo comparison slider with keyboard support added, and six real tweakcn presets on a shadcn product composition. The source directory also includes coss ui (the current destination of Origin UI) and ReUI.
 
 Registry metadata, official components and blocks were reviewed on 14 October 2026. Source revisions and selected files are pinned in `research/shadcn-snapshots.json`; run `npm run build:shadcn` to rebuild. Raw upstream components stay in ignored `.cache/`; compiled demo applications and retained licenses are published. `dist/SHADCN_NOTICES.txt` includes source and direct dependency notices.
+
+## Design Prompts reference
+
+Design Prompts is included as an art-direction source with selected Newsprint, Swiss Minimalist, Botanical and Maximalism references. These are links to the official full-page previews, not additional local implementations or copied prompt text.

@@ -708,6 +708,45 @@
         "https://reui.io/"
       ],
       "verifiedAt": "2026-10-14"
+    },
+    {
+      "name": "Design Prompts",
+      "url": "https://www.designprompts.dev/",
+      "framework": "Browser style explorer with full-page previews and AI design prompts",
+      "license": "Publicly accessible prompt gallery; a reuse license for site source code, photos and assets was not verified",
+      "effort": "Low for typography/layout exploration; implementation effort depends on the chosen treatment",
+      "bestFor": "Choose whole-page typography, colour and composition before selecting UI components",
+      "standouts": [
+        "Newsprint",
+        "Swiss Minimalist",
+        "Botanical",
+        "Maximalism"
+      ],
+      "caveat": "Source reference only. Its previews demonstrate art direction, rather than a reusable component library. Swiss and Newsprint can be built mostly with typography and CSS grids; Botanical depends on strong licensed imagery; Maximalism needs careful hierarchy and restraint. Some light/dark labels differ from the observed preview appearance.",
+      "install": "Browse a style, inspect its full-page preview, then open Get Prompt",
+      "demos": [
+        {
+          "name": "Newsprint \u2014 editorial hierarchy and print-style layout",
+          "url": "https://www.designprompts.dev/newsprint"
+        },
+        {
+          "name": "Swiss Minimalist \u2014 precise grids and strong type",
+          "url": "https://www.designprompts.dev/swiss-minimalist"
+        },
+        {
+          "name": "Botanical \u2014 warm palettes and organic image framing",
+          "url": "https://www.designprompts.dev/botanical"
+        },
+        {
+          "name": "Maximalism \u2014 saturated, layered campaign direction",
+          "url": "https://www.designprompts.dev/maximalism"
+        }
+      ],
+      "evidence": [
+        "https://www.designprompts.dev/"
+      ],
+      "verifiedAt": "2026-10-14",
+      "inspection": "Reviewed the 30-style list and visually inspected Monochrome, Industrial, Botanical, Newsprint, Swiss Minimalist, Academia, Organic, Maximalism and Retro. Shortlist is an editorial judgement."
     }
   ],
   "excludedOrDeferred": [
