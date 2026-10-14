@@ -9,7 +9,7 @@ export function mountPlayground(el, paused, notify) {
   renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 1.5));
   renderer.setClearColor('#e5e9df', 1);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.25;
+  renderer.toneMappingExposure = 1.05;
   renderer.domElement.setAttribute('aria-label', 'Interactive isometric town. Drag to rotate; click an empty plot to build.');
   el.prepend(renderer.domElement);
   scene.add(new THREE.AmbientLight('#ffffff', 2.2));

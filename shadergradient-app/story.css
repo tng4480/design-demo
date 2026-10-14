@@ -4,3 +4,10 @@
 .chapter-copy .volume-tools{position:static;margin-top:22px}.embedded .chapter-copy .volume-tools{margin-top:15px}
 
 .chapter-copy .parameter-panel{position:static;width:100%;margin-top:22px}.embedded .chapter-copy .parameter-panel{margin-top:15px}
+
+body{background:#eef0e5;color:#354a35}.surface-shade{background:linear-gradient(90deg,#eef0e580,transparent 75%)}.journey-header button,.journey-controls button,.gradient-options button,.volume-tools button{background:#f7f8eef0;color:#3f5936;border-color:#b5c6a7;backdrop-filter:none}.window-copy{color:#354a35}.chapter-copy>p,.chapter-copy>small,.journey-header>span,.scroll-cue{opacity:1}.journey-footer{background:#eef0e5;color:#354a35}
+
+.gallery .chapter-copy,.gallery .journey-header,.gallery .journey-controls,.gallery .window-copy{display:none}
+
+footer{background:#eef0e5;color:#354a35}footer p,footer small{color:#53674b;opacity:1}.scroll-progress{background:#c4cfb9}.scroll-progress i{background:#557548}
+.journey-controls nav button{background:#e8ecde;color:#415b36;border-color:#abbf9b}.journey-controls nav button[aria-current=step]{background:#405a36;color:#fff}
