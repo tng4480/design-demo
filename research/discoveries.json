@@ -1,0 +1,510 @@
+{
+  "checkedAt": "2026-10-14",
+  "method": "Official websites and public GitHub repository pages. Star counts are rounded observations, not exact API totals. Effort and caveats are implementation judgments.",
+  "sources": [
+    {
+      "name": "React Bits",
+      "url": "https://reactbits.dev/get-started/index",
+      "repo": "https://github.com/DavidHDev/react-bits",
+      "stars": "49.1k",
+      "license": "MIT + Commons Clause",
+      "framework": "React; JS/TS; CSS or Tailwind",
+      "effort": "Low for CSS; medium/high for WebGL",
+      "standouts": [
+        "Holo Card",
+        "Fluid Glass",
+        "ASCII Text",
+        "CRT Warp",
+        "Scroll Stack"
+      ],
+      "styles": [
+        "holographic",
+        "glassmorphism",
+        "ascii",
+        "retro",
+        "scroll"
+      ],
+      "caveat": "Commons Clause adds restrictions; preserve license and inspect component dependencies. WebGL effects need mobile performance checks.",
+      "demos": [
+        {
+          "name": "Holo Card",
+          "url": "https://reactbits.dev/components/holo-card"
+        },
+        {
+          "name": "Fluid Glass",
+          "url": "https://reactbits.dev/components/fluid-glass"
+        },
+        {
+          "name": "ASCII Text",
+          "url": "https://reactbits.dev/text-animations/ascii-text"
+        },
+        {
+          "name": "Scroll Stack",
+          "url": "https://reactbits.dev/components/scroll-stack"
+        }
+      ],
+      "install": "npx shadcn@latest add @react-bits/FluidGlass-TS-TW"
+    },
+    {
+      "name": "Magic UI",
+      "url": "https://magicui.design/docs/components/magic-card",
+      "repo": "https://github.com/magicuidesign/magicui",
+      "stars": "22.7k",
+      "license": "MIT for public repo; Pro separate",
+      "framework": "React + Tailwind + Motion",
+      "effort": "Low/medium",
+      "standouts": [
+        "Magic Card",
+        "Animated Beam",
+        "Retro Grid",
+        "Comic Text"
+      ],
+      "styles": [
+        "neon",
+        "retro",
+        "comic",
+        "bento"
+      ],
+      "caveat": "Strong marketing effects; combine selectively with quieter product controls.",
+      "demos": [
+        {
+          "name": "Magic Card",
+          "url": "https://magicui.design/docs/components/magic-card"
+        },
+        {
+          "name": "Comic Text",
+          "url": "https://magicui.design/docs/components/comic-text"
+        },
+        {
+          "name": "Animated Beam",
+          "url": "https://magicui.design/docs/components/animated-beam"
+        },
+        {
+          "name": "Retro Grid",
+          "url": "https://magicui.design/docs/components/retro-grid"
+        }
+      ],
+      "install": "npx shadcn@latest add @magicui/comic-text"
+    },
+    {
+      "name": "Paper Shaders",
+      "url": "https://shaders.paper.design/",
+      "repo": "https://github.com/paper-design/shaders",
+      "stars": "3.6k",
+      "license": "Apache-2.0",
+      "framework": "Vanilla JS or React; WebGL",
+      "effort": "Medium",
+      "standouts": [
+        "Liquid Metal",
+        "Fluted Glass",
+        "Halftone Dots",
+        "Mesh Gradient"
+      ],
+      "previews": [
+        "https://shaders.paper.design/liquid-metal",
+        "https://shaders.paper.design/fluted-glass",
+        "https://shaders.paper.design/halftone-dots"
+      ],
+      "styles": [
+        "liquid morph",
+        "glassmorphism",
+        "halftone",
+        "gradient mesh"
+      ],
+      "caveat": "README explicitly asks to pin dependency: breaking changes can occur under 0.0.x versions. Keep LICENSE/NOTICE when redistributing library code."
+    },
+    {
+      "name": "Drei / React Three Fiber",
+      "url": "https://drei.docs.pmnd.rs/",
+      "repo": "https://github.com/pmndrs/drei",
+      "stars": "9.9k",
+      "license": "MIT",
+      "framework": "React + Three.js",
+      "effort": "High",
+      "standouts": [
+        "MeshTransmissionMaterial",
+        "Float",
+        "Stars",
+        "AsciiRenderer"
+      ],
+      "styles": [
+        "wireframe 3d",
+        "clay 3d",
+        "isometric",
+        "ascii"
+      ],
+      "caveat": "3D foundation rather than drop-in DOM UI. Requires GPU, camera/light setup, asset work and fallback.",
+      "demos": [
+        {
+          "name": "MeshTransmissionMaterial",
+          "url": "https://drei.docs.pmnd.rs/shaders/mesh-transmission-material"
+        }
+      ]
+    },
+    {
+      "name": "tsParticles",
+      "url": "https://particles.js.org/samples",
+      "repo": "https://github.com/tsparticles/tsparticles",
+      "stars": "9.0k",
+      "license": "MIT",
+      "framework": "Vanilla plus React/Vue/Svelte/Angular and other adapters",
+      "effort": "Low/medium",
+      "standouts": [
+        "Polygon mask",
+        "Confetti",
+        "Fireworks",
+        "Animated stars"
+      ],
+      "styles": [
+        "particles",
+        "celebration",
+        "neon"
+      ],
+      "caveat": "Load only required engine/plugins and reduce particle density on mobile."
+    },
+    {
+      "name": "NES.css",
+      "url": "https://nostalgic-css.github.io/NES.css/",
+      "repo": "https://github.com/nostalgic-css/NES.css",
+      "stars": "21.8k",
+      "license": "MIT",
+      "framework": "Plain CSS/SCSS; any frontend",
+      "effort": "Low",
+      "standouts": [
+        "Pixel buttons",
+        "Speech balloons",
+        "Pixel containers"
+      ],
+      "styles": [
+        "pixel art",
+        "retro"
+      ],
+      "caveat": "Provides components rather than page layout. Retro typography can reduce density/readability."
+    },
+    {
+      "name": "98.css",
+      "url": "https://jdan.github.io/98.css/",
+      "repo": "https://github.com/jdan/98.css",
+      "stars": "11.5k",
+      "license": "MIT",
+      "framework": "Semantic HTML + CSS; any frontend",
+      "effort": "Low",
+      "standouts": [
+        "Windows title bars",
+        "Tree view",
+        "Tabs"
+      ],
+      "styles": [
+        "retro desktop",
+        "skeuomorphism"
+      ],
+      "caveat": "CSS only: draggable windows and desktop behavior require separate JS."
+    },
+    {
+      "name": "Neobrutalism Components",
+      "url": "https://www.neobrutalism.dev/docs",
+      "repo": "https://github.com/ekmas/neobrutalism-components",
+      "stars": "5.6k",
+      "license": "MIT",
+      "framework": "React + Tailwind; based on shadcn/ui",
+      "effort": "Low/medium",
+      "standouts": [
+        "Hard-shadow buttons",
+        "Bold bordered cards",
+        "Forms with flat color surfaces"
+      ],
+      "styles": [
+        "neo brutalism"
+      ],
+      "caveat": "Opinionated thick borders and shadows can overwhelm dense dashboards."
+    },
+    {
+      "name": "shadcn/ui",
+      "url": "https://ui.shadcn.com/docs/components",
+      "repo": "https://github.com/shadcn-ui/ui",
+      "stars": "125.5k",
+      "license": "MIT",
+      "framework": "React + Tailwind; copied source",
+      "effort": "Low/medium",
+      "standouts": [
+        "Command",
+        "Data Table",
+        "Sidebar"
+      ],
+      "styles": [
+        "product UI",
+        "minimal"
+      ],
+      "caveat": "Excellent functional baseline but visual distinction needs your own tokens. Accessibility still depends on composition.",
+      "demos": [
+        {
+          "name": "Command",
+          "url": "https://ui.shadcn.com/docs/components/command"
+        },
+        {
+          "name": "Data Table",
+          "url": "https://ui.shadcn.com/docs/components/data-table"
+        },
+        {
+          "name": "Sidebar",
+          "url": "https://ui.shadcn.com/docs/components/sidebar"
+        }
+      ]
+    },
+    {
+      "name": "daisyUI",
+      "url": "https://daisyui.com/components/",
+      "repo": "https://github.com/saadeghi/daisyui",
+      "stars": "42.6k",
+      "license": "MIT public library; paid products separate",
+      "framework": "Tailwind CSS; framework independent",
+      "effort": "Low",
+      "standouts": [
+        "Diff comparison",
+        "Mockup window",
+        "Themeable cards"
+      ],
+      "styles": [
+        "themes",
+        "product UI",
+        "retro"
+      ],
+      "caveat": "CSS classes provide styling; complex widget behavior still needs application code."
+    },
+    {
+      "name": "Vaul",
+      "url": "https://vaul.emilkowal.ski/",
+      "repo": "https://github.com/emilkowalski/vaul",
+      "stars": "8.6k",
+      "license": "MIT",
+      "framework": "React",
+      "effort": "Low/medium",
+      "standouts": [
+        "Touch drawer",
+        "Snap points",
+        "Nested drawer"
+      ],
+      "styles": [
+        "mobile interaction",
+        "product UI"
+      ],
+      "caveat": "A focused drawer primitive; validate touch, scrolling, focus, and background scaling in your actual app."
+    },
+    {
+      "name": "Rough.js",
+      "url": "https://roughjs.com/",
+      "repo": "https://github.com/rough-stuff/rough",
+      "stars": "21.3k",
+      "license": "MIT",
+      "framework": "Vanilla Canvas/SVG",
+      "effort": "Medium",
+      "standouts": [
+        "Sketchy rectangles",
+        "Hachure fills",
+        "Hand-drawn SVG paths"
+      ],
+      "styles": [
+        "comic book",
+        "sketch",
+        "blueprint"
+      ],
+      "caveat": "Drawing engine rather than accessible controls. Use semantic HTML for interaction and SVG for decorative treatment."
+    },
+    {
+      "name": "Anime.js",
+      "url": "https://animejs.com/documentation/",
+      "repo": "https://github.com/juliangarnier/anime",
+      "stars": "73.6k",
+      "license": "MIT public engine",
+      "framework": "Vanilla JS; adaptable to any frontend",
+      "effort": "Medium",
+      "standouts": [
+        "Staggered timelines",
+        "SVG morphing",
+        "Text animation"
+      ],
+      "styles": [
+        "kinetic type",
+        "liquid morph",
+        "scroll"
+      ],
+      "caveat": "Animation engine requires composing your own components and cleaning up animations in framework lifecycles."
+    },
+    {
+      "name": "css-doodle",
+      "url": "https://css-doodle.com/",
+      "repo": "https://github.com/css-doodle/css-doodle",
+      "stars": "6.1k",
+      "license": "MIT component; public doodles MIT per current service terms",
+      "framework": "Web Component + CSS",
+      "effort": "Low/medium",
+      "standouts": [
+        "Generative grids",
+        "Polygon shapes",
+        "Random decorative patterns"
+      ],
+      "styles": [
+        "bauhaus",
+        "pixel art",
+        "patterns"
+      ],
+      "caveat": "Large DOM grids can be expensive. Good for decorative surfaces, not functional widget primitives."
+    },
+    {
+      "name": "Open Props",
+      "url": "https://open-props.style/",
+      "repo": "https://github.com/argyleink/open-props",
+      "stars": "5.5k",
+      "license": "License file exists; exact terms not verified in this pass",
+      "framework": "CSS custom properties",
+      "effort": "Low",
+      "standouts": [
+        "Gradient tokens",
+        "Shadow scales",
+        "Easing and animation tokens"
+      ],
+      "styles": [
+        "color palette",
+        "motion system",
+        "design tokens"
+      ],
+      "caveat": "Token foundation rather than a component collection."
+    },
+    {
+      "name": "Uiverse",
+      "url": "https://uiverse.io/",
+      "repo": null,
+      "stars": null,
+      "license": "Official site states all UI elements MIT",
+      "framework": "HTML/CSS and Tailwind snippets",
+      "effort": "Low/medium",
+      "standouts": [
+        "Buttons",
+        "Toggle switches",
+        "Loaders"
+      ],
+      "styles": [
+        "neon",
+        "glassmorphism",
+        "clay",
+        "microinteraction"
+      ],
+      "caveat": "Community quality varies. Check each snippet's semantics, keyboard behavior and CSS isolation."
+    },
+    {
+      "name": "Haikei",
+      "url": "https://haikei.app/",
+      "repo": null,
+      "stars": null,
+      "license": "Asset export rights not independently verified",
+      "framework": "SVG/PNG generator; any frontend",
+      "effort": "Low",
+      "standouts": [
+        "Layered waves",
+        "Blobs",
+        "Stacked peaks"
+      ],
+      "styles": [
+        "organic",
+        "gradient",
+        "geometric"
+      ],
+      "caveat": "Exported static assets, not animated interactive components."
+    },
+    {
+      "name": "shadcn-svelte",
+      "url": "https://shadcn-svelte.com/docs",
+      "repo": "https://github.com/huntabyte/shadcn-svelte",
+      "stars": "9.2k",
+      "license": "MIT",
+      "framework": "Svelte 5 + Tailwind + Bits UI",
+      "effort": "Low/medium",
+      "standouts": [
+        "Dialog",
+        "Command",
+        "Data table"
+      ],
+      "styles": [
+        "product UI",
+        "minimal"
+      ],
+      "caveat": "Community-led port; use when Svelte is your implementation target."
+    },
+    {
+      "name": "Vanta.js",
+      "url": "https://www.vantajs.com/",
+      "repo": "https://github.com/tengbao/vanta",
+      "stars": "7.2k",
+      "license": "MIT",
+      "framework": "Vanilla JS; Three.js or p5.js; framework adapters by lifecycle integration",
+      "effort": "Low to medium",
+      "standouts": [
+        "NET",
+        "FOG",
+        "WAVES",
+        "GLOBE",
+        "BIRDS",
+        "TOPOLOGY"
+      ],
+      "demos": [
+        {
+          "name": "Interactive effect gallery and customizer",
+          "url": "https://www.vantajs.com/"
+        }
+      ],
+      "install": "npm install vanta@0.5.24 three@0.134.0",
+      "bestFor": "Drop-in interactive animated hero backgrounds",
+      "caveat": "Official site recommends at most one or two instances on a page, warns of slow WebGL on older devices and mobile incompatibility, and requires a fallback. This gallery uses actual Vanta with its documented older Three.js version isolated from modern Three.js demos.",
+      "evidence": [
+        "https://www.vantajs.com/",
+        "https://github.com/tengbao/vanta"
+      ],
+      "verifiedAt": "2026-10-14"
+    },
+    {
+      "name": "Souradip",
+      "url": "https://souradip.com/",
+      "repo": null,
+      "stars": null,
+      "license": "Inspiration only; original site footage, artwork and code are not licensed for redistribution",
+      "framework": "Observed: HTML chapter cards with two muted video elements; exact underlying stack not confirmed",
+      "effort": "High",
+      "standouts": [
+        "Seven-chapter cinematic journey",
+        "Paper-collage world",
+        "Scroll/click chapter navigation",
+        "Video-backed camera transitions"
+      ],
+      "bestFor": "Immersive portfolio storytelling with a distinctive crafted visual world",
+      "caveat": "Browser inspection found two video elements and no canvas. Scroll/click triggers cinematic chapter changes. Footage and illustration production, media loading, navigation and reduced motion are major implementation concerns. The local demo uses original real-time Three.js geometry, not the source\u2019s videos or assets.",
+      "demos": [
+        {
+          "name": "Seven-chapter cinematic homepage",
+          "url": "https://souradip.com/"
+        }
+      ],
+      "evidence": [
+        "https://souradip.com/"
+      ],
+      "verifiedAt": "2026-10-14",
+      "visualInspection": "Observed chapters 01 and 02, wheel/click transitions, camera travel and fading content cards; native browser DOM contained two muted video elements and zero canvases."
+    }
+  ],
+  "excludedOrDeferred": [
+    {
+      "name": "Inspira UI",
+      "url": "https://inspira-ui.com/",
+      "reason": "Official site fetch returned very little content and GitHub repo URL was unavailable; do not imply its licensing or specific components were verified."
+    },
+    {
+      "name": "particles.js",
+      "url": "https://github.com/VincentGarreau/particles.js",
+      "reason": "Original engine exists; tsParticles offers broader modern adapters and effect presets for this directory."
+    },
+    {
+      "name": "Codrops",
+      "url": "https://github.com/codrops",
+      "reason": "Useful experimental inspiration; verify license and dependencies per demo repository, not as a blanket library license."
+    }
+  ]
+}

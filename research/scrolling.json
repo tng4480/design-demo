@@ -1,0 +1,319 @@
+{
+  "verifiedAt": "2026-10-14",
+  "scope": "Motion and scrolling sources; original implementation concepts, not copied premium resources",
+  "sources": [
+    {
+      "id": "gsap",
+      "name": "GSAP + ScrollTrigger",
+      "url": "https://gsap.com/",
+      "docs": "https://gsap.com/docs/v3/Plugins/ScrollTrigger/",
+      "demos": "https://demos.gsap.com/plugin/scrolltrigger/",
+      "github": "https://github.com/greensock/GSAP",
+      "frameworks": [
+        "Vanilla JS",
+        "React",
+        "Next.js",
+        "Vue",
+        "Svelte",
+        "Webflow"
+      ],
+      "role": "Animation timelines, pinning, scrubbing, SVG morphs and text reveals",
+      "license": "Custom Standard License; free commercial use including formerly premium plugins. Restrictions apply to competing visual animation builders; AI-generated GSAP code is explicitly allowed.",
+      "licenseUrl": "https://gsap.com/community/standard-license/",
+      "cost": "Free",
+      "bestFor": "Precisely sequenced marketing stories and editorial motion",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "lenis",
+      "name": "Lenis",
+      "url": "https://lenis.dev/",
+      "docs": "https://github.com/darkroomengineering/lenis",
+      "demos": "https://lenis.dev/showcase",
+      "github": "https://github.com/darkroomengineering/lenis",
+      "frameworks": [
+        "Vanilla JS",
+        "React",
+        "Vue",
+        "Framer"
+      ],
+      "role": "Smooths native scrolling; synchronizes scroll position with GSAP or WebGL. Does not create animation timelines itself.",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/darkroomengineering/lenis/blob/main/LICENSE",
+      "cost": "Free",
+      "githubStarsApprox": "16.5k",
+      "bestFor": "Optional smooth scrolling and synchronized parallax",
+      "difficulty": "Low"
+    },
+    {
+      "id": "barba",
+      "name": "Barba.js",
+      "url": "https://barba.js.org/",
+      "docs": "https://barba.js.org/docs/getstarted/install/",
+      "demos": "https://barba.js.org/showcase/",
+      "github": "https://github.com/barbajs/barba",
+      "frameworks": [
+        "Vanilla JS",
+        "HTML multi-page sites",
+        "Webflow with custom integration"
+      ],
+      "role": "Fetches and swaps page containers and manages transition hooks; pair with GSAP for actual animation.",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/barbajs/barba/blob/main/LICENSE.md",
+      "cost": "Free",
+      "githubStarsApprox": "13k",
+      "bestFor": "Editorial page-to-page transitions",
+      "difficulty": "Medium to high",
+      "caveat": "Requires lifecycle cleanup, focus restoration, page titles, navigation history and analytics handling. Avoid adding a second router to a React framework app."
+    },
+    {
+      "id": "osmo",
+      "name": "Osmo",
+      "url": "https://www.osmo.supply/",
+      "docs": "https://www.osmo.supply/faq",
+      "demos": "https://www.osmo.supply/collection",
+      "frameworks": [
+        "Webflow",
+        "HTML/CSS/JS"
+      ],
+      "role": "Curated documented components, interaction recipes, easings and transition education",
+      "license": "Commercial membership license; project implementation allowed. No redistribution as a component library or stockpiling resources outside Vault for future use. Legitimate existing project implementations may continue after cancellation.",
+      "licenseUrl": "https://www.osmo.supply/faq",
+      "cost": "Solo displayed at \u20ac20/month billed annually or \u20ac25/month billed quarterly; team pricing differs. Verify current checkout.",
+      "bestFor": "Fast premium creative-site interactions",
+      "difficulty": "Low to medium",
+      "caveat": "Link premium resources; directory demos should use original implementations."
+    },
+    {
+      "id": "webflow-interactions",
+      "name": "Webflow Interactions with GSAP",
+      "url": "https://webflow.com/feature/interactions-animations",
+      "docs": "https://webflow.com/webflow-way/design-systems/interactions",
+      "demos": "https://webflow.com/made-in-webflow/website/webflow-gsap-basics",
+      "frameworks": [
+        "Webflow"
+      ],
+      "role": "Visual GSAP timeline authoring with reusable interactions, scroll triggers and responsive controls",
+      "license": "Webflow platform terms; underlying GSAP custom license",
+      "cost": "Interactions available to Webflow users at no additional cost; platform hosting and site plans separate",
+      "bestFor": "Visually maintained motion for non-code teams",
+      "difficulty": "Low to medium",
+      "caveat": "Breakpoint, reduced-motion and page-scope controls are supported. Native element-specific navbar/tab/dropdown/slider triggers have limitations; review current help docs."
+    },
+    {
+      "id": "motion-scroll",
+      "name": "Motion scroll animations",
+      "url": "https://motion.dev/",
+      "docs": "https://motion.dev/docs/react-scroll-animations",
+      "github": "https://github.com/motiondivision/motion",
+      "frameworks": [
+        "React",
+        "JavaScript",
+        "Vue"
+      ],
+      "role": "UI motion and scroll-linked transforms; React useScroll/useTransform and in-view reveals",
+      "license": "MIT core; separately paid Motion+ examples and tools",
+      "licenseUrl": "https://github.com/motiondivision/motion",
+      "cost": "Free core; optional Motion+",
+      "bestFor": "Product UI springs, state transitions and lightweight parallax",
+      "difficulty": "Low to medium"
+    }
+  ],
+  "demoIdeas": [
+    {
+      "id": "pinned-story",
+      "name": "Pinned product story",
+      "sources": [
+        "gsap",
+        "osmo"
+      ],
+      "description": "Three chapters change a geometric product illustration while the chapter list advances. Finish with the object settling into a normal content card.",
+      "officialReference": "https://demos.gsap.com/demo/scrubbed-bento-gallery/",
+      "fallback": "Unpinned stacked chapters on mobile or reduced motion",
+      "complexity": "Medium"
+    },
+    {
+      "id": "horizontal-gallery",
+      "name": "Horizontal editorial gallery",
+      "sources": [
+        "gsap",
+        "webflow-interactions",
+        "lenis"
+      ],
+      "description": "Vertical scroll advances a short horizontal row of image or geometric cards, with visible progress and an ordinary vertical exit.",
+      "officialReference": "https://university.webflow.com/videos/horizontal-scrolling",
+      "fallback": "Native overflow carousel with buttons or stacked cards",
+      "complexity": "Medium"
+    },
+    {
+      "id": "masked-text",
+      "name": "Masked kinetic text",
+      "sources": [
+        "gsap",
+        "motion-scroll"
+      ],
+      "description": "Oversized headline reveals line by line, then a gradient highlight follows scroll progress. Preserve a readable semantic headline.",
+      "officialReference": "https://demos.gsap.com/plugin/splittext/",
+      "fallback": "Full static headline with no movement",
+      "complexity": "Low to medium"
+    },
+    {
+      "id": "stacking-cards",
+      "name": "Stacking case-study cards",
+      "sources": [
+        "gsap",
+        "osmo"
+      ],
+      "description": "Cards stack with small scale and depth changes, each retained as an accessible linked article.",
+      "officialReference": "https://demos.gsap.com/demo/card-stack/",
+      "fallback": "Normal article grid",
+      "complexity": "Medium"
+    },
+    {
+      "id": "page-transition",
+      "name": "Shutter page transition",
+      "sources": [
+        "barba",
+        "gsap",
+        "osmo"
+      ],
+      "description": "A button moves between two original demo pages behind a short column wipe; disclose if a preview only simulates routing.",
+      "officialReference": "https://barba.js.org/docs/getstarted/intro/",
+      "fallback": "Immediate normal navigation; restore focus and title",
+      "complexity": "Medium to high"
+    },
+    {
+      "id": "velocity-skew",
+      "name": "Velocity-reactive gallery",
+      "sources": [
+        "gsap",
+        "lenis"
+      ],
+      "description": "Cards tilt slightly with scrolling velocity and return to rest; constrain tilt to preserve legibility.",
+      "officialReference": "https://demos.gsap.com/demo/velocity-skew/",
+      "fallback": "No skew and native scroll",
+      "complexity": "Medium"
+    }
+  ],
+  "inspirations": [
+    {
+      "name": "Dr Souradip Mookerjee",
+      "url": "https://souradip.com/",
+      "curatedBy": "User supplied reference",
+      "study": "Video-backed chapter navigation, cinematic camera travel through a paper-collage world, and fading information cards",
+      "evidence": "Direct browser inspection of chapters 01 and 02 and wheel/click navigation; two muted video elements and zero canvases observed."
+    },
+    {
+      "name": "Guillaume Colombel \u2014 Portfolio 2026",
+      "url": "https://guillaumecolombel.fr/",
+      "curatedBy": "https://gsap.com/showcase/",
+      "study": "Interactive project navigation and project transitions",
+      "evidence": "Official GSAP showcase listing and live project links verified; animation not fully inspected because browser became unavailable."
+    },
+    {
+      "name": "A24 \u2014 Films by Ravi Klaassens",
+      "url": "https://a24.raviklaassens.com/",
+      "curatedBy": "https://gsap.com/showcase/",
+      "study": "Cinematic media browsing, film index and detail hierarchy",
+      "evidence": "Live film index and media controls verified; treat as an independent creative example, not A24's production site."
+    },
+    {
+      "name": "Huy Phan Portfolio",
+      "url": "https://huyml.co/",
+      "curatedBy": "https://gsap.com/showcase/",
+      "study": "Expressive portfolio typography and motion beside substantial project information",
+      "evidence": "Live portfolio content and Rive development credit verified."
+    },
+    {
+      "name": "Garaje Inspiration Fest",
+      "url": "https://gif.garajedeideas.com/",
+      "curatedBy": "https://www.osmo.supply/showcase",
+      "study": "Festival-brand interaction inspiration",
+      "evidence": "Official Osmo showcase links this site and records three resources used; effects require direct inspection."
+    },
+    {
+      "name": "Illoca",
+      "url": "https://illoca.unseen.co/",
+      "curatedBy": "https://gsap.com/showcase/",
+      "study": "Immersive creative-site inspiration",
+      "evidence": "Official GSAP showcase listing verified; direct page was unavailable to web text retrieval."
+    }
+  ],
+  "styleResources": [
+    {
+      "styles": [
+        "liquid morph"
+      ],
+      "resource": "GSAP MorphSVG",
+      "url": "https://gsap.com/docs/v3/Plugins/MorphSVGPlugin/",
+      "note": "SVG shape morphing; shader fluids are a different implementation."
+    },
+    {
+      "styles": [
+        "kinetic type",
+        "ascii art"
+      ],
+      "resource": "GSAP SplitText and ScrambleText demo collections",
+      "url": "https://demos.gsap.com/plugin/splittext/",
+      "note": "Split/reveal headings; ScrambleText can support terminal-like text motion."
+    },
+    {
+      "styles": [
+        "glassmorphism",
+        "holographic"
+      ],
+      "resource": "Osmo Glass Effect, Refracted Glass and Liquid Glass Carousel",
+      "url": "https://www.osmo.supply/collection",
+      "note": "Premium recipes; original CSS approximation or licensed shader implementation for local demos."
+    },
+    {
+      "styles": [
+        "pixel art"
+      ],
+      "resource": "Osmo Pixelated Scroll Transition and Pixelated Wave Page Transition",
+      "url": "https://www.osmo.supply/collection",
+      "note": "Style-linked motion references, not a pixel icon library."
+    },
+    {
+      "styles": [
+        "retro vhs"
+      ],
+      "resource": "Osmo Film Grain Effect",
+      "url": "https://www.osmo.supply/collection",
+      "note": "Use a static texture and mild offset; avoid flashing scanlines."
+    },
+    {
+      "styles": [
+        "wireframe 3d",
+        "isometric"
+      ],
+      "resource": "Osmo Stacking Cards 3D, Globe Gallery and 3D Perspective Tiles",
+      "url": "https://www.osmo.supply/collection",
+      "note": "Useful motion references; real 3D scenes need WebGL/Three.js rather than a CSS-only claim."
+    },
+    {
+      "styles": [
+        "blueprint"
+      ],
+      "resource": "GSAP DrawSVG and MotionPath",
+      "url": "https://demos.gsap.com/",
+      "note": "Animate construction lines and diagram paths in SVG."
+    },
+    {
+      "styles": [
+        "split flap"
+      ],
+      "resource": "Osmo Number Odometer",
+      "url": "https://www.osmo.supply/collection",
+      "note": "Adjacent mechanical-number reference; rolling odometer is not a literal split-flap component."
+    }
+  ],
+  "implementationGuidance": [
+    "GSAP, Lenis and Barba are complementary: animation engine, scroll smoothing and navigation lifecycle. Use only the layers needed.",
+    "CSS sticky and native overflow can produce excellent pinned stories and horizontal galleries without a library.",
+    "Honor prefers-reduced-motion and offer pause controls for continuous decorations; current Lenis includes respectReducedMotion enabled by default.",
+    "Animate transforms and opacity where possible. Large blur layers, WebGL, videos and image sequences dominate GPU, memory and bandwidth costs.",
+    "Refresh measurements after responsive changes and late-loading media. Tear down ScrollTriggers and animation loops on route changes.",
+    "Test keyboard access, touch scrolling, anchor navigation, focus and history. Never make content depend on animation finishing."
+  ]
+}

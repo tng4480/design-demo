@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {readFile,stat} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+const catalog=JSON.parse(await readFile('dist/catalog.json','utf8'));
+assert.equal(catalog.styles.length,20,'All requested styles must be represented');
+for(const key of ['demos','sources','styles'])assert.equal(new Set(catalog[key].map(x=>x.id)).size,catalog[key].length,`${key}: duplicate IDs`);
+for(const style of catalog.styles)assert(catalog.demos.some(d=>d.style===style.id),`${style.name}: no study`);
+for(const demo of catalog.demos){assert(catalog.sources.some(s=>s.id===demo.source),`${demo.id}: missing source`);assert(['Low','Medium','High'].includes(demo.effort));assert.match(demo.official,/^https:\/\//);assert(demo.watch&&demo.kind);}
+for(const source of catalog.sources.filter(s=>s.capture))await stat(`dist/assets/${source.id}.jpg`);
+for(const file of ['dist/app.js','dist/engines.js','dist/scroll-lab.js','dist/transitions/transition.js','dist/journey.js','scripts/generate-catalog.mjs','scripts/vendor.mjs']){const r=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});assert.equal(r.status,0,r.stderr);}
+for(const file of ['index.html','atlas.css','effects.css','scroll-lab.html','scroll-lab.css','catalog.json','transitions/a.html','transitions/b.html','journey.html','journey.js','journey.css','vendor/gsap.js','vendor/ScrollTrigger.js','vendor/motion.js','vendor/lenis.js','vendor/lenis.css','vendor/barba.js','vendor/three.module.js','vendor/three.core.js','vendor/three-vanta.js','vendor/vanta.net.js','vendor/vanta.fog.js','vendor/vanta.waves.js','vendor/vanta.globe.js','THIRD_PARTY_NOTICES.txt'])assert((await stat('dist/'+file)).size>0,`${file}: empty`);
+const notices=await readFile('dist/THIRD_PARTY_NOTICES.txt','utf8');for(const lib of ['motion','gsap','lenis','three','@barba/core','vanta','three-vanta'])assert(notices.includes('## '+lib),`${lib}: missing notice`);
+console.log(`Validated ${catalog.demos.length} studies, ${catalog.sources.length} sources, all 20 styles, script syntax, local assets, and library notices.`);
