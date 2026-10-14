@@ -15,3 +15,9 @@
 .gallery-live .live-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;pointer-events:none;transition:opacity .2s}.gallery-live iframe{transition:opacity .2s}.gallery-live.preview-ready iframe{opacity:1!important}.gallery-live.preview-ready .live-poster{opacity:0}.gallery-live.cr-hover .live-poster{object-fit:contain;background:#dedce6}.gallery-live.cr-circuit .live-poster{object-fit:contain;background:#101813}.live-card .expand-demo{inset:auto 9px 9px auto}.live-card .expand-demo span{position:static}.live-card .expand-demo{z-index:12}@media(prefers-reduced-motion:reduce){.gallery-live iframe,.gallery-live .live-poster{transition:none}}
 
 .gallery-live.cr-circuit,.gallery-live.cr-circuit .componentry-preview{background:#101813}.gallery-live.cr-circuit iframe{height:360px}
+
+/* Reserve card geometry, but release offscreen preview trees and pause buffered CSS. */
+.preview-dormant{visibility:hidden;content-visibility:hidden}
+.preview-idle,.preview-idle *,.preview-idle::before,.preview-idle::after,.preview-idle *::before,.preview-idle *::after{animation-play-state:paused!important}
+.expand-demo{pointer-events:auto;z-index:14!important;min-height:28px}
+.preview-actions{z-index:16!important}
