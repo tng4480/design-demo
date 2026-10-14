@@ -1,0 +1,11 @@
+Componentry application demos
+
+Source: https://github.com/harshjdhv/componentry
+Revision: b602c2872fea85c9f2464016ce3bbe0af17b51b4
+License: MIT (retained in COMPONENTRY_LICENSE.txt).
+
+Hover Transition, Circuit Board and Scroll Choreography run actual upstream component logic. Framer Motion imports use the same installed runtime as motion/react. The demo controls, text and composition are original.
+
+Scroll Choreography uses the same public Unsplash image URLs referenced in the upstream demo, at a smaller delivery size. Images remain hosted by Unsplash and are subject to their license: https://unsplash.com/license
+
+React, Motion, clsx and tailwind-merge dependency notices are retained in THIRD_PARTY_NOTICES.txt and SHADCN_NOTICES.txt.
