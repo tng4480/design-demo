@@ -111,4 +111,6 @@ The earlier Atmospheric Mesh is still labelled as an original CSS study. `npm ru
 
 ## Gallery presentation
 
-The newer library and whole-page studies use immediate local screenshots in the gallery, with short titles and source attribution in the metadata. Full interactive renderers mount when a study opens, avoiding blank React Bits cards and repeated iframe loading during browsing. The screenshots in `dist/assets/previews/` are captures of the local demos; refresh them after a visual change to the corresponding study.
+Newer studies use short titles and source attribution in the metadata. Compact library effects and controls keep an immediate local screenshot visible while their live renderer loads; full-page studies keep a screenshot in the gallery and run interactively when opened. The screenshots in `dist/assets/previews/` are captures of the local demos; refresh them after a visual change to the corresponding study.
+
+Compact gallery effects and controls (React Bits, shadcn picks, Circuit Board and Hover Transition) run live when visible, with an immediate captured preview retained until the component signals readiness. Whole-page stories and direction/skill studies keep static gallery previews. Offscreen instances dispose, and Pause motion is forwarded to live frames.
