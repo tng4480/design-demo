@@ -726,7 +726,7 @@
         "Botanical",
         "Maximalism"
       ],
-      "caveat": "Source reference only. Its previews demonstrate art direction, rather than a reusable component library. Swiss and Newsprint can be built mostly with typography and CSS grids; Botanical depends on strong licensed imagery; Maximalism needs careful hierarchy and restraint. Some light/dark labels differ from the observed preview appearance.",
+      "caveat": "Four original local compositions demonstrate Newsprint, Swiss Minimalist, Botanical and Maximalism. Full-page references remain linked. These are art-direction studies, not an upstream component library or copied prompts. Botanical uses original SVG illustrations. Some source light/dark labels differ from the observed preview appearance.",
       "install": "Browse a style, inspect its full-page preview, then open Get Prompt",
       "demos": [
         {

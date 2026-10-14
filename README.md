@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **88 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **92 live studies, 50 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -83,7 +83,7 @@ Registry metadata, official components and blocks were reviewed on 14 October 20
 
 ## Design Prompts reference
 
-Design Prompts is included as an art-direction source with selected Newsprint, Swiss Minimalist, Botanical and Maximalism references. These are links to the official full-page previews, not additional local implementations or copied prompt text.
+Design Prompts is included as an art-direction source with selected Newsprint, Swiss Minimalist, Botanical and Maximalism references. Four original local compositions now run in `design-prompts.html` and the gallery, with links to the official references. Newsprint includes section filters and article dialogs; Swiss offers list/grid views and a geometric interaction; Botanical offers original SVG plant illustrations, specimen selection and care accordions; Maximalism includes poster parallax, palette remixes and a demo ticket builder. These are style studies, not copied upstream prompts or components.
 
 ## Paper Neuro Noise
 
