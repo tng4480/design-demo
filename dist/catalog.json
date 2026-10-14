@@ -3012,9 +3012,9 @@
       "category": "Styles",
       "style": "",
       "effort": "Medium",
-      "summary": "Neural threads flow across a quiet sage surface.",
+      "summary": "Glowing neural threads flow across a living texture.",
       "use": "Atmospheric hero backgrounds and futuristic visual surfaces",
-      "watch": "Runs the actual Paper Neuro Noise shader from pinned package 0.0.81, with four official presets plus an original Atlas palette. WebGL2 required; headline and controls are original.",
+      "watch": "Runs the actual Paper Neuro Noise shader from pinned package 0.0.81, with four official presets. WebGL2 required; headline and controls are original.",
       "order": 83,
       "kind": "Runs Paper Shaders",
       "official": "https://shaders.paper.design/neuro-noise"

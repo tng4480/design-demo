@@ -19,12 +19,5 @@
 .shadergradient-preview{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#111}.shadergradient-frame{width:640px;height:500px;flex:none;border:0;transform-origin:center center}.preview.sg-scroll .preview-caption{display:none}
 
 .preview:has(.design-prompts-preview){padding:0;background:#f5f3eb}.design-prompts-preview{position:absolute;inset:0;overflow:hidden}.design-prompts-frame{position:absolute;left:50%;top:50%;width:800px;height:560px;border:0;margin-left:-400px;margin-top:-280px;transform-origin:center}.preview:has(.design-prompts-preview) .preview-caption{display:none}
-/* Match the host to each React Bits composition, including the space around scaled frames. */
-.preview.rb-aurora,.rb-aurora .react-bits-preview{background:#31483b}.preview.rb-silk,.rb-silk .react-bits-preview{background:#b7c2ab}.preview.rb-orb,.rb-orb .react-bits-preview{background:#302b3c}.preview.rb-blur-text,.rb-blur-text .react-bits-preview{background:#eee8dc}.preview.rb-rotating-text,.rb-rotating-text .react-bits-preview{background:#e0e7d7}.preview.rb-tilted-card,.rb-tilted-card .react-bits-preview{background:#e6e0ed}.preview.rb-glass-icons,.rb-glass-icons .react-bits-preview{background:#e9e3ed}.preview.rb-pixel-transition,.rb-pixel-transition .react-bits-preview{background:#e7dfd3}
 
-/* Contrast and a consistent, component-first gallery surface. */
-.preview.stars{background:#e6ebdc}.stars .effect-label{color:#3b5035;opacity:1}.scroll-preview{background:#dce6cc}.scroll-content .sticky-demo{color:#4f7040}.scroll-chapter{color:#3e5733;border-color:#a8bb91}.scroll-content small{color:#61744f}.horizontal-preview{background:#d4beac}.h-mini>div{color:#574335;background:#f0e2d1}.h-mini>div:nth-child(2){background:#465f4a;color:#f0f3de}.h-mini>div:nth-child(3){background:#b8876b;color:#fff9e8}.card-stack button{color:#3c5531;border-color:#99ad7f}.stack{background:#c6d5b5}.trail h3{color:#566846}.town-status,.town-controls button{color:#3e5734}.preview.world{background:#d6e0ca}.helmet-status,.helmet-controls button{color:#435f36}.preview.helmet{background:#e1e8d6}.gallery-live.cr-circuit,.gallery-live.cr-circuit .componentry-preview,.thumbnail-cr-circuit{background:#e7ecdf}.gallery-live.cr-hover .live-poster,.thumbnail-cr-hover{background:#e5e8db}.neuro-copy h3,.neuro-copy>small{display:none}.neuro-preview-presets{opacity:.9}
-
-.preview.particle-type{background:#dce6cd}.particle-type .preview-caption{color:#3d5834;text-shadow:none}
-
-.demo-card .neuro-copy{display:none}.gallery-live.rb-aurora .live-poster{object-fit:cover}
+.demo-card .neuro-copy{display:none}
