@@ -132,3 +132,7 @@ Spline remains in the source directory as a tool reference. Its Mini Home embed 
 ## Transition studies
 
 `transition-studies.html` has two original GSAP demonstrations: a clip-path reveal with an adjustable origin, and a zoom-through portal. Both offer replay, a progress slider, immediate gallery previews and reduced-motion scene changes. They also appear under Scroll & motion. They are original transition studies, not upstream Amicro or Skiper components.
+
+## Gallery performance
+
+Preview contents are created only within one viewport above or below the screen and removed outside that buffer. Live engines run only while visible, after a short delay that avoids starting every effect during fast scrolling. Offscreen CSS animation is paused; opening a study suspends gallery engines. Closing the study restores only nearby previews. Card geometry and directory metadata stay in place, so scrolling, search and source/style filters remain stable.
