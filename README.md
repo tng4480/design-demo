@@ -100,3 +100,7 @@ Source is pinned to `b602c2872fea85c9f2464016ce3bbe0af17b51b4`. `npm run build:c
 `shadergradient-scroll.html` runs actual `@shadergradient/react@2.4.20` and React Three Fiber 9.3.0 in an original four-chapter scroll system: full-screen surface, framed browser, changing atmosphere and 3D volume. One scroll progress drives framing, colour/camera interpolation and word reveals. Chapter buttons, gradient pause, grain and camera orbit controls allow inspection. Reduced motion offers static chapter selection.
 
 The earlier Atmospheric Mesh is still labelled as an original CSS study. `npm run build:shadergradient` rebuilds the new demo. The small Framer web adapter disables Framer-only live reload. Renderer/dependency attribution is preserved in `dist/SHADERGRADIENT_NOTICES.txt`, and the original choreography source is published as `dist/shadergradient-demo-source.txt`.
+
+## Mobile drawer
+
+`drawer.html` and the gallery Mobile drawer preview run actual Vaul 1.1.2, replacing the earlier CSS approximation. Supports gesture-driven dismissal, overlay dismissal, Escape, focus containment and reduced motion. The full-page example preserves native touch dimensions; the embedded preview stays inside its card. Build with `npm run build:drawer`. Retained licenses are in `dist/VAUL_NOTICES.txt`. Upstream currently marks Vaul unmaintained.

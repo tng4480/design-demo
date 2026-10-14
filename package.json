@@ -11,7 +11,8 @@
     "build:shadcn": "node scripts/shadcn-build.mjs",
     "build:paper": "node scripts/paper-shaders-build.mjs",
     "build:componentry": "node scripts/componentry-build.mjs",
-    "build:shadergradient": "node scripts/shadergradient-build.mjs"
+    "build:shadergradient": "node scripts/shadergradient-build.mjs",
+    "build:drawer": "node scripts/drawer-build.mjs"
   },
   "dependencies": {
     "@barba/core": "2.10.3",
@@ -34,7 +35,8 @@
     "tailwind-merge": "3.3.1",
     "three": "0.180.0",
     "three-vanta": "npm:three@0.134.0",
-    "vanta": "0.5.24"
+    "vanta": "0.5.24",
+    "vaul": "1.1.2"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.0",

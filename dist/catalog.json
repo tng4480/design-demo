@@ -740,7 +740,7 @@
         "mobile interaction",
         "product UI"
       ],
-      "caveat": "A focused drawer primitive; validate touch, scrolling, focus, and background scaling in your actual app.",
+      "caveat": "Actual Vaul 1.1.2 runs in the local drawer study. Upstream currently marks the project unmaintained; validate touch, scrolling and focus in your actual app.",
       "id": "vaul",
       "github": "https://github.com/emilkowalski/vaul",
       "githubStarsApprox": "8.6k",
@@ -2421,11 +2421,11 @@
       "category": "Components",
       "style": "",
       "effort": "Medium",
-      "summary": "Open a bottom sheet with a close action and contained content.",
+      "summary": "Open a smooth bottom sheet, drag to dismiss, or tap outside to close.",
       "use": "Mobile detail panels",
-      "watch": "Original DOM dialog; does not reproduce Vaul drag physics.",
+      "watch": "Runs actual Vaul 1.1.2 with gesture-driven dismissal, an overlay and keyboard focus containment. Open the full-page example to test native-sized touch gestures. Upstream currently marks the project unmaintained.",
       "order": 49,
-      "kind": "Original study",
+      "kind": "Runs Vaul",
       "official": "https://vaul.emilkowal.ski/"
     },
     {

@@ -327,7 +327,7 @@
         "mobile interaction",
         "product UI"
       ],
-      "caveat": "A focused drawer primitive; validate touch, scrolling, focus, and background scaling in your actual app."
+      "caveat": "Actual Vaul 1.1.2 runs in the local drawer study. Upstream currently marks the project unmaintained; validate touch, scrolling and focus in your actual app."
     },
     {
       "name": "Rough.js",
@@ -519,7 +519,7 @@
         "Video-backed camera transitions"
       ],
       "bestFor": "Immersive portfolio storytelling with a distinctive crafted visual world",
-      "caveat": "Browser inspection found two video elements and no canvas. Scroll/click triggers cinematic chapter changes. Footage and illustration production, media loading, navigation and reduced motion are major implementation concerns. The local demo uses original real-time Three.js geometry, not the source\u2019s videos or assets.",
+      "caveat": "Browser inspection found two video elements and no canvas. Scroll/click triggers cinematic chapter changes. Footage and illustration production, media loading, navigation and reduced motion are major implementation concerns. The local demo uses original real-time Three.js geometry, not the source’s videos or assets.",
       "demos": [
         {
           "name": "Seven-chapter cinematic homepage",
@@ -730,19 +730,19 @@
       "install": "Browse a style, inspect its full-page preview, then open Get Prompt",
       "demos": [
         {
-          "name": "Newsprint \u2014 editorial hierarchy and print-style layout",
+          "name": "Newsprint — editorial hierarchy and print-style layout",
           "url": "https://www.designprompts.dev/newsprint"
         },
         {
-          "name": "Swiss Minimalist \u2014 precise grids and strong type",
+          "name": "Swiss Minimalist — precise grids and strong type",
           "url": "https://www.designprompts.dev/swiss-minimalist"
         },
         {
-          "name": "Botanical \u2014 warm palettes and organic image framing",
+          "name": "Botanical — warm palettes and organic image framing",
           "url": "https://www.designprompts.dev/botanical"
         },
         {
-          "name": "Maximalism \u2014 saturated, layered campaign direction",
+          "name": "Maximalism — saturated, layered campaign direction",
           "url": "https://www.designprompts.dev/maximalism"
         }
       ],
