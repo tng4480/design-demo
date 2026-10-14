@@ -2373,9 +2373,9 @@
       "category": "Styles",
       "style": "isometric",
       "effort": "High",
-      "summary": "Rotate a miniature geometric world with pointer input.",
+      "summary": "Build a miniature town, drag to rotate, and reset its layout.",
       "use": "Interactive world-building exploration",
-      "watch": "Original Three.js scene; not Bruno Simon portfolio code.",
+      "watch": "Original Three.js town with selectable plots, building controls and orthographic projection.",
       "order": 66,
       "kind": "Runs Three.js",
       "official": "https://bruno-simon.com/"
@@ -2383,14 +2383,14 @@
     {
       "id": "cinematic-chapters",
       "title": "Cinematic chapter journey",
-      "effect": "world",
+      "effect": "journey",
       "source": "souradip",
       "category": "Motion",
       "style": "isometric",
       "effort": "High",
       "summary": "Move a camera between three original installations as the story advances.",
       "use": "Immersive portfolio and narrative storytelling",
-      "watch": "Thumbnail is an orbiting scene. Open the full journey for chapter-driven camera travel. Souradip uses video transitions; this original demo uses real-time Three.js geometry.",
+      "watch": "This preview runs the actual three-chapter journey. Use Next or open the full-page demo for camera travel. Original Three.js geometry; no source footage is reused.",
       "order": 67,
       "kind": "Runs Three.js",
       "official": "https://souradip.com/"

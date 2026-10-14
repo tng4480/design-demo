@@ -59,6 +59,6 @@ GitHub Pages serves the `gh-pages` branch. The source stays on `main`; the publi
 
 After committing a change to `main`, run `npm run publish` to update the live site. The publishing script preserves Pages branch history and requires GitHub CLI authentication.
 
-## Souradip-inspired cinematic chapters
+## Interactive 3D studies
 
-The newly added `journey.html` is an original real-time Three.js camera study with chapter buttons, wheel/swipe/keyboard navigation and reduced motion. Direct inspection of souradip.com showed video-backed camera transitions and paper-collage artwork. That production workflow differs from this procedural 3D study; no source footage or artwork is copied into the demo. A screenshot is retained as an attributed reference in the source directory.
+The isometric playground supports building on empty plots, dragging to rotate, quarter-turn controls, and resetting the town. The cinematic chapter preview embeds the actual three-scene camera journey, including chapter navigation, wheel/swipe/keyboard input and reduced motion. Both are original Three.js demonstrations.
