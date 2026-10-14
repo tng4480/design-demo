@@ -450,11 +450,15 @@
         {
           "name": "Interactive effect gallery and customizer",
           "url": "https://www.vantajs.com/"
+        },
+        {
+          "name": "Topology customizer",
+          "url": "https://www.vantajs.com/?effect=topology"
         }
       ],
-      "install": "npm install vanta@0.5.24 three@0.134.0",
+      "install": "npm install vanta@0.5.24 three@0.134.0 p5@1.1.9",
       "bestFor": "Drop-in interactive animated hero backgrounds",
-      "caveat": "Official site recommends at most one or two instances on a page, warns of slow WebGL on older devices and mobile incompatibility, and requires a fallback. This gallery uses actual Vanta with its documented older Three.js version isolated from modern Three.js demos.",
+      "caveat": "Official site recommends at most one or two instances on a page, warns of slow WebGL on older devices and mobile incompatibility, and requires a fallback. This gallery uses actual Vanta with its documented older Three.js version isolated from modern Three.js demos. TOPOLOGY uses pinned p5.js 1.1.9 rather than WebGL; its 4,500 particle strokes form an autonomous flow field. The p5.js LGPL license is included in library notices.",
       "evidence": [
         "https://www.vantajs.com/",
         "https://github.com/tengbao/vanta"

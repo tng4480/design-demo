@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **70 live studies, 44 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **71 live studies, 44 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -50,7 +50,7 @@ The catalog is saved and editable in this workspace. No PR has been created.
 
 ## Vanta
 
-Four actual Vanta effects are integrated: NET, FOG, WAVES and GLOBE. Vanta 0.5.24 uses Three.js r134, isolated from the gallery’s modern Three.js r180. At most two Vanta instances run simultaneously. Opening a study disposes the background gallery renderers; offscreen effects are destroyed. Pause motion stops animation updates. Invalid WebGL receives a fallback. Vanta source and both Three.js licenses are retained.
+Five actual Vanta effects are integrated: NET, FOG, WAVES, GLOBE and TOPOLOGY. Topology uses p5.js 1.1.9 to accumulate flowing contour lines, with accent colour and fresh-pattern controls. Vanta 0.5.24 uses Three.js r134, isolated from the gallery’s modern Three.js r180. At most two Vanta instances run simultaneously. Opening a study disposes the background gallery renderers; offscreen effects are destroyed. Pause motion stops animation updates. Invalid WebGL receives a fallback. Vanta, p5.js and both Three.js licenses are retained.
 
 
 ## GitHub Pages

@@ -879,11 +879,15 @@
         {
           "name": "Interactive effect gallery and customizer",
           "url": "https://www.vantajs.com/"
+        },
+        {
+          "name": "Topology customizer",
+          "url": "https://www.vantajs.com/?effect=topology"
         }
       ],
-      "install": "npm install vanta@0.5.24 three@0.134.0",
+      "install": "npm install vanta@0.5.24 three@0.134.0 p5@1.1.9",
       "bestFor": "Drop-in interactive animated hero backgrounds",
-      "caveat": "Official site recommends at most one or two instances on a page, warns of slow WebGL on older devices and mobile incompatibility, and requires a fallback. This gallery uses actual Vanta with its documented older Three.js version isolated from modern Three.js demos.",
+      "caveat": "Official site recommends at most one or two instances on a page, warns of slow WebGL on older devices and mobile incompatibility, and requires a fallback. This gallery uses actual Vanta with its documented older Three.js version isolated from modern Three.js demos. TOPOLOGY uses pinned p5.js 1.1.9 rather than WebGL; its 4,500 particle strokes form an autonomous flow field. The p5.js LGPL license is included in library notices.",
       "evidence": [
         "https://www.vantajs.com/",
         "https://github.com/tengbao/vanta"
@@ -1549,6 +1553,21 @@
       "official": "https://www.shadergradient.co/customize"
     },
     {
+      "id": "vanta-topology",
+      "title": "Vanta / TOPOLOGY",
+      "effect": "vanta-topology",
+      "source": "vanta-js",
+      "category": "Styles",
+      "style": "particles",
+      "effort": "Medium",
+      "summary": "Thousands of flowing strokes accumulate into organic contour lines.",
+      "use": "Quiet generative textures and atmospheric hero backgrounds",
+      "watch": "Runs actual Vanta TOPOLOGY with p5.js 1.1.9. Change the accent or generate a fresh pattern. This effect is autonomous, not pointer-reactive.",
+      "order": 7,
+      "kind": "Runs Vanta",
+      "official": "https://www.vantajs.com/?effect=topology"
+    },
+    {
       "id": "vanta-net",
       "title": "Vanta / NET",
       "effect": "vanta-net",
@@ -1559,7 +1578,7 @@
       "summary": "A real Vanta network of points and connections that follows your cursor.",
       "use": "Technology and network-themed hero backgrounds",
       "watch": "Runs Vanta 0.5.24 with Three.js r134. At most two instances run concurrently.",
-      "order": 7,
+      "order": 8,
       "kind": "Runs Vanta",
       "official": "https://www.vantajs.com/"
     },
@@ -1574,7 +1593,7 @@
       "summary": "A real Vanta shader paints a drifting atmospheric fog.",
       "use": "Quiet ambient hero backgrounds",
       "watch": "Runs the actual Vanta FOG effect. Provide a static fallback on unsupported devices.",
-      "order": 8,
+      "order": 9,
       "kind": "Runs Vanta",
       "official": "https://www.vantajs.com/"
     },
@@ -1589,7 +1608,7 @@
       "summary": "A real Vanta 3D wave surface with lighting and pointer movement.",
       "use": "Flow and fluidity in a landing-page hero",
       "watch": "Runs actual Vanta WAVES, not the local liquid shader. Compatible Three.js is pinned separately.",
-      "order": 9,
+      "order": 10,
       "kind": "Runs Vanta",
       "official": "https://www.vantajs.com/"
     },
@@ -1604,7 +1623,7 @@
       "summary": "A real Vanta connected globe in a quiet geometric landscape.",
       "use": "Global products and connectivity stories",
       "watch": "Runs actual Vanta GLOBE. WebGL cost is substantial; prefer one background in your product.",
-      "order": 10,
+      "order": 11,
       "kind": "Runs Vanta",
       "official": "https://www.vantajs.com/"
     },
@@ -1619,7 +1638,7 @@
       "summary": "A rotating torus knot rendered as a real 3D wireframe.",
       "use": "Technical product headers",
       "watch": "Runs Three.js; not Drei. WebGL fallback included.",
-      "order": 11,
+      "order": 12,
       "kind": "Runs Three.js",
       "official": "https://drei.docs.pmnd.rs/shaders/mesh-transmission-material"
     },
@@ -1634,7 +1653,7 @@
       "summary": "Click to flip between short words on a mechanical display.",
       "use": "Launch announcements and status",
       "watch": "Original DOM flip study; official Componentry example linked.",
-      "order": 12,
+      "order": 13,
       "kind": "Original study",
       "official": "https://componentry.dev/docs/components/split-flap-display"
     },
@@ -1649,7 +1668,7 @@
       "summary": "A glowing action with click feedback and a restrained pulse.",
       "use": "Primary campaign action",
       "watch": "Glow is decorative; the button remains semantic.",
-      "order": 13,
+      "order": 14,
       "kind": "Original study",
       "official": "https://uiverse.io/"
     },
@@ -1664,7 +1683,7 @@
       "summary": "A geometric composition in primary colors.",
       "use": "Editorial identity",
       "watch": "Original CSS composition, not a css-doodle export.",
-      "order": 14,
+      "order": 15,
       "kind": "Original study",
       "official": "https://css-doodle.com/"
     },
@@ -1679,7 +1698,7 @@
       "summary": "Check tasks to update progress and completion feedback.",
       "use": "SaaS onboarding",
       "watch": "Original implementation; official checklist linked.",
-      "order": 15,
+      "order": 16,
       "kind": "Original study",
       "official": "https://ui.watermelon.sh/animated-components/onboarding-checklist"
     },
@@ -1694,7 +1713,7 @@
       "summary": "A fluid blob morphs between organic silhouettes.",
       "use": "Illustrated loading and accent shapes",
       "watch": "SVG/CSS shape study; not a liquid simulation or Anime.js integration.",
-      "order": 16,
+      "order": 17,
       "kind": "Original study",
       "official": "https://animejs.com/documentation/"
     },
@@ -1709,7 +1728,7 @@
       "summary": "Tactile surfaces with soft relief and click states.",
       "use": "Friendly consumer interfaces",
       "watch": "CSS relief; no 3D assets or physical scene.",
-      "order": 17,
+      "order": 18,
       "kind": "Original study",
       "official": "https://uiverse.io/"
     },
@@ -1724,7 +1743,7 @@
       "summary": "A rotating donut described in characters rather than pixels.",
       "use": "Developer-facing brand moments",
       "watch": "Original CPU character projection, not React Bits ASCII Text.",
-      "order": 18,
+      "order": 19,
       "kind": "Original study",
       "official": "https://reactbits.dev/text-animations/ascii-text"
     },
@@ -1739,7 +1758,7 @@
       "summary": "Staggered letter entrances with the Motion animation engine.",
       "use": "Compact headlines",
       "watch": "Runs Motion on semantic text; pause and replay available.",
-      "order": 19,
+      "order": 20,
       "kind": "Runs Motion",
       "official": "https://motion.dev/examples/react-layout-animation"
     },
@@ -1754,7 +1773,7 @@
       "summary": "A floating stack illustrates a system in three layers.",
       "use": "Architecture and feature explanations",
       "watch": "CSS perspective study; not a Three.js scene.",
-      "order": 20,
+      "order": 21,
       "kind": "Original study",
       "official": "https://drei.docs.pmnd.rs/shaders/mesh-transmission-material"
     },
@@ -1769,7 +1788,7 @@
       "summary": "High-contrast comic type over a burst of color.",
       "use": "Campaigns and playful highlights",
       "watch": "Original lettering study. Keep primary content calm.",
-      "order": 21,
+      "order": 22,
       "kind": "Original study",
       "official": "https://magicui.design/docs/components/comic-text"
     },
@@ -1784,7 +1803,7 @@
       "summary": "Subtle scanlines and chromatic type offsets.",
       "use": "Culture, music, and retro launches",
       "watch": "Static offsets and mild motion, no rapid flashing.",
-      "order": 22,
+      "order": 23,
       "kind": "Original study",
       "official": "https://reactbits.dev/components/holo-card"
     },
@@ -1799,7 +1818,7 @@
       "summary": "A dot-based print composition with adjustable scale.",
       "use": "Editorial posters",
       "watch": "CSS halftone study; official Paper shader linked.",
-      "order": 23,
+      "order": 24,
       "kind": "Original study",
       "official": "https://shaders.paper.design/halftone-dots"
     },
@@ -1814,7 +1833,7 @@
       "summary": "A nostalgic panel with working directional controls.",
       "use": "Games and playful product sections",
       "watch": "Original pixel grid/CSS; official NES.css is linked.",
-      "order": 24,
+      "order": 25,
       "kind": "Original study",
       "official": "https://nostalgic-css.github.io/NES.css/"
     },
@@ -1829,7 +1848,7 @@
       "summary": "Construction lines and measured geometry.",
       "use": "Engineering and process storytelling",
       "watch": "Original SVG diagram; not Rough.js integration.",
-      "order": 25,
+      "order": 26,
       "kind": "Original study",
       "official": "https://roughjs.com/"
     },
@@ -1844,7 +1863,7 @@
       "summary": "A ceremonial ticket in gold, ink, and symmetrical linework.",
       "use": "Luxury, hospitality, events",
       "watch": "Original CSS/SVG composition; Framer marketplace is an asset source.",
-      "order": 26,
+      "order": 27,
       "kind": "Original study",
       "official": "https://www.framer.com/marketplace/components/liquid-shader/"
     },
@@ -1859,7 +1878,7 @@
       "summary": "A decisive card with a hard shadow and flat color.",
       "use": "Creator products and bold pricing",
       "watch": "Original CSS; related shadcn-style components linked.",
-      "order": 27,
+      "order": 28,
       "kind": "Original study",
       "official": "https://www.neobrutalism.dev/docs"
     },
@@ -1874,7 +1893,7 @@
       "summary": "Light follows your pointer across a dark card.",
       "use": "Feature cards",
       "watch": "Original CSS spotlight, not Aceternity source.",
-      "order": 28,
+      "order": 29,
       "kind": "Original study",
       "official": "https://ui.aceternity.com/components/card-spotlight"
     },
@@ -1889,7 +1908,7 @@
       "summary": "Concentric progress rings with a replay action.",
       "use": "Fitness or completion dashboards",
       "watch": "Original SVG study; synthetic progress values.",
-      "order": 29,
+      "order": 30,
       "kind": "Original study",
       "official": "https://kokonutui.com/docs/cards/apple-activity-card"
     },
@@ -1904,7 +1923,7 @@
       "summary": "Type a query and select an action with mouse or keyboard.",
       "use": "Product navigation",
       "watch": "Original semantic command study, not shadcn primitives.",
-      "order": 30,
+      "order": 31,
       "kind": "Original study",
       "official": "https://ui.shadcn.com/docs/components/command"
     },
@@ -1919,7 +1938,7 @@
       "summary": "An action bar expands into a prompt field.",
       "use": "Selection actions and AI assist",
       "watch": "Illustrative UI only; no prompt is sent to an AI service.",
-      "order": 31,
+      "order": 32,
       "kind": "Original study",
       "official": "https://ui.watermelon.sh/animated-components/contextual-ai-bar"
     },
@@ -1934,7 +1953,7 @@
       "summary": "Press and hold to complete an intentional action.",
       "use": "Destructive-action confirmation patterns",
       "watch": "Demo only; keyboard Space/Enter supported.",
-      "order": 32,
+      "order": 33,
       "kind": "Original study",
       "official": "https://kokonutui.com/docs/buttons/hold-button"
     },
@@ -1949,7 +1968,7 @@
       "summary": "A magnifying dock responds to pointer and keyboard focus.",
       "use": "Compact tool navigation",
       "watch": "Original dock study. Touch uses normal-size targets.",
-      "order": 33,
+      "order": 34,
       "kind": "Original study",
       "official": "https://componentry.dev/docs/components/cursor-driven-particle-typography"
     },
@@ -1964,7 +1983,7 @@
       "summary": "Vertical lens-like bands soften a vivid color field.",
       "use": "Decorative panels",
       "watch": "CSS illustration, not true refraction or Paper shader.",
-      "order": 34,
+      "order": 35,
       "kind": "Original study",
       "official": "https://shaders.paper.design/fluted-glass"
     },
@@ -1979,7 +1998,7 @@
       "summary": "An illuminated perspective grid reaches toward a sun.",
       "use": "Retro brand surfaces",
       "watch": "Original CSS grid study.",
-      "order": 35,
+      "order": 36,
       "kind": "Original study",
       "official": "https://magicui.design/docs/components/retro-grid"
     },
@@ -1994,7 +2013,7 @@
       "summary": "A looping sequence of chunky pixels.",
       "use": "Short loading moments",
       "watch": "Illustrative loading; never hides real content.",
-      "order": 36,
+      "order": 37,
       "kind": "Original study",
       "official": "https://css-doodle.com/"
     },
@@ -2009,7 +2028,7 @@
       "summary": "A luminous curtain of overlapping color.",
       "use": "Open hero surfaces",
       "watch": "Original CSS approximation. Blur-heavy on large surfaces.",
-      "order": 37,
+      "order": 38,
       "kind": "Original study",
       "official": "https://componentry.dev/docs/components/cursor-driven-particle-typography"
     },
@@ -2024,7 +2043,7 @@
       "summary": "Small nodes linked by moving dashes.",
       "use": "Integration diagrams",
       "watch": "Original SVG path motion, not upstream Animated Beam.",
-      "order": 38,
+      "order": 39,
       "kind": "Original study",
       "official": "https://magicui.design/docs/components/animated-beam"
     },
@@ -2039,7 +2058,7 @@
       "summary": "An active pill tracks a selected navigation item.",
       "use": "Floating page navigation",
       "watch": "Original CSS glass; labelled demo sections.",
-      "order": 39,
+      "order": 40,
       "kind": "Original study",
       "official": "https://kokonutui.com/docs/cards/apple-activity-card"
     },
@@ -2054,7 +2073,7 @@
       "summary": "Cycle through palettes and see them on a live surface.",
       "use": "Compare visual color direction",
       "watch": "Local curated presets, not Khroma personalized AI.",
-      "order": 40,
+      "order": 41,
       "kind": "Original study",
       "official": "https://www.khroma.co/"
     },
@@ -2069,7 +2088,7 @@
       "summary": "Blend two chosen colors into a usable seven-step scale.",
       "use": "Chart colors and design tokens",
       "watch": "Local RGB interpolation, not perceptually uniform OKLCH.",
-      "order": 41,
+      "order": 42,
       "kind": "Original study",
       "official": "https://colorkit.io/"
     },
@@ -2084,7 +2103,7 @@
       "summary": "Cycle curated palettes on a small product interface.",
       "use": "Evaluate real foreground/background roles",
       "watch": "Local presets, not Coolors generation. Contrast ratio is calculated.",
-      "order": 42,
+      "order": 43,
       "kind": "Original study",
       "official": "https://coolors.co/generate"
     },
@@ -2099,7 +2118,7 @@
       "summary": "Test a foreground, background and accent in a mini UI.",
       "use": "Brand token exploration",
       "watch": "Color input updates live; contrast checks only text/background.",
-      "order": 43,
+      "order": 44,
       "kind": "Original study",
       "official": "https://www.realtimecolors.com/"
     },
@@ -2114,7 +2133,7 @@
       "summary": "Layered SVG wave compositions with palette variations.",
       "use": "Section backgrounds and exported assets",
       "watch": "Original SVG assets; not Haikei exports.",
-      "order": 44,
+      "order": 45,
       "kind": "Original study",
       "official": "https://haikei.app/"
     },
@@ -2129,7 +2148,7 @@
       "summary": "Curated CSS gradients that can be copied.",
       "use": "Quiet backgrounds",
       "watch": "Original gradients; not Open Props token values.",
-      "order": 45,
+      "order": 46,
       "kind": "Original study",
       "official": "https://open-props.style/"
     },
@@ -2144,7 +2163,7 @@
       "summary": "Switch between original visual cards in an editorial slider.",
       "use": "Portfolio project browsing",
       "watch": "Original slider; paid Framer assets are linked, not copied.",
-      "order": 46,
+      "order": 47,
       "kind": "Original study",
       "official": "https://www.framer.com/marketplace/components/liquid-shader/"
     },
@@ -2159,7 +2178,7 @@
       "summary": "Turn a fixed example brief into a preview specification.",
       "use": "Evaluate whole-site AI-building workflow",
       "watch": "Illustration only; no Manus API integration or AI output.",
-      "order": 47,
+      "order": 48,
       "kind": "Original study",
       "official": "https://awesome.manus.space/?category=web-app"
     },
@@ -2174,7 +2193,7 @@
       "summary": "Open a bottom sheet with a close action and contained content.",
       "use": "Mobile detail panels",
       "watch": "Original DOM dialog; does not reproduce Vaul drag physics.",
-      "order": 48,
+      "order": 49,
       "kind": "Original study",
       "official": "https://vaul.emilkowal.ski/"
     },
@@ -2189,7 +2208,7 @@
       "summary": "A tiny desktop window with selectable tabs.",
       "use": "Nostalgic microsites",
       "watch": "Original CSS window; official 98.css examples linked.",
-      "order": 49,
+      "order": 50,
       "kind": "Original study",
       "official": "https://jdan.github.io/98.css/"
     },
@@ -2204,7 +2223,7 @@
       "summary": "Hatched paper and deliberately imperfect linework.",
       "use": "Creative learning and notes",
       "watch": "Original SVG sketch, not Rough.js output.",
-      "order": 50,
+      "order": 51,
       "kind": "Original study",
       "official": "https://roughjs.com/"
     },
@@ -2219,7 +2238,7 @@
       "summary": "Switch a practical card between three visual themes.",
       "use": "Framework-independent themed UI",
       "watch": "Original CSS themes; no daisyUI dependency.",
-      "order": 51,
+      "order": 52,
       "kind": "Original study",
       "official": "https://daisyui.com/components/"
     },
@@ -2234,7 +2253,7 @@
       "summary": "Filter a small table of realistic project data.",
       "use": "Functional application baseline",
       "watch": "Vanilla study; official Svelte implementation linked.",
-      "order": 52,
+      "order": 53,
       "kind": "Original study",
       "official": "https://shadcn-svelte.com/docs"
     },
@@ -2249,7 +2268,7 @@
       "summary": "A quiet moving field with pointer parallax.",
       "use": "Ambient backgrounds",
       "watch": "Original Canvas engine, not tsParticles.",
-      "order": 53,
+      "order": 54,
       "kind": "Original study",
       "official": "https://particles.js.org/samples"
     },
@@ -2264,7 +2283,7 @@
       "summary": "A prismatic edge around a compact action.",
       "use": "Creative product actions",
       "watch": "CSS-only study; button click produces feedback.",
-      "order": 54,
+      "order": 55,
       "kind": "Original study",
       "official": "https://uiverse.io/"
     },
@@ -2279,7 +2298,7 @@
       "summary": "Architectural symmetry for a restrained brand mark.",
       "use": "Luxury branding",
       "watch": "Original vector ornament.",
-      "order": 55,
+      "order": 56,
       "kind": "Original study",
       "official": "https://www.framer.com/marketplace/components/liquid-shader/"
     },
@@ -2294,7 +2313,7 @@
       "summary": "A typographic grid balanced against primary shapes.",
       "use": "Magazine and design identities",
       "watch": "Original static composition.",
-      "order": 56,
+      "order": 57,
       "kind": "Original study",
       "official": "https://css-doodle.com/"
     },
@@ -2309,7 +2328,7 @@
       "summary": "Large flat actions with tactile press feedback.",
       "use": "Bold task-focused interfaces",
       "watch": "Original CSS button states.",
-      "order": 57,
+      "order": 58,
       "kind": "Original study",
       "official": "https://www.neobrutalism.dev/docs"
     },
@@ -2324,7 +2343,7 @@
       "summary": "A sequence of tiles moves under a real GSAP timeline.",
       "use": "Orchestrated interface entrances",
       "watch": "Runs GSAP; press Replay to inspect timing.",
-      "order": 58,
+      "order": 59,
       "kind": "Runs GSAP",
       "official": "https://demos.gsap.com/plugin/scrolltrigger/"
     },
@@ -2339,7 +2358,7 @@
       "summary": "A product stays in view while its chapters advance.",
       "use": "Product storytelling",
       "watch": "Open the full scroll lab for the real ScrollTrigger implementation.",
-      "order": 59,
+      "order": 60,
       "kind": "Original study",
       "official": "https://demos.gsap.com/plugin/scrolltrigger/"
     },
@@ -2354,7 +2373,7 @@
       "summary": "Vertical scrolling moves a compact editorial collection sideways.",
       "use": "Editorial case studies",
       "watch": "Actual GSAP demonstration in the full scroll lab.",
-      "order": 60,
+      "order": 61,
       "kind": "Original study",
       "official": "https://webflow.com/made-in-webflow/website/webflow-gsap-basics"
     },
@@ -2369,7 +2388,7 @@
       "summary": "Compare native scrolling with optional Lenis smoothing.",
       "use": "Gentle creative-site scrolling",
       "watch": "Runs Lenis in the full lab; smoothing does not create the animations.",
-      "order": 61,
+      "order": 62,
       "kind": "Original study",
       "official": "https://lenis.dev/showcase"
     },
@@ -2384,7 +2403,7 @@
       "summary": "Navigate between real pages behind a short shutter wipe.",
       "use": "Multipage creative sites",
       "watch": "Runs Barba + GSAP in the full transition demo; not a React router.",
-      "order": 62,
+      "order": 63,
       "kind": "Original study",
       "official": "https://barba.js.org/showcase/"
     },
@@ -2399,7 +2418,7 @@
       "summary": "A compact card stack demonstrates layered storytelling.",
       "use": "Creative-site case studies",
       "watch": "Original study. Osmo premium resources cannot be redistributed.",
-      "order": 63,
+      "order": 64,
       "kind": "Original study",
       "official": "https://www.osmo.supply/collection"
     },
@@ -2414,7 +2433,7 @@
       "summary": "Drag your pointer through a field of transient cards.",
       "use": "Experimental portfolio navigation",
       "watch": "Original DOM trail. Follow a specific Codrops tutorial for production.",
-      "order": 64,
+      "order": 65,
       "kind": "Original study",
       "official": "https://tympanus.net/codrops/category/tutorials/"
     },
@@ -2429,7 +2448,7 @@
       "summary": "A softly lit physical geometry in a real Three.js scene.",
       "use": "High-end creative direction",
       "watch": "Original procedural model; not a Lusion asset or implementation.",
-      "order": 65,
+      "order": 66,
       "kind": "Runs Three.js",
       "official": "https://labs.lusion.co/"
     },
@@ -2444,7 +2463,7 @@
       "summary": "Build a miniature town, drag to rotate, and reset its layout.",
       "use": "Interactive world-building exploration",
       "watch": "Original Three.js town with selectable plots, building controls and orthographic projection.",
-      "order": 66,
+      "order": 67,
       "kind": "Runs Three.js",
       "official": "https://bruno-simon.com/"
     },
@@ -2459,7 +2478,7 @@
       "summary": "Move a camera between three original installations as the story advances.",
       "use": "Immersive portfolio and narrative storytelling",
       "watch": "This preview runs the actual three-chapter journey. Use Next or open the full-page demo for camera travel. Original Three.js geometry; no source footage is reused.",
-      "order": 67,
+      "order": 68,
       "kind": "Runs Three.js",
       "official": "https://souradip.com/"
     },
@@ -2474,7 +2493,7 @@
       "summary": "Search real outline and filled icons, customize them, and export SVG.",
       "use": "A consistent icon system for product UI",
       "watch": "Runs the actual MIT-licensed Tabler SVGs. Open the full explorer for all 6,238 icons.",
-      "order": 68,
+      "order": 69,
       "kind": "Runs Tabler SVGs",
       "official": "https://tabler.io/icons"
     },
@@ -2489,7 +2508,7 @@
       "summary": "Reveal a coloured 3D helmet through its wireframe by moving the pointer.",
       "use": "Interactive product models and brand heroes",
       "watch": "Original procedural helmet and hover shader, not Lando’s model, photos, branding or source code. Lock reveal and Show full work with keyboard and touch.",
-      "order": 69,
+      "order": 70,
       "kind": "Runs Three.js",
       "official": "https://landonorris.com/"
     }
