@@ -25,3 +25,6 @@
 /* These two particle studies use explicit contrast, independent of the renderer palettes. */
 .preview.stars,.preview.particle-type{background:#edf0e3;color:#263e29}.stars .effect-label,.particle-type .preview-caption{color:#3c5235;opacity:1;text-shadow:none}
 .stars .preview-caption{color:#3c5235;opacity:1;text-shadow:none}
+
+.interaction-preview{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#f1f0e9}.interaction-frame{flex:none;border:0;transform-origin:center center}.preview.su-expand .preview-caption,.preview.su-blur .preview-caption,.preview.am-cart .preview-caption,.preview.am-spread .preview-caption,.preview.sp-shapes .preview-caption{display:none}.preview.sp-shapes .interaction-preview{background:#111}
+.preview:has(.interaction-preview) .preview-caption{display:none}.preview.sp-home .interaction-preview{background:#eae5db}

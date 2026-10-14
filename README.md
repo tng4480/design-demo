@@ -2,7 +2,7 @@
 
 **Hosting: GitHub Pages. No ChatGPT Sites or Cloudflare configuration.**
 
-A searchable visual palette of **95 live studies, 53 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
+A searchable visual palette of **102 studies, 56 sources, and all 20 requested styles**. Includes a four-part scrolling lab and a real two-page Barba transition.
 
 ## Run locally
 
@@ -120,3 +120,11 @@ Compact gallery effects and controls (React Bits, shadcn picks, Circuit Board an
 The later pastel colour shift has been rolled back. Original renderer palettes and surfaces are restored; current SVG artwork, layouts, focused gallery previews, stronger particle visibility and live-preview readiness remain in place. Neuro Noise uses its original official presets again.
 
 Starfield and particle typography use a dedicated high-contrast treatment: dark, larger points on a light surface, with denser ATLAS lettering. This readability adjustment is independent of the colour rollback elsewhere.
+
+## Skiper UI, Amicro & Spline
+
+Four actual free Skiper picks: expanding strips (52), progressive blur (41), smooth caret (106), and a gooey drag composition using its SVG filter (64). Two actual MIT Amicro components: CardScatterSpread and AddToCartMorph. All compact demos have immediate captured previews and mount live in the visible gallery. Original Atlas artwork, attribution and adaptation notes are included.
+
+Spline’s official Mini Home template is displayed through its hosted app preview after pressing Play. Its gallery capture appears immediately. Pause unloads the third-party iframe; no Spline runtime or scene asset is redistributed. Network/WebGL is required. Open the template in Spline to make an editable copy for your own project.
+
+`npm run build:interactions` rebuilds the six compact demos and Spline wrapper. Selected upstream source is retained in `interaction-lab/upstream/`; source snapshots, licenses and adaptations are recorded in `dist/INTERACTION_NOTICES.txt` and `dist/AMICRO_LICENSE.txt`.
