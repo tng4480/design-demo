@@ -108,3 +108,7 @@ The earlier Atmospheric Mesh is still labelled as an original CSS study. `npm ru
 ## Design skill comparison lab
 
 `skills.html` compares a conventional baseline and selected guidance from Impeccable, Taste Skill and the Awesome Design Skills Editorial recipe. Same fictional workshop brief, copy, schedule, prices and reference imagery; differences in hierarchy, composition and visual language are intentional. Each treatment is available in the gallery. These are original illustrative guidance studies, not complete upstream workflow runs or quality benchmarks. No skills were installed globally. See `dist/skill-lab/NOTES.txt` for the exact scope and sources. Remote Unsplash reference photos require network access.
+
+## Gallery presentation
+
+The newer library and whole-page studies use immediate local screenshots in the gallery, with short titles and source attribution in the metadata. Full interactive renderers mount when a study opens, avoiding blank React Bits cards and repeated iframe loading during browsing. The screenshots in `dist/assets/previews/` are captures of the local demos; refresh them after a visual change to the corresponding study.
