@@ -20,5 +20,6 @@ const drawerPage=await readFile('dist/drawer.html','utf8');
 for(const [,file] of drawerPage.matchAll(/(?:src|href)="(drawer-app\/[^"]+)"/g))assert((await stat('dist/'+file)).size>0,`Drawer asset missing: ${file}`);
 assert.equal(catalog.demos.filter(d=>d.effect.startsWith('dp-')).length,4);
 assert.equal(catalog.demos.filter(d=>d.effect.startsWith('sk-')).length,3);
+const localFrames=JSON.parse(await readFile('componentry/images.json','utf8'));for(const file of Object.values(localFrames))assert((await stat('dist/'+file)).size>0,`Missing scroll artwork: ${file}`);
 const rbPage=await readFile('dist/react-bits.html','utf8');assert(rbPage.includes('react-bits-app/app-'));
 console.log(`Validated ${catalog.demos.length} studies, ${catalog.sources.length} sources, all 20 styles, script syntax, local assets, and library notices.`);

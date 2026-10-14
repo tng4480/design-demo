@@ -3,14 +3,14 @@ export function mountHelmet(el,paused,notify){
   const resources=new Set(),scene=new THREE.Scene();
   const camera=new THREE.PerspectiveCamera(35,1,.1,50);camera.position.set(0,.25,5.5);camera.lookAt(0,.05,0);
   const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});
-  renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;
+  renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
   renderer.domElement.setAttribute('aria-label','Original 3D helmet. Move the pointer to reveal its surface. Use the buttons to show or lock the reveal.');
   renderer.domElement.tabIndex=0;el.prepend(renderer.domElement);
   scene.add(new THREE.AmbientLight('#ffffff',2));const key=new THREE.DirectionalLight('#ffffff',4);key.position.set(3,4,5);scene.add(key);const rim=new THREE.DirectionalLight('#d7f2a5',2);rim.position.set(-4,1,-2);scene.add(rim);
   const object=new THREE.Group();object.rotation.y=.32;scene.add(object);
   const uniforms={uPointer:{value:new THREE.Vector2(.5,.55)},uResolution:{value:new THREE.Vector2(1,1)},uReveal:{value:.7},uFull:{value:0}};
   function solid(color,metalness=.15,roughness=.4){const mat=new THREE.MeshStandardMaterial({color,metalness,roughness,side:THREE.DoubleSide});resources.add(mat);mat.onBeforeCompile=shader=>{Object.assign(shader.uniforms,uniforms);shader.fragmentShader='uniform vec2 uPointer;uniform vec2 uResolution;uniform float uReveal;uniform float uFull;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nvec2 delta=(gl_FragCoord.xy/uResolution-uPointer)*vec2(uResolution.x/uResolution.y,1.0);float revealMask=1.0-smoothstep(0.24,0.31,length(delta));if(uFull<0.5 && revealMask*uReveal<0.18)discard;');};return mat;}
-  const wire=new THREE.MeshBasicMaterial({color:'#698061',wireframe:true,transparent:true,opacity:.14,depthWrite:false});resources.add(wire);
+  const wire=new THREE.MeshBasicMaterial({color:'#486a45',wireframe:true,transparent:true,opacity:.4,depthWrite:false});resources.add(wire);
   wire.onBeforeCompile=shader=>{Object.assign(shader.uniforms,uniforms);shader.fragmentShader='uniform vec2 uPointer;uniform vec2 uResolution;uniform float uReveal;uniform float uFull;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nvec2 delta=(gl_FragCoord.xy/uResolution-uPointer)*vec2(uResolution.x/uResolution.y,1.0);float revealMask=1.0-smoothstep(0.24,0.31,length(delta));if(uFull>0.5 || revealMask*uReveal>=0.18)discard;');};
   function part(geometry,material,position=[0,0,0],scale=[1,1,1],rotation=[0,0,0]){resources.add(geometry);const group=new THREE.Group();group.position.set(...position);group.scale.set(...scale);group.rotation.set(...rotation);group.add(new THREE.Mesh(geometry,material));const ghost=new THREE.Mesh(geometry,wire);ghost.scale.setScalar(1.003);group.add(ghost);object.add(group);return group;}
   const shell=new THREE.SphereGeometry(1.15,52,32,0,Math.PI*2,0,2.5);
