@@ -31,3 +31,5 @@
 
 /* Text studies use the shared, viewport-managed iframe lifecycle. */
 .preview:is(.te-blur,.te-lines,.te-letters){background:#e8eddf}.preview.te-lines{background:#242d31}.preview.te-letters{background:#f1e4db}.preview:is(.te-blur,.te-lines,.te-letters) .preview-caption{display:none}
+
+.preview:is(.im-reveal,.im-fade,.im-push){background:#f1f0e9}.preview:is(.im-reveal,.im-fade,.im-push) .preview-caption{display:none}

@@ -37,3 +37,7 @@ assert.equal(catalog.demos.filter(d=>d.kind==='Runs Motion-Primitives').length,3
 const textPage=await readFile('dist/text-studies.html','utf8');
 for(const [,file] of textPage.matchAll(/(?:src|href)="(text-app\/[^\"]+)"/g))assert((await stat('dist/'+file)).size>0);
 for(const file of ['MOTION_PRIMITIVES_LICENSE.txt','TEXT_STUDIES_NOTICES.txt'])assert((await stat('dist/'+file)).size>0);
+
+for(const id of ['im-reveal','im-fade','im-push'])assert(catalog.demos.some(d=>d.id===id));
+for(const file of ['image-studies.html','image-studies.js','image-studies.css','IMAGE_STUDIES_NOTICES.txt','assets/react-bits/landscape.svg'])assert((await stat('dist/'+file)).size>0);
+assert.equal(spawnSync(process.execPath,['--check','dist/image-studies.js']).status,0);
