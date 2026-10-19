@@ -79,7 +79,7 @@ export function mount(el,effect,paused=()=>false,onMessage=()=>{}){
 if(/^(su-|am-|tx-|te-|im-)/.test(effect)){
 const frame=document.createElement('iframe'),gallery=el.classList.contains('gallery-live');
 frame.title=(effect.startsWith('im-')?'Original image transition':effect.startsWith('te-')?'Motion-Primitives TextEffect':effect==='su-preloader'?'Original preloader study':effect.startsWith('tx-')?'Original GSAP transition':effect.startsWith('su-')?'Skiper UI component':'Amicro component')+' / '+effect;
-frame.src=new URL((effect.startsWith('im-')?'image-studies.html':effect.startsWith('te-')?'text-studies.html':effect.startsWith('tx-')?'transition-studies.html':'interactions.html')+'?v=skiper-scroll-1&embedded=1&demo='+effect+(paused()?'&paused=1':''),document.baseURI).href;
+frame.src=new URL((effect.startsWith('im-')?'image-preview.html':effect.startsWith('te-')?'text-preview.html':effect.startsWith('tx-')?'transition-studies.html':'interactions.html')+'?v=skiper-scroll-1&embedded=1&demo='+effect+(paused()?'&paused=1':''),document.baseURI).href;
 frame.className='interaction-frame';frame.style.width='600px';frame.style.height='400px';el.querySelector('.interaction-preview').append(frame);
 const resize=()=>{const r=el.getBoundingClientRect();frame.style.transform=`scale(${Math.min(r.width/600,r.height/400)})`;};const ro=new ResizeObserver(resize);ro.observe(el);resize();
 const ready=e=>{if(e.origin===location.origin&&e.source===frame.contentWindow&&e.data?.type==='atlas-preview-ready'){el.classList.add('preview-ready');frame.inert=false;}};
