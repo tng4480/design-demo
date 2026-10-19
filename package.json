@@ -13,7 +13,8 @@
     "build:componentry": "node scripts/componentry-build.mjs",
     "build:shadergradient": "node scripts/shadergradient-build.mjs",
     "build:drawer": "node scripts/drawer-build.mjs",
-    "build:interactions": "node scripts/interaction-build.mjs"
+    "build:interactions": "node scripts/interaction-build.mjs",
+    "build:text": "node scripts/text-build.mjs"
   },
   "dependencies": {
     "@barba/core": "2.10.3",

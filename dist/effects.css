@@ -28,3 +28,6 @@
 
 .interaction-preview{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#f1f0e9}.interaction-frame{flex:none;border:0;transform-origin:center center}.preview.su-expand .preview-caption,.preview.su-blur .preview-caption,.preview.am-spread .preview-caption{display:none}
 .preview:has(.interaction-preview) .preview-caption{display:none}
+
+/* Text studies use the shared, viewport-managed iframe lifecycle. */
+.preview:is(.te-blur,.te-lines,.te-letters){background:#e8eddf}.preview.te-lines{background:#242d31}.preview.te-letters{background:#f1e4db}.preview:is(.te-blur,.te-lines,.te-letters) .preview-caption{display:none}
