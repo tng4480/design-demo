@@ -1619,6 +1619,23 @@
           "url": "https://docs.spline.design/"
         }
       ]
+    },
+    {
+      "id": "motion-primitives",
+      "name": "Motion-Primitives",
+      "url": "https://motion-primitives.com",
+      "github": "https://github.com/ibelick/motion-primitives",
+      "framework": "React + Motion",
+      "license": "MIT",
+      "bestFor": "Composable text and interface transitions with controlled entry and exit",
+      "install": "npx shadcn@latest add https://motion-primitives.com/r/text-effect.json",
+      "caveat": "Connect the trigger to the active section. These are section-triggered transitions, not continuously scrubbed animation.",
+      "demos": [
+        {
+          "name": "TextEffect",
+          "url": "https://motion-primitives.com/docs/text-effect"
+        }
+      ]
     }
   ],
   "styles": [
@@ -3273,6 +3290,51 @@
       "previewImage": "assets/previews/sk-awesome.jpg"
     },
     {
+      "id": "te-blur",
+      "title": "Words in focus",
+      "effect": "te-blur",
+      "source": "motion-primitives",
+      "category": "Motion",
+      "style": "kinetic",
+      "effort": "Low",
+      "summary": "Words rise into focus, then soften away as the next chapter enters.",
+      "use": "Headlines in a scrolling slideshow",
+      "watch": "Actual Motion-Primitives TextEffect at 120f64f. Original typography and scroll controller; line reveal uses custom variants. Both entry and exit follow the active chapter. Reduced motion shows static text.",
+      "order": 95,
+      "kind": "Runs Motion-Primitives",
+      "official": "https://motion-primitives.com/docs/text-effect"
+    },
+    {
+      "id": "te-lines",
+      "title": "Through the frame",
+      "effect": "te-lines",
+      "source": "motion-primitives",
+      "category": "Motion",
+      "style": "kinetic",
+      "effort": "Low",
+      "summary": "Clean lines enter from below and leave upward through a clipped frame.",
+      "use": "Headlines in a scrolling slideshow",
+      "watch": "Actual Motion-Primitives TextEffect at 120f64f. Original typography and scroll controller; line reveal uses custom variants. Both entry and exit follow the active chapter. Reduced motion shows static text.",
+      "order": 96,
+      "kind": "Runs Motion-Primitives",
+      "official": "https://motion-primitives.com/docs/text-effect"
+    },
+    {
+      "id": "te-letters",
+      "title": "Letter by letter",
+      "effect": "te-letters",
+      "source": "motion-primitives",
+      "category": "Motion",
+      "style": "kinetic",
+      "effort": "Low",
+      "summary": "A staggered sequence of letters sharpens into a bold, readable headline.",
+      "use": "Headlines in a scrolling slideshow",
+      "watch": "Actual Motion-Primitives TextEffect at 120f64f. Original typography and scroll controller; line reveal uses custom variants. Both entry and exit follow the active chapter. Reduced motion shows static text.",
+      "order": 97,
+      "kind": "Runs Motion-Primitives",
+      "official": "https://motion-primitives.com/docs/text-effect"
+    },
+    {
       "id": "su-expand",
       "title": "Expanding strips",
       "source": "skiper-ui",
@@ -3285,7 +3347,7 @@
       "official": "https://skiper-ui.com/v1/skiper52",
       "effect": "su-expand",
       "category": "Components",
-      "order": 95,
+      "order": 98,
       "previewImage": "assets/previews/su-expand.jpg"
     },
     {
@@ -3301,7 +3363,7 @@
       "official": "https://skiper-ui.com/v1/skiper41",
       "effect": "su-blur",
       "category": "Components",
-      "order": 96,
+      "order": 99,
       "previewImage": "assets/previews/su-blur.jpg"
     },
     {
@@ -3317,7 +3379,7 @@
       "official": "https://skiper-ui.com/v1/skiper106",
       "effect": "su-caret",
       "category": "Components",
-      "order": 97,
+      "order": 100,
       "previewImage": "assets/previews/su-caret.jpg"
     },
     {
@@ -3333,7 +3395,7 @@
       "official": "https://amicro.dev/cards",
       "effect": "am-spread",
       "category": "Components",
-      "order": 98,
+      "order": 101,
       "previewImage": "assets/previews/am-spread.jpg"
     },
     {
@@ -3349,7 +3411,7 @@
       "watch": "Original GSAP study, not an Amicro or Skiper component. Replay, scrub or click the scene to move the reveal origin. Reduced motion changes scenes instantly.",
       "official": "https://gsap.com/docs/v3/GSAP/Timeline/",
       "effect": "tx-clip",
-      "order": 99,
+      "order": 102,
       "previewImage": "assets/previews/tx-clip.jpg"
     },
     {
@@ -3365,7 +3427,7 @@
       "watch": "Original GSAP portal composition with a masked SVG foreground and layered scale. Replay or scrub the progress slider. Reduced motion changes scenes instantly.",
       "official": "https://gsap.com/docs/v3/GSAP/Timeline/",
       "effect": "tx-zoom",
-      "order": 100,
+      "order": 103,
       "previewImage": "assets/previews/tx-zoom.jpg"
     },
     {
@@ -3381,7 +3443,7 @@
       "official": "https://skiper-ui.com/v1/skiper99",
       "style": "",
       "effect": "su-icons",
-      "order": 101,
+      "order": 104,
       "previewImage": "assets/previews/su-icons.jpg"
     },
     {
@@ -3397,7 +3459,7 @@
       "official": "https://skiper-ui.com/v1/skiper9",
       "style": "",
       "effect": "su-preloader",
-      "order": 102,
+      "order": 105,
       "previewImage": "assets/previews/su-preloader.jpg"
     },
     {
@@ -3413,7 +3475,7 @@
       "official": "https://skiper-ui.com/v1/skiper19",
       "style": "",
       "effect": "su-follow",
-      "order": 103,
+      "order": 106,
       "previewImage": "assets/previews/su-follow.jpg"
     },
     {
@@ -3429,7 +3491,7 @@
       "official": "https://skiper-ui.com/v1/skiper31",
       "style": "kinetic",
       "effect": "su-text-scroll",
-      "order": 104,
+      "order": 107,
       "previewImage": "assets/previews/su-text-scroll.jpg"
     }
   ],
