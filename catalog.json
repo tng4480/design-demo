@@ -1636,6 +1636,72 @@
           "url": "https://motion-primitives.com/docs/text-effect"
         }
       ]
+    },
+    {
+      "id": "carbon-business",
+      "name": "IBM Carbon Design System",
+      "url": "https://carbondesignsystem.com/",
+      "github": "https://github.com/carbon-design-system/carbon",
+      "framework": "Design system / React and web components",
+      "license": "Apache 2.0; local study is original",
+      "bestFor": "Enterprise data tables, filtering and information-rich dashboards",
+      "caveat": "Local work is inspired by the documented patterns and does not use Carbon components.",
+      "install": "See Carbon component documentation",
+      "demos": [
+        {
+          "name": "Data table",
+          "url": "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines"
+        }
+      ]
+    },
+    {
+      "id": "cloudscape-business",
+      "name": "Cloudscape Design System",
+      "url": "https://cloudscape.design/",
+      "github": "https://github.com/cloudscape-design",
+      "framework": "Design system / React",
+      "license": "Apache 2.0; local study is original",
+      "bestFor": "Resource lists and contextual detail panels",
+      "caveat": "Local work is an independent study, not a Cloudscape component.",
+      "install": "See Cloudscape documentation",
+      "demos": [
+        {
+          "name": "Resource views",
+          "url": "https://cloudscape.design/patterns/resource-management/view/"
+        }
+      ]
+    },
+    {
+      "id": "atlassian-business",
+      "name": "Atlassian Design System",
+      "url": "https://atlassian.design/",
+      "framework": "Design system / React",
+      "license": "See individual package terms; local study is original",
+      "bestFor": "Project collaboration and contextual navigation",
+      "caveat": "The study is an independent board, not an Atlassian implementation.",
+      "install": "See Atlassian Design System",
+      "demos": [
+        {
+          "name": "Panels",
+          "url": "https://atlassian.design/components/panel/usage"
+        }
+      ]
+    },
+    {
+      "id": "google-fonts-business",
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "framework": "Web fonts",
+      "license": "Font licenses vary by family; inspect the chosen family",
+      "bestFor": "Comparing readable typefaces and pairings",
+      "caveat": "Font loading depends on Google Fonts; fallbacks are provided.",
+      "install": "Use the chosen font family CSS",
+      "demos": [
+        {
+          "name": "Font catalog",
+          "url": "https://fonts.google.com/"
+        }
+      ]
     }
   ],
   "styles": [
@@ -1838,6 +1904,46 @@
       "stack": "CSS / Tailwind",
       "use": "Creator products and opinionated interfaces",
       "watch": "Hard shadows and thick borders need consistent hierarchy."
+    },
+    {
+      "id": "business-operations",
+      "name": "Operational enterprise",
+      "description": "A compact table-first workspace for monitoring and filtering records.",
+      "source": "carbon-business",
+      "effort": "Medium",
+      "stack": "IBM Plex Sans / data table",
+      "use": "High-volume operational work",
+      "watch": "Density requires clear hierarchy and keyboard-accessible controls."
+    },
+    {
+      "id": "business-casework",
+      "name": "Casework and service",
+      "description": "A three-pane inbox for conversation, context and next steps.",
+      "source": "cloudscape-business",
+      "effort": "Medium",
+      "stack": "Source Sans 3 / split view",
+      "use": "Support and partner communications",
+      "watch": "Keep the selected item and its details in sync."
+    },
+    {
+      "id": "business-board",
+      "name": "Collaborative workspace",
+      "description": "A project board organised by work stage and ownership.",
+      "source": "atlassian-business",
+      "effort": "Medium",
+      "stack": "Work Sans / board",
+      "use": "Team projects and handoffs",
+      "watch": "Provide a list view and keyboard-accessible alternatives in production."
+    },
+    {
+      "id": "business-report",
+      "name": "Editorial business reporting",
+      "description": "A report-led overview with an editorial hierarchy and restrained metrics.",
+      "source": "carbon-business",
+      "effort": "Medium",
+      "stack": "Source Serif 4 / DM Sans",
+      "use": "Executive reviews and reporting",
+      "watch": "Use the same period and definitions across all metrics."
     }
   ],
   "demos": [
@@ -3380,6 +3486,81 @@
       "official": "https://motion.dev/examples/react-layout-animation"
     },
     {
+      "id": "business-operations",
+      "title": "Operational enterprise",
+      "effect": "biz-operations",
+      "source": "carbon-business",
+      "category": "Styles",
+      "style": "business-operations",
+      "effort": "Medium",
+      "summary": "Filter a dense order table and inspect a selected record.",
+      "use": "Operations and transaction-heavy products",
+      "watch": "Original HTML/CSS study informed by Carbon data tables. IBM Plex Sans.",
+      "order": 101,
+      "kind": "Original study",
+      "official": "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines"
+    },
+    {
+      "id": "business-casework",
+      "title": "Casework and service",
+      "effect": "biz-casework",
+      "source": "cloudscape-business",
+      "category": "Styles",
+      "style": "business-casework",
+      "effort": "Medium",
+      "summary": "Select a case to view the conversation and its context.",
+      "use": "Support, partner communications and case handling",
+      "watch": "Original split-view study informed by Cloudscape resource views. Source Sans 3.",
+      "order": 102,
+      "kind": "Original study",
+      "official": "https://cloudscape.design/patterns/resource-management/view/"
+    },
+    {
+      "id": "business-board",
+      "title": "Collaborative workspace",
+      "effect": "biz-board",
+      "source": "atlassian-business",
+      "category": "Styles",
+      "style": "business-board",
+      "effort": "Medium",
+      "summary": "Move a task across a three-column project board.",
+      "use": "Team coordination and project delivery",
+      "watch": "Original board study informed by Atlassian collaboration patterns. Work Sans.",
+      "order": 103,
+      "kind": "Original study",
+      "official": "https://atlassian.design/components/panel/usage"
+    },
+    {
+      "id": "business-report",
+      "title": "Editorial business reporting",
+      "effect": "biz-report",
+      "source": "carbon-business",
+      "category": "Styles",
+      "style": "business-report",
+      "effort": "Medium",
+      "summary": "Review a prominent performance measure alongside priorities.",
+      "use": "Executive reporting and advisory products",
+      "watch": "Original editorial study informed by Carbon dashboard guidance. Source Serif 4 and DM Sans.",
+      "order": 104,
+      "kind": "Original study",
+      "official": "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines"
+    },
+    {
+      "id": "business-fonts",
+      "title": "Business typography",
+      "effect": "biz-fonts",
+      "source": "google-fonts-business",
+      "category": "Styles",
+      "style": "",
+      "effort": "Medium",
+      "summary": "Compare seven typefaces on headings, body copy and numerals.",
+      "use": "Select typography for product and editorial interfaces",
+      "watch": "Web fonts load from Google Fonts when available. Check each family licence and language coverage.",
+      "order": 105,
+      "kind": "Original study",
+      "official": "https://fonts.google.com/"
+    },
+    {
       "id": "su-expand",
       "title": "Expanding strips",
       "source": "skiper-ui",
@@ -3392,7 +3573,7 @@
       "official": "https://skiper-ui.com/v1/skiper52",
       "effect": "su-expand",
       "category": "Components",
-      "order": 101,
+      "order": 106,
       "previewImage": "assets/previews/su-expand.jpg"
     },
     {
@@ -3408,7 +3589,7 @@
       "official": "https://skiper-ui.com/v1/skiper41",
       "effect": "su-blur",
       "category": "Components",
-      "order": 102,
+      "order": 107,
       "previewImage": "assets/previews/su-blur.jpg"
     },
     {
@@ -3424,7 +3605,7 @@
       "official": "https://skiper-ui.com/v1/skiper106",
       "effect": "su-caret",
       "category": "Components",
-      "order": 103,
+      "order": 108,
       "previewImage": "assets/previews/su-caret.jpg"
     },
     {
@@ -3440,7 +3621,7 @@
       "official": "https://amicro.dev/cards",
       "effect": "am-spread",
       "category": "Components",
-      "order": 104,
+      "order": 109,
       "previewImage": "assets/previews/am-spread.jpg"
     },
     {
@@ -3456,7 +3637,7 @@
       "watch": "Original GSAP study, not an Amicro or Skiper component. Replay, scrub or click the scene to move the reveal origin. Reduced motion changes scenes instantly.",
       "official": "https://gsap.com/docs/v3/GSAP/Timeline/",
       "effect": "tx-clip",
-      "order": 105,
+      "order": 110,
       "previewImage": "assets/previews/tx-clip.jpg"
     },
     {
@@ -3472,7 +3653,7 @@
       "watch": "Original GSAP portal composition with a masked SVG foreground and layered scale. Replay or scrub the progress slider. Reduced motion changes scenes instantly.",
       "official": "https://gsap.com/docs/v3/GSAP/Timeline/",
       "effect": "tx-zoom",
-      "order": 106,
+      "order": 111,
       "previewImage": "assets/previews/tx-zoom.jpg"
     },
     {
@@ -3488,7 +3669,7 @@
       "official": "https://skiper-ui.com/v1/skiper99",
       "style": "",
       "effect": "su-icons",
-      "order": 107,
+      "order": 112,
       "previewImage": "assets/previews/su-icons.jpg"
     },
     {
@@ -3504,7 +3685,7 @@
       "official": "https://skiper-ui.com/v1/skiper9",
       "style": "",
       "effect": "su-preloader",
-      "order": 108,
+      "order": 113,
       "previewImage": "assets/previews/su-preloader.jpg"
     },
     {
@@ -3520,7 +3701,7 @@
       "official": "https://skiper-ui.com/v1/skiper19",
       "style": "",
       "effect": "su-follow",
-      "order": 109,
+      "order": 114,
       "previewImage": "assets/previews/su-follow.jpg"
     },
     {
@@ -3536,7 +3717,7 @@
       "official": "https://skiper-ui.com/v1/skiper31",
       "style": "kinetic",
       "effect": "su-text-scroll",
-      "order": 110,
+      "order": 115,
       "previewImage": "assets/previews/su-text-scroll.jpg"
     }
   ],
