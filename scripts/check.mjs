@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,stat} from 'node:fs/promises';
 import {spawnSync} from 'node:child_process';
 const catalog=JSON.parse(await readFile('dist/catalog.json','utf8'));
-assert.equal(catalog.styles.length,20,'All requested styles must be represented');
+assert(catalog.styles.length>=24,'Original and business styles must be represented');
 for(const key of ['demos','sources','styles'])assert.equal(new Set(catalog[key].map(x=>x.id)).size,catalog[key].length,`${key}: duplicate IDs`);
 for(const style of catalog.styles)assert(catalog.demos.some(d=>d.style===style.id),`${style.name}: no study`);
 for(const demo of catalog.demos){if(demo.previewImage)assert((await stat('dist/'+demo.previewImage)).size>0,`${demo.id}: missing preview`);assert(catalog.sources.some(s=>s.id===demo.source),`${demo.id}: missing source`);assert(['Low','Medium','High'].includes(demo.effort));assert.match(demo.official,/^https:\/\//);assert(demo.watch&&demo.kind);}
@@ -22,7 +22,7 @@ assert.equal(catalog.demos.filter(d=>d.effect.startsWith('dp-')).length,4);
 assert.equal(catalog.demos.filter(d=>d.effect.startsWith('sk-')).length,3);
 const localFrames=JSON.parse(await readFile('componentry/images.json','utf8'));for(const file of Object.values(localFrames))assert((await stat('dist/'+file)).size>0,`Missing scroll artwork: ${file}`);
 const rbPage=await readFile('dist/react-bits.html','utf8');assert(rbPage.includes('react-bits-app/app-'));
-console.log(`Validated ${catalog.demos.length} studies, ${catalog.sources.length} sources, all 20 styles, script syntax, local assets, and library notices.`);
+console.log(`Validated ${catalog.demos.length} studies, ${catalog.sources.length} sources, all styles, script syntax, local assets, and library notices.`);
 
 assert.equal(catalog.demos.filter(d=>d.kind==='Runs Skiper UI').length,6);
 assert.equal(catalog.demos.filter(d=>d.kind==='Runs Amicro').length,1);
@@ -41,3 +41,6 @@ for(const file of ['MOTION_PRIMITIVES_LICENSE.txt','TEXT_STUDIES_NOTICES.txt'])a
 for(const id of ['im-reveal','im-fade','im-push'])assert(catalog.demos.some(d=>d.id===id));
 for(const file of ['image-preview.html','image-studies.js','image-studies.css','IMAGE_STUDIES_NOTICES.txt','assets/react-bits/landscape.svg'])assert((await stat('dist/'+file)).size>0);
 assert.equal(spawnSync(process.execPath,['--check','dist/image-studies.js']).status,0);
+
+for(const id of ['operations','casework','board','report','fonts'])assert(catalog.demos.some(d=>d.id==='business-'+id));
+assert.equal(spawnSync(process.execPath,['--check','dist/business-preview.js']).status,0);

@@ -139,4 +139,4 @@ Preview contents are created only within one viewport above or below the screen 
 
 ## Business styles and useful copy
 
-`business-styles.html` compares four original professional interface treatments and six font specimens. The project-local Humanizer skill is imported from [blader/humanizer](https://github.com/blader/humanizer), with its MIT license and provenance retained. `AGENTS.md` adds project-specific guidance for useful product copy. The skill applies in this repository; it is not installed globally.
+The atlas includes four original business interface studies and a typography study. They appear in the gallery and style index; the sources link to Carbon, Cloudscape, Atlassian and Google Fonts. The project-local Humanizer skill is imported from [blader/humanizer](https://github.com/blader/humanizer), with its MIT license and provenance retained. `AGENTS.md` adds project-specific guidance for useful product copy. The skill applies in this repository; it is not installed globally.
