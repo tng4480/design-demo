@@ -1,0 +1,1 @@
+Humanizer 3.1.0 by Siqi Chen, MIT license. Source: https://github.com/blader/humanizer. The imported `SKILL.md` has Git blob SHA `19fc634208e8cc6ae55d4ff287152583216fd244`. Project-specific product-copy guidance is in the repository's `AGENTS.md`.
