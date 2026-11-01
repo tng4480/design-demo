@@ -44,3 +44,5 @@ assert.equal(spawnSync(process.execPath,['--check','dist/image-studies.js']).sta
 
 for(const id of ['operations','casework','board','report','fonts'])assert(catalog.demos.some(d=>d.id==='business-'+id));
 assert.equal(spawnSync(process.execPath,['--check','dist/business-preview.js']).status,0);
+
+assert(catalog.demos.some(d=>d.id==="humanizer" && d.source==="humanizer"));
