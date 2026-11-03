@@ -1719,6 +1719,22 @@
           "url": "https://github.com/blader/humanizer"
         }
       ]
+    },
+    {
+      "id": "atlas-colours",
+      "name": "Atlas colour themes",
+      "url": "https://tng4480.github.io/design-demo/colour-themes.html",
+      "framework": "HTML / CSS custom properties / JSON",
+      "license": "Original study; Graphite colours supplied by the user",
+      "bestFor": "Compare complete dark palettes, accent pairings and semantic colour roles",
+      "caveat": "Contrast checks cover selected pairs. Disabled text is for inactive controls only.",
+      "install": "Use colour-themes.json or export the selected CSS tokens",
+      "demos": [
+        {
+          "name": "Colour theme study",
+          "url": "https://tng4480.github.io/design-demo/colour-themes.html"
+        }
+      ]
     }
   ],
   "styles": [
@@ -3593,6 +3609,21 @@
       "official": "https://github.com/blader/humanizer"
     },
     {
+      "id": "colour-themes",
+      "title": "Dark colour themes",
+      "effect": "colour-themes",
+      "source": "atlas-colours",
+      "category": "Color",
+      "style": "",
+      "effort": "Low",
+      "summary": "Explore five dark palettes, swap coordinated accents and save or export your combinations.",
+      "use": "Choosing semantic colours for a dark interface",
+      "watch": "Graphite reproduces the supplied reference. Other palettes are original; primary and error retain separate roles.",
+      "order": 107,
+      "kind": "Original study",
+      "official": "https://tng4480.github.io/design-demo/colour-themes.html"
+    },
+    {
       "id": "su-expand",
       "title": "Expanding strips",
       "source": "skiper-ui",
@@ -3605,7 +3636,7 @@
       "official": "https://skiper-ui.com/v1/skiper52",
       "effect": "su-expand",
       "category": "Components",
-      "order": 107,
+      "order": 108,
       "previewImage": "assets/previews/su-expand.jpg"
     },
     {
@@ -3621,7 +3652,7 @@
       "official": "https://skiper-ui.com/v1/skiper41",
       "effect": "su-blur",
       "category": "Components",
-      "order": 108,
+      "order": 109,
       "previewImage": "assets/previews/su-blur.jpg"
     },
     {
@@ -3637,7 +3668,7 @@
       "official": "https://skiper-ui.com/v1/skiper106",
       "effect": "su-caret",
       "category": "Components",
-      "order": 109,
+      "order": 110,
       "previewImage": "assets/previews/su-caret.jpg"
     },
     {
@@ -3653,7 +3684,7 @@
       "official": "https://amicro.dev/cards",
       "effect": "am-spread",
       "category": "Components",
-      "order": 110,
+      "order": 111,
       "previewImage": "assets/previews/am-spread.jpg"
     },
     {
@@ -3669,7 +3700,7 @@
       "watch": "Original GSAP study, not an Amicro or Skiper component. Replay, scrub or click the scene to move the reveal origin. Reduced motion changes scenes instantly.",
       "official": "https://gsap.com/docs/v3/GSAP/Timeline/",
       "effect": "tx-clip",
-      "order": 111,
+      "order": 112,
       "previewImage": "assets/previews/tx-clip.jpg"
     },
     {
@@ -3685,7 +3716,7 @@
       "watch": "Original GSAP portal composition with a masked SVG foreground and layered scale. Replay or scrub the progress slider. Reduced motion changes scenes instantly.",
       "official": "https://gsap.com/docs/v3/GSAP/Timeline/",
       "effect": "tx-zoom",
-      "order": 112,
+      "order": 113,
       "previewImage": "assets/previews/tx-zoom.jpg"
     },
     {
@@ -3701,7 +3732,7 @@
       "official": "https://skiper-ui.com/v1/skiper99",
       "style": "",
       "effect": "su-icons",
-      "order": 113,
+      "order": 114,
       "previewImage": "assets/previews/su-icons.jpg"
     },
     {
@@ -3717,7 +3748,7 @@
       "official": "https://skiper-ui.com/v1/skiper9",
       "style": "",
       "effect": "su-preloader",
-      "order": 114,
+      "order": 115,
       "previewImage": "assets/previews/su-preloader.jpg"
     },
     {
@@ -3733,7 +3764,7 @@
       "official": "https://skiper-ui.com/v1/skiper19",
       "style": "",
       "effect": "su-follow",
-      "order": 115,
+      "order": 116,
       "previewImage": "assets/previews/su-follow.jpg"
     },
     {
@@ -3749,7 +3780,7 @@
       "official": "https://skiper-ui.com/v1/skiper31",
       "style": "kinetic",
       "effect": "su-text-scroll",
-      "order": 116,
+      "order": 117,
       "previewImage": "assets/previews/su-text-scroll.jpg"
     }
   ],
