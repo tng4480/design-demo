@@ -140,3 +140,7 @@ Preview contents are created only within one viewport above or below the screen 
 ## Business styles and useful copy
 
 The atlas includes four original business interface studies and a typography study. They appear in the gallery and style index; the sources link to Carbon, Cloudscape, Atlassian and Google Fonts. The project-local Humanizer skill is imported from [blader/humanizer](https://github.com/blader/humanizer), with its MIT license and provenance retained. `AGENTS.md` adds project-specific guidance for useful product copy. The skill applies in this repository; it is not installed globally.
+
+## Dark colour themes
+
+The gallery’s Dark colour themes study combines data-driven base palettes and accent sets, browser-local saved combinations, contrast readings and CSS/JSON export. See `research/colour-themes.md` to add themes or roles.

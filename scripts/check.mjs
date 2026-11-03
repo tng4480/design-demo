@@ -46,3 +46,11 @@ for(const id of ['operations','casework','board','report','fonts'])assert(catalo
 assert.equal(spawnSync(process.execPath,['--check','dist/business-preview.js']).status,0);
 
 assert(catalog.demos.some(d=>d.id==="humanizer" && d.source==="humanizer"));
+
+const colourData=JSON.parse(await readFile("dist/colour-themes.json","utf8"));
+for(const key of ["roles","themes","accentSets"])assert.equal(new Set(colourData[key].map(x=>x.id)).size,colourData[key].length);
+for(const t of colourData.themes){assert(colourData.accentSets.some(a=>a.id===t.accents));for(const v of Object.values(t.tokens))assert.match(v,/^#[a-f0-9]{6}$/i);}
+for(const a of colourData.accentSets)for(const v of Object.values(a.tokens))assert.match(v,/^#[a-f0-9]{6}$/i);
+assert(catalog.demos.some(d=>d.id==="colour-themes"&&d.category==="Color"));
+assert.equal(spawnSync(process.execPath,["--check","dist/colour-themes.js"]).status,0);
+for(const f of ["colour-themes.html","colour-themes.css","colour-themes.js"])assert((await stat("dist/"+f)).size>0);

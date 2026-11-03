@@ -1,0 +1,173 @@
+{
+  "roles": [
+    {
+      "id": "base",
+      "label": "Page",
+      "group": "base"
+    },
+    {
+      "id": "card",
+      "label": "Cards",
+      "group": "base"
+    },
+    {
+      "id": "bar",
+      "label": "App bar",
+      "group": "base"
+    },
+    {
+      "id": "menu",
+      "label": "Menus",
+      "group": "base"
+    },
+    {
+      "id": "dialog",
+      "label": "Dialogs",
+      "group": "base"
+    },
+    {
+      "id": "text",
+      "label": "Text",
+      "group": "base"
+    },
+    {
+      "id": "secondary",
+      "label": "Secondary text",
+      "group": "base"
+    },
+    {
+      "id": "disabled",
+      "label": "Disabled text",
+      "group": "base"
+    },
+    {
+      "id": "primary",
+      "label": "Primary",
+      "group": "accent"
+    },
+    {
+      "id": "error",
+      "label": "Error",
+      "group": "accent"
+    }
+  ],
+  "themes": [
+    {
+      "id": "graphite",
+      "name": "Graphite",
+      "tokens": {
+        "base": "#121212",
+        "card": "#1E1E1E",
+        "bar": "#272727",
+        "menu": "#2E2E2E",
+        "dialog": "#383838",
+        "text": "#E0E0E0",
+        "secondary": "#A0A0A0",
+        "disabled": "#6C6C6C"
+      },
+      "accents": "orchid"
+    },
+    {
+      "id": "midnight",
+      "name": "Midnight",
+      "tokens": {
+        "base": "#0E1420",
+        "card": "#172131",
+        "bar": "#1E2B3E",
+        "menu": "#25344A",
+        "dialog": "#2E4058",
+        "text": "#E3EAF4",
+        "secondary": "#A8B9CE",
+        "disabled": "#718198"
+      },
+      "accents": "ice"
+    },
+    {
+      "id": "pine",
+      "name": "Pine",
+      "tokens": {
+        "base": "#101815",
+        "card": "#19251F",
+        "bar": "#213128",
+        "menu": "#293B30",
+        "dialog": "#334A3C",
+        "text": "#E2ECE5",
+        "secondary": "#A6BCAD",
+        "disabled": "#708778"
+      },
+      "accents": "mint"
+    },
+    {
+      "id": "umber",
+      "name": "Umber",
+      "tokens": {
+        "base": "#1B1612",
+        "card": "#27201A",
+        "bar": "#30281F",
+        "menu": "#3A3026",
+        "dialog": "#473B2F",
+        "text": "#F0E6D9",
+        "secondary": "#C1AE98",
+        "disabled": "#8B7966"
+      },
+      "accents": "apricot"
+    },
+    {
+      "id": "ink",
+      "name": "Ink",
+      "tokens": {
+        "base": "#14131C",
+        "card": "#201E2B",
+        "bar": "#2A2737",
+        "menu": "#332F43",
+        "dialog": "#403A52",
+        "text": "#ECE8F5",
+        "secondary": "#B8AFCB",
+        "disabled": "#837A96"
+      },
+      "accents": "iris"
+    }
+  ],
+  "accentSets": [
+    {
+      "id": "orchid",
+      "name": "Orchid / Rose",
+      "tokens": {
+        "primary": "#BB86FC",
+        "error": "#CF6679"
+      }
+    },
+    {
+      "id": "ice",
+      "name": "Ice / Coral",
+      "tokens": {
+        "primary": "#8FCDF2",
+        "error": "#F299A0"
+      }
+    },
+    {
+      "id": "mint",
+      "name": "Mint / Salmon",
+      "tokens": {
+        "primary": "#9CD9B1",
+        "error": "#F4A49C"
+      }
+    },
+    {
+      "id": "apricot",
+      "name": "Apricot / Rose",
+      "tokens": {
+        "primary": "#F1BE83",
+        "error": "#F0A3AE"
+      }
+    },
+    {
+      "id": "iris",
+      "name": "Iris / Peach",
+      "tokens": {
+        "primary": "#C5B4F4",
+        "error": "#F5AA91"
+      }
+    }
+  ]
+}
