@@ -24,3 +24,5 @@
 
 
 .skills-intro,.skills-note{color:#717b6b;font-size:12px;margin:0 0 20px}.skills-heading{font-size:20px;margin:34px 0 16px}.skills-heading a{font-size:11px;color:#617b50;margin-left:12px}.skill-directory{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}.skill-entry{background:#fff;border:1px solid #e2e7db;border-radius:6px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;min-height:155px}.skill-entry span{font-size:9px;color:#818e78;text-transform:uppercase;letter-spacing:.08em}.skill-entry h3{font-size:15px;margin:8px 0}.skill-entry p{font-size:12px;color:#6e7769}.skill-entry a{font-size:11px;color:#43623f;margin-top:18px;font-weight:600}.skill-entry a:focus-visible{outline:2px solid #748d51;outline-offset:4px}
+
+.skills-note{margin-top:30px}.skills-note a{color:#43623f;text-decoration:underline;text-underline-offset:3px}.skill-entry{border-color:var(--line);border-radius:7px}.skill-entry h3{font-family:Manrope,Arial,sans-serif;letter-spacing:-.3px}
