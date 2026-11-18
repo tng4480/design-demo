@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- ATLAS STUDY · m3-expressive
+What: controls in the spirit of Material 3 Expressive: shape-morphing buttons, a springy connected button group, a wavy progress
+      indicator and emphasised type, all in plain CSS.
+Use for: consumer apps and Android-adjacent products that want energy without decoration. Not for dense enterprise UI.
+Technique: border-radius morphs on press and selection; spring easing written with CSS linear(); tonal colour roles (primary,
+           primary-container, surface-container). For real components, the community M3E web components (MIT) implement the spec.
+Reuse: copy the :root roles and the .btn/.group rules. Swap --primary and derive containers from it.
+-->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Material expressive</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..900&display=swap" rel="stylesheet">
+<script>{const p=new URLSearchParams(location.search),c=document.documentElement.classList;if(p.has('embedded'))c.add('embedded');if(p.has('capture'))c.add('embedded','capture');}</script><style>.capture .bar,.capture .tabs,.capture .thumb{display:none!important}</style>
+<style>
+/* Tonal roles from one seed (#00696f teal). Material's baseline is violet; seed from the brand instead. */
+:root{--primary:#00696f;--on-primary:#fff;--primary-container:#9cf1f6;--on-primary-container:#002022;--tertiary-container:#ffdbc9;--on-tertiary-container:#341100;
+ --surface:#f4fbfb;--surface-container:#e3eded;--on-surface:#161d1d;--on-surface-variant:#3f4949;--outline:#bec8c9;
+ --spring:linear(0,.18 6%,.62 15%,1.04 26%,1.12 33%,1.05 44%,.99 55%,1.01 70%,1);}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--surface);color:var(--on-surface);font:16px/1.4 'Roboto Flex',system-ui,sans-serif;display:grid;place-items:center;padding:24px}
+.card{width:min(560px,100%);background:var(--surface-container);border-radius:32px;padding:28px;display:grid;gap:22px}
+h1{margin:0;font-weight:800;font-variation-settings:'opsz' 96;font-size:clamp(36px,7vw,56px);line-height:1;letter-spacing:-.02em}
+.embedded h1{font-size:40px}
+p{margin:0;color:var(--on-surface-variant)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{all:unset;cursor:pointer;height:56px;padding:0 28px;display:inline-flex;align-items:center;gap:10px;font-weight:600;border-radius:28px;
+ background:var(--primary);color:var(--on-primary);transition:border-radius .5s var(--spring),transform .5s var(--spring),background .2s}
+.btn:hover{border-radius:18px}.btn:active{border-radius:12px;transform:scale(.96)}
+.btn.tonal{background:var(--primary-container);color:var(--on-primary-container)}
+.btn:focus-visible,.seg:focus-visible,.fab:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
+.fab{all:unset;cursor:pointer;width:80px;height:80px;display:grid;place-items:center;font-size:30px;background:var(--tertiary-container);color:var(--on-tertiary-container);
+ border-radius:24px;transition:border-radius .6s var(--spring),rotate .6s var(--spring)}
+.fab:hover{border-radius:40px;rotate:45deg}
+.group{display:flex;gap:3px}
+.seg{all:unset;cursor:pointer;height:48px;padding:0 20px;display:grid;place-items:center;font-weight:600;background:var(--primary-container);color:var(--on-primary-container);
+ border-radius:8px;transition:border-radius .5s var(--spring),flex-grow .5s var(--spring),background .2s;flex:1 1 0}
+.seg:first-child{border-radius:24px 8px 8px 24px}.seg:last-child{border-radius:8px 24px 24px 8px}
+.seg[aria-pressed=true]{background:var(--primary);color:var(--on-primary);border-radius:24px;flex-grow:1.4}
+.wave{height:14px;width:100%}
+.wave path{stroke:var(--primary);stroke-width:4;fill:none;stroke-linecap:round;stroke-dasharray:var(--done) 1000}
+.track{stroke:var(--outline)!important;stroke-dasharray:none!important}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.wave .live{animation:slide 1.2s linear infinite}@keyframes slide{to{transform:translateX(-24px)}}
+</style></head><body>
+<section class="card">
+ <h1>Morning run</h1>
+ <p>Shapes change with state: press a button and its corners tighten; pick a segment and it widens.</p>
+ <div class="row"><button class="btn">Start run</button><button class="btn tonal">Plan route</button><button class="fab" aria-label="Add">+</button></div>
+ <div class="group" role="group" aria-label="Distance">
+  <button class="seg" aria-pressed="false">3 km</button><button class="seg" aria-pressed="true">5 km</button><button class="seg" aria-pressed="false">10 km</button></div>
+ <svg class="wave" viewBox="0 0 480 14" preserveAspectRatio="none" aria-label="Progress 62%" role="img">
+  <path class="track" d="M300 7 H480"/>
+  <g style="--done:300"><path class="live" d="M0 7 q6 -6 12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0"/></g>
+ </svg>
+</section>
+<script>document.querySelectorAll('.seg').forEach(s=>s.onclick=()=>document.querySelectorAll('.seg').forEach(o=>o.setAttribute('aria-pressed',o===s)));</script>
+</body></html>

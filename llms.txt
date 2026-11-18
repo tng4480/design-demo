@@ -1,0 +1,27 @@
+# UI Atlas
+
+> A design library for AI agents and people: 15 complete design directions (tokens, type, layout, motion, copy), 129 live studies (5 of them graphics: posters, charts, slides, social images, identities, generative art) and 84 vetted sources with licences. Use it to choose a deliberate design for a website, app UI or graphic instead of a generic default.
+
+When asked to "use the UI Atlas" or "choose a design from the atlas":
+
+1. Read the guide: https://tng4480.github.io/design-demo/agents/guide.md (the process, the budget and the checklist).
+2. Pick one direction from https://tng4480.github.io/design-demo/agents/directions.md and paste its tokens and font link.
+3. Read your medium's rules in https://tng4480.github.io/design-demo/agents/media.md.
+4. Choose one signature element and two to four supporting ones from the direction, opening their study code from https://tng4480.github.io/design-demo/agents/studies.md.
+
+## Docs
+
+- [Agent guide](https://tng4480.github.io/design-demo/agents/guide.md): the seven-step process, restraint budget, defaults to replace and final checklist
+- [Design directions](https://tng4480.github.io/design-demo/agents/directions.md): Quiet product, Dark technical, Editorial catalogue, Newsprint, Swiss grid, Operational enterprise, Casework and service, Warm consumer, Organic botanical, Bold maximal, Neo brutal, Luxury deco, Retro playful, Immersive showcase, Data report
+- [Rules per medium](https://tng4480.github.io/design-demo/agents/media.md): web page, app UI, poster and print, chart, slides, social image, brand identity, pattern and generative art, infographic
+- [Study index](https://tng4480.github.io/design-demo/agents/studies.md): every study with use, effort, code link and preview image
+- [Sources](https://tng4480.github.io/design-demo/agents/sources.md): libraries, tools and references with licences and install lines
+
+## Data
+
+- [directions.json](https://tng4480.github.io/design-demo/agents/directions.json): the directions as structured data
+- [catalog.json](https://tng4480.github.io/design-demo/catalog.json): every study, style and source as structured data
+
+## Optional
+
+- [Gallery](https://tng4480.github.io/design-demo/): the visual atlas for people; open one study with https://tng4480.github.io/design-demo/index.html#study=<id>

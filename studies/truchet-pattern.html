@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- ATLAS STUDY · truchet-pattern
+What: a seamless Truchet tile pattern (quarter-arcs or diagonals in random orientations) that reads as continuous paths.
+Use for: packaging, gift wrap, brand textures, slide and section backgrounds, merch, endpapers.
+Technique: a grid of square tiles, each rotated 0° or 90° by a seeded random; strokes meet at tile midpoints so lines connect across tiles.
+           Output is a single SVG; for a repeating CSS background, export one tile set and use it as background-image.
+Reuse: copy tile() and build(); keep stroke width ≈ 1/6 of tile size for the woven look.
+-->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Truchet pattern</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet">
+<script>{const p=new URLSearchParams(location.search),c=document.documentElement.classList;if(p.has('embedded'))c.add('embedded');if(p.has('capture'))c.add('embedded','capture');}</script><style>.capture .bar,.capture .tabs,.capture .thumb{display:none!important}</style>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{font:13px Geist,system-ui,sans-serif;display:grid;grid-template-rows:1fr auto;background:#222}
+#out{min-height:0}#out svg{width:100%;height:100%;display:block}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:10px 14px;background:#fffdf8}
+button,select{font:inherit;border:1px solid #ccc;background:#fff;border-radius:99px;padding:5px 11px;cursor:pointer}
+input[type=color]{width:26px;height:26px;border:0;padding:0;background:none}
+</style></head><body>
+<div id="out" role="img" aria-label="Tile pattern"></div>
+<div class="bar"><label>Tile <select id="kind"><option value="arc">Arcs</option><option value="diag">Diagonals</option><option value="tri">Triangles</option></select></label>
+<label>Size <input id="sz" type="range" min="24" max="120" value="56"></label>
+<label>Colours <input type="color" id="fg" value="#f4efe4"><input type="color" id="bg" value="#1f3d2b"></label>
+<button id="new">Reshuffle</button><button id="dl">Download SVG</button></div>
+<script>
+const q=s=>document.getElementById(s);let seed=11;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+function tile(kind,s,x,y,rot,fg){const sw=s/6,c=`transform="translate(${x+s/2} ${y+s/2}) rotate(${rot}) translate(${-s/2} ${-s/2})"`;
+ if(kind==='arc')return`<g ${c} fill="none" stroke="${fg}" stroke-width="${sw}"><path d="M${s/2} 0 A${s/2} ${s/2} 0 0 1 0 ${s/2}"/><path d="M${s} ${s/2} A${s/2} ${s/2} 0 0 0 ${s/2} ${s}"/></g>`;
+ if(kind==='diag')return`<g ${c} stroke="${fg}" stroke-width="${sw}" stroke-linecap="square"><path d="M0 0 L${s} ${s}"/></g>`;
+ return`<g ${c}><path d="M0 0 H${s} L0 ${s}Z" fill="${fg}"/></g>`;}
+function build(w=1600,h=1000){let s0=seed;const s=+q('sz').value,fg=q('fg').value,kind=q('kind').value;let out='';
+ for(let y=0;y<h;y+=s)for(let x=0;x<w;x+=s)out+=tile(kind,s,x,y,(kind==='tri'?Math.floor(rnd()*4):Math.floor(rnd()*2))*90,fg);seed=s0;
+ return`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="${q('bg').value}"/>${out}</svg>`;}
+function render(){q('out').innerHTML=build();}
+render();['kind','sz','fg','bg'].forEach(i=>q(i).oninput=render);
+q('new').onclick=()=>{seed=Math.floor(Math.random()*1e6)+1;render();};
+q('dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([build()],{type:'image/svg+xml'}));a.download='truchet.svg';a.click();};
+</script></body></html>

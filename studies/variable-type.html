@@ -1,0 +1,32 @@
+<!doctype html>
+<!-- ATLAS STUDY · variable-type
+What: a headline whose letters gain weight and optical size as the pointer comes near, using one variable font.
+Use for: a single hero word or name on portfolios, studios and launches. One line, short words.
+Technique: split the word into spans, measure each letter's distance to the pointer every frame, map it to font-variation-settings.
+           Fancy Components (MIT, React + Motion) ships polished versions of this family of effects; this file is an original vanilla study.
+Reuse: copy the script and pick any variable font with a wght axis. Screen readers get the word once through aria-label.
+-->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Variable type</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Geist:wght@400&display=swap" rel="stylesheet">
+<script>{const p=new URLSearchParams(location.search),c=document.documentElement.classList;if(p.has('embedded'))c.add('embedded');if(p.has('capture'))c.add('embedded','capture');}</script><style>.capture .bar,.capture .tabs,.capture .thumb{display:none!important}</style>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:#f3efe6;color:#22301f;display:grid;place-items:center;font-family:Geist,system-ui,sans-serif;overflow:hidden}
+h1{margin:0;font:400 clamp(64px,16vw,220px)/.9 Fraunces,Georgia,serif;letter-spacing:-.03em;cursor:default;user-select:none;text-align:center}
+h1 span{display:inline-block;font-variation-settings:'wght' 120,'opsz' 144;transition:font-variation-settings .25s ease-out}
+p{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:13px;color:#59644f;margin:0}
+.embedded p{display:none}
+</style></head><body>
+<h1 id="w" aria-label="Botanist">Botanist</h1>
+<p>Move across the word. On touch, drag.</p>
+<script>
+const h=document.getElementById('w'),txt=h.textContent;h.innerHTML=[...txt].map(c=>`<span aria-hidden="true">${c}</span>`).join('');
+const spans=[...h.children],still=matchMedia('(prefers-reduced-motion: reduce)').matches;let px=-1e4,py=-1e4,raf=0;
+function paint(){raf=0;const reach=h.getBoundingClientRect().height*1.4;
+ for(const s of spans){const r=s.getBoundingClientRect(),d=Math.hypot(px-(r.left+r.width/2),py-(r.top+r.height/2)),k=Math.max(0,1-d/reach),e=k*k*(3-2*k);
+  s.style.fontVariationSettings=`'wght' ${Math.round(120+780*e)},'opsz' ${Math.round(144-100*e)}`;}}
+addEventListener('pointermove',e=>{px=e.clientX;py=e.clientY;if(!raf)raf=requestAnimationFrame(paint);});
+addEventListener('pointerleave',()=>{px=py=-1e4;paint();});
+if(still){spans.forEach((s,i)=>s.style.fontVariationSettings=`'wght' ${i%2?700:200},'opsz' 96`);}
+</script></body></html>
