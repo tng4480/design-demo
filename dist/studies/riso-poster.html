@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- ATLAS STUDY · riso-poster
+What: a two-ink risograph poster: overlapping shapes in fluorescent pink and blue that multiply where they cross, slight misregistration
+      and paper grain.
+Use for: zines, gig and workshop posters, indie brand graphics, book covers, illustrated social posts.
+Technique: each ink is its own SVG layer drawn in a flat colour with mix-blend-mode:multiply; one layer is nudged a few pixels to fake
+           registration drift; feTurbulence adds grain. Ink hex values are screen approximations of Riso inks (see stencil.wiki/colors);
+           real prints look different, so ask the printer which drums they stock.
+Reuse: keep to two or three inks; build the art per ink layer so it can be separated for a real print run.
+-->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Risograph poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono&display=swap" rel="stylesheet">
+<script>{const p=new URLSearchParams(location.search),c=document.documentElement.classList;if(p.has('embedded'))c.add('embedded');if(p.has('capture'))c.add('embedded','capture');}</script><style>.capture .bar,.capture .tabs,.capture .thumb{display:none!important}</style>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:#2a2a2a;font:12px 'Space Mono',monospace;display:grid;grid-template-rows:1fr auto}
+.stage{min-height:0;display:grid;place-items:center;padding:14px}svg#art{height:100%;max-width:100%;box-shadow:0 20px 50px #0006}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:10px 14px;background:#f2eee3}
+button,select{font:inherit;border:1px solid #222;background:#fff;padding:5px 10px;cursor:pointer}
+</style></head><body>
+<div class="stage"><svg id="art" viewBox="0 0 1000 1414" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Risograph poster"></svg></div>
+<div class="bar"><label>Inks <select id="ink"><option value="#ff48b0|#0078bf">Fluo pink + Blue</option><option value="#ffe800|#00838a">Yellow + Teal</option><option value="#ff6c2f|#3d5588">Orange + Federal blue</option></select></label>
+<label>Drift <input id="drift" type="range" min="0" max="16" value="6"></label><button id="new">New composition</button><button id="dl">Download SVG</button></div>
+<script>
+const q=s=>document.getElementById(s);let seed=3;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+let shapes=[];function compose(){shapes=Array.from({length:7},(_,i)=>({k:i%2,type:['circle','half','bar'][Math.floor(rnd()*3)],x:120+rnd()*760,y:220+rnd()*720,s:120+rnd()*240,r:Math.floor(rnd()*4)*45}));}
+function shape(s){if(s.type==='circle')return`<circle cx="${s.x}" cy="${s.y}" r="${s.s}"/>`;
+ if(s.type==='half')return`<path transform="rotate(${s.r} ${s.x} ${s.y})" d="M${s.x-s.s} ${s.y} a${s.s} ${s.s} 0 0 1 ${2*s.s} 0z"/>`;
+ return`<rect transform="rotate(${s.r} ${s.x} ${s.y})" x="${s.x-s.s}" y="${s.y-s.s*.22}" width="${s.s*2}" height="${s.s*.44}"/>`;}
+function draw(){const [a,b]=q('ink').value.split('|'),d=+q('drift').value;
+ const layer=(ink,k,dx,dy,extra)=>`<g fill="${ink}" style="mix-blend-mode:multiply" transform="translate(${dx} ${dy})">${shapes.filter(s=>s.k===k).map(shape).join('')}${extra}</g>`;
+ q('art').innerHTML=`<defs><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 .2  0 0 0 0 .18  0 0 0 0 .15  0 0 0 -1.4 .9"/></filter></defs>
+ <rect width="1000" height="1414" fill="#f4efe4"/>
+ ${layer(a,0,0,0,`<text x="70" y="1210" font-family="Archivo Black, Impact, sans-serif" font-size="190" letter-spacing="-6">ZINE</text>`)}
+ ${layer(b,1,d,d*.6,`<text x="70" y="1330" font-family="Archivo Black, Impact, sans-serif" font-size="96" letter-spacing="-2">FAIR / 23 MAR</text><text x="72" y="130" font-family="Space Mono, monospace" font-size="30">PRINT CLUB · DOORS 12:00 · FREE</text>`)}
+ <rect width="1000" height="1414" filter="url(#grain)" opacity=".55"/>`;}
+compose();draw();['ink','drift'].forEach(i=>q(i).oninput=draw);
+q('new').onclick=()=>{seed=Math.floor(Math.random()*1e6)+1;compose();draw();};
+q('dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(q('art'))],{type:'image/svg+xml'}));a.download='riso-poster.svg';a.click();};
+document.fonts.ready.then(draw);
+</script></body></html>

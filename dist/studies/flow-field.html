@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- ATLAS STUDY · flow-field
+What: generative line art: thousands of curves follow a smooth noise field, drawn in a limited palette on paper. Seeded, so a seed is a
+      reproducible artwork.
+Use for: cover art, posters, packaging, hero imagery, brand textures, print editions.
+Technique: value noise (included, no library) → angle field → curves stepped through it with collision-free spacing kept loose;
+           palette weights decide the look more than the algorithm. Background reading: Tyler Hobbs, "Flow Fields".
+Reuse: copy noise() and draw(); feed a seed and palette. Download PNG renders at 2× the canvas size.
+-->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flow field</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap" rel="stylesheet">
+<script>{const p=new URLSearchParams(location.search),c=document.documentElement.classList;if(p.has('embedded'))c.add('embedded');if(p.has('capture'))c.add('embedded','capture');}</script><style>.capture .bar,.capture .tabs,.capture .thumb{display:none!important}</style>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:#e9e4d8;font:12px 'Geist Mono',monospace;display:grid;grid-template-rows:1fr auto}
+.stage{min-height:0;display:grid;place-items:center;padding:14px}canvas{max-width:100%;max-height:100%;box-shadow:0 18px 40px #0003}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:10px 14px;background:#fffdf8}
+button,select,input{font:inherit}button,select{border:1px solid #bbb;background:#fff;border-radius:99px;padding:5px 11px;cursor:pointer}
+</style></head><body>
+<div class="stage"><canvas id="c" width="900" height="1125" aria-label="Generative flow field artwork"></canvas></div>
+<div class="bar"><span id="seedLabel"></span><button id="new">New seed</button>
+<label>Palette <select id="pal"><option>Terracotta</option><option>Ink</option><option>Lagoon</option></select></label>
+<label>Turbulence <input id="tu" type="range" min="1" max="8" value="3"></label><button id="dl">Download PNG</button></div>
+<script>
+const PAL={Terracotta:{bg:'#f1e9da',c:[['#c4572e',4],['#1f2a44',3],['#e0a43b',2],['#7f8f6a',1]]},Ink:{bg:'#f4f1ea',c:[['#16130f',6],['#16130f99',3],['#b3261e',1]]},Lagoon:{bg:'#0f2a33',c:[['#7fd6c2',4],['#f4efe4',3],['#ff8a5c',1]]}};
+const q=s=>document.getElementById(s);let seed=20241118;
+function mulberry(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+function makeNoise(r){const g=new Float32Array(256*256).map(()=>r());const s=t=>t*t*(3-2*t);
+ return(x,y)=>{const xi=Math.floor(x),yi=Math.floor(y),xf=s(x-xi),yf=s(y-yi),at=(i,j)=>g[((j&255)<<8)|(i&255)];
+  const a=at(xi,yi),b=at(xi+1,yi),c=at(xi,yi+1),d=at(xi+1,yi+1);return a+(b-a)*xf+(c-a)*yf+(a-b-c+d)*xf*yf;};}
+function draw(cv,scale=1){const x=cv.getContext('2d'),W=cv.width,H=cv.height,r=mulberry(seed),noise=makeNoise(r),p=PAL[q('pal').value],tu=+q('tu').value;
+ x.fillStyle=p.bg;x.fillRect(0,0,W,H);const total=p.c.reduce((s,c)=>s+c[1],0);
+ const pick=()=>{let k=r()*total;for(const [col,w] of p.c){if((k-=w)<0)return col;}return p.c[0][0];};
+ const m=W*.08;x.lineCap='round';
+ for(let i=0;i<1400;i++){let px=m+r()*(W-2*m),py=m+r()*(H-2*m);x.strokeStyle=pick();x.lineWidth=(r()<.15?6:1.6+r()*2.2)*scale;x.beginPath();x.moveTo(px,py);
+  const len=20+r()*90;for(let s=0;s<len;s++){const a=noise(px/W*tu*4,py/H*tu*4)*Math.PI*4;px+=Math.cos(a)*3*scale;py+=Math.sin(a)*3*scale;
+   if(px<m||px>W-m||py<m||py>H-m)break;x.lineTo(px,py);}x.stroke();}
+ q('seedLabel').textContent='Seed '+seed;}
+const cv=q('c');draw(cv);
+q('new').onclick=()=>{seed=Math.floor(Math.random()*1e9);draw(cv);};['pal','tu'].forEach(i=>q(i).oninput=()=>draw(cv));
+q('dl').onclick=()=>{const big=document.createElement('canvas');big.width=cv.width*2;big.height=cv.height*2;draw(big,2);const a=document.createElement('a');a.href=big.toDataURL('image/png');a.download='flow-field-'+seed+'.png';a.click();};
+</script></body></html>

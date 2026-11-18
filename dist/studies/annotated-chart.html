@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- ATLAS STUDY · annotated-chart
+What: an explanatory line chart done properly: the title states the finding, one series is highlighted and the rest are grey, lines are
+      labelled directly at their ends, one annotation explains the turning point, and the source line says where the data came from.
+Use for: reports, articles, slides, dashboards that must make one point. Contrast with an exploratory chart, which shows everything equally.
+Technique: hand-written SVG with linear scales (no library). Observable Plot (ISC) or D3 (ISC) give the same result with less code for real data.
+Rules: direct labels instead of a legend; light horizontal gridlines only; one highlight colour; tabular figures; say when an axis does not start at zero.
+Data: illustrative values for the study, labelled as such in the source line.
+-->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Annotated chart</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<script>{const p=new URLSearchParams(location.search),c=document.documentElement.classList;if(p.has('embedded'))c.add('embedded');if(p.has('capture'))c.add('embedded','capture');}</script><style>.capture .bar,.capture .tabs,.capture .thumb{display:none!important}</style>
+<style>
+:root{--ink:#171717;--muted:#545454;--grid:#e6e6e1;--other:#b9b9b3;--hi:#1f5f8b}
+*{box-sizing:border-box}body{margin:0;background:#fafaf8;color:var(--ink);font:15px 'Source Sans 3',system-ui,sans-serif;padding:24px}
+figure{margin:0 auto;max-width:860px}
+h1{font:600 clamp(22px,3.2vw,30px)/1.2 'Source Serif 4',Georgia,serif;margin:0 0 6px;max-width:30ch}
+.dek{color:var(--muted);margin:0 0 14px}
+svg{width:100%;height:auto;display:block;font-variant-numeric:tabular-nums}
+figcaption{font-size:12px;color:var(--muted);margin-top:8px}
+.tabs{display:flex;gap:6px;margin:0 0 12px}.tabs button{font:inherit;font-size:13px;border:1px solid #d5d5cf;background:#fff;border-radius:99px;padding:4px 11px;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+</style></head><body>
+<figure>
+<h1 id="title"></h1><p class="dek" id="dek"></p>
+<div class="tabs" role="group" aria-label="Highlight"></div>
+<svg id="chart" viewBox="0 0 860 420" role="img"></svg>
+<figcaption>Share of trips by mode, 2014–2026. Illustrative data for this study.</figcaption>
+</figure>
+<script>
+const years=[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
+const series={Car:[61,60,60,59,58,57,49,52,51,49,47,45,43],Bus:[14,14,13,13,13,13,8,10,11,12,12,12,12],Bike:[4,4,5,5,6,6,11,10,11,12,13,15,17],Walk:[21,22,22,23,23,24,32,28,27,27,28,28,28]};
+const story={Bike:['Cycling share has quadrupled since 2014','The 2020 jump held, and growth has continued every year since.',2020,'Temporary lanes made permanent'],
+ Car:['Car trips fell below half of all journeys in 2023','The decline was gradual before 2020 and steady after it.',2023,'First year under 50%'],
+ Bus:['Bus use has not recovered to its 2019 level','Ridership dropped by a third in 2020 and has regained about half of that loss.',2020,'Service cut by 40%']};
+const W=860,H=420,m={t:20,r:80,b:34,l:40},x=v=>m.l+(v-2014)/(2026-2014)*(W-m.l-m.r),y=v=>H-m.b-v/70*(H-m.t-m.b);
+let hi='Bike';
+function draw(){const [t,d,ay,note]=story[hi];document.getElementById('title').textContent=t;document.getElementById('dek').textContent=d;
+ let s='';for(let v=0;v<=70;v+=10)s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--grid)"/><text x="${m.l-8}" y="${y(v)+4}" text-anchor="end" font-size="12" fill="var(--muted)">${v}${v===70?'%':''}</text>`;
+ for(const yr of [2014,2017,2020,2023,2026])s+=`<text x="${x(yr)}" y="${H-10}" text-anchor="middle" font-size="12" fill="var(--muted)">${yr}</text>`;
+ const order=Object.keys(series).sort((a,b)=>(a===hi)-(b===hi));
+ for(const k of order){const on=k===hi,pts=series[k].map((v,i)=>`${x(years[i])},${y(v)}`).join(' '),last=series[k].at(-1);
+  s+=`<polyline points="${pts}" fill="none" stroke="${on?'var(--hi)':'var(--other)'}" stroke-width="${on?3.5:1.6}" stroke-linejoin="round"/>`;
+  s+=`<text x="${W-m.r+8}" y="${y(last)+4}" font-size="13" font-weight="${on?600:400}" fill="${on?'var(--hi)':'var(--muted)'}">${k} ${last}%</text>`;}
+ const i=years.indexOf(ay),vx=x(ay),vy=y(series[hi][i]);
+ s+=`<circle cx="${vx}" cy="${vy}" r="5" fill="var(--hi)"/><line x1="${vx}" y1="${vy-8}" x2="${vx}" y2="${y(68)}" stroke="var(--ink)" stroke-width="1"/>`;
+ s+=`<text x="${vx+6}" y="${y(66)}" font-size="13" font-weight="600" fill="var(--ink)">${ay}</text><text x="${vx+6}" y="${y(66)+17}" font-size="13" fill="var(--muted)">${note}</text>`;
+ const c=document.getElementById('chart');c.innerHTML=s;c.setAttribute('aria-label',t);}
+const tabs=document.querySelector('.tabs');tabs.innerHTML=Object.keys(story).map(k=>`<button aria-pressed="${k===hi}">${k}</button>`).join('');
+tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{hi=b.textContent;tabs.querySelectorAll('button').forEach(o=>o.setAttribute('aria-pressed',o===b));draw();});
+draw();
+</script></body></html>

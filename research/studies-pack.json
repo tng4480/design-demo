@@ -1,0 +1,576 @@
+{
+  "about": "Standalone studies (dist/studies/<id>.html) plus the sources and styles they introduce. Merged by scripts/generate-catalog.mjs. Checked 18 November 2026 against official sites and GitHub repositories.",
+  "sources": [
+    {
+      "id": "view-transitions-api",
+      "name": "View Transitions API",
+      "url": "https://developer.chrome.com/docs/web-platform/view-transitions",
+      "framework": "Native browser API (CSS + JS)",
+      "license": "Web platform feature; no licence needed",
+      "bestFor": "List-to-detail morphs and page transitions without a library",
+      "caveat": "Same-document transitions are Baseline since October 2025; cross-document transitions are Chromium and Safari 18.2+ only.",
+      "install": "No install: document.startViewTransition()",
+      "demos": [
+        {
+          "name": "web.dev Baseline note",
+          "url": "https://web.dev/blog/same-document-view-transitions-are-now-baseline-newly-available"
+        }
+      ]
+    },
+    {
+      "id": "css-scroll-driven",
+      "name": "CSS scroll-driven animations",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations",
+      "framework": "Native CSS",
+      "license": "Web platform feature; no licence needed",
+      "bestFor": "Reading progress, reveals and parallax without scroll listeners",
+      "caveat": "Chromium and Safari 26; check Firefox before relying on it. Always wrap in @supports.",
+      "install": "No install: animation-timeline: scroll() / view()",
+      "demos": [
+        {
+          "name": "MDN guide",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
+        }
+      ]
+    },
+    {
+      "id": "liquid-glass-svg",
+      "name": "liquid-glass (nikdelvin)",
+      "url": "https://github.com/nikdelvin/liquid-glass",
+      "github": "https://github.com/nikdelvin/liquid-glass",
+      "framework": "CSS + SVG filters",
+      "license": "MIT",
+      "bestFor": "Apple Liquid Glass-style refraction with no WebGL",
+      "caveat": "backdrop-filter:url() refracts in Chromium; Safari falls back to blur. For WebGL refraction see liquidGL.",
+      "install": "Copy the SVG filter and CSS",
+      "githubStarsApprox": "0.1k",
+      "demos": [
+        {
+          "name": "liquidGL (WebGL alternative)",
+          "url": "https://github.com/naughtyduk/liquidGL"
+        }
+      ]
+    },
+    {
+      "id": "m3e",
+      "name": "M3E (Material 3 Expressive web components)",
+      "url": "https://matraic.github.io/m3e",
+      "github": "https://github.com/matraic/m3e",
+      "framework": "Lit web components",
+      "license": "MIT; community project, not affiliated with Google",
+      "bestFor": "Material 3 Expressive shapes, motion and components on the web",
+      "caveat": "Google has no official Expressive web library; Material trademarks belong to Google.",
+      "install": "npm install @m3e/web",
+      "githubStarsApprox": "0.3k",
+      "demos": [
+        {
+          "name": "Docs",
+          "url": "https://matraic.github.io/m3e"
+        }
+      ]
+    },
+    {
+      "id": "fancy-components",
+      "name": "Fancy Components",
+      "url": "https://fancycomponents.dev",
+      "github": "https://github.com/danielpetho/fancy",
+      "framework": "React + Tailwind + Motion",
+      "license": "MIT",
+      "bestFor": "Playful text effects and micro-interactions",
+      "caveat": "React only; copy components individually.",
+      "install": "Copy from fancycomponents.dev",
+      "githubStarsApprox": "3.3k",
+      "demos": [
+        {
+          "name": "Components",
+          "url": "https://fancycomponents.dev"
+        }
+      ]
+    },
+    {
+      "id": "fffuel",
+      "name": "fffuel",
+      "url": "https://fffuel.co",
+      "framework": "Browser SVG generators",
+      "license": "Free tools; check the site's terms for each asset",
+      "bestFor": "Grain, gradients, blobs, patterns and textures as SVG",
+      "caveat": "Hosted tools, no code library.",
+      "install": "Use in the browser and export SVG",
+      "demos": [
+        {
+          "name": "All generators",
+          "url": "https://fffuel.co"
+        }
+      ]
+    },
+    {
+      "id": "adobe-leonardo",
+      "name": "Adobe Leonardo",
+      "url": "https://leonardocolor.io",
+      "github": "https://github.com/adobe/leonardo",
+      "framework": "JS library + web app",
+      "license": "Apache-2.0",
+      "bestFor": "Contrast-first, accessible colour scales and themes",
+      "caveat": "Targets WCAG 2 contrast; check APCA separately if you use it.",
+      "install": "npm install @adobe/leonardo-contrast-colors",
+      "githubStarsApprox": "2.2k",
+      "demos": [
+        {
+          "name": "Theme builder",
+          "url": "https://leonardocolor.io"
+        }
+      ]
+    },
+    {
+      "id": "rive",
+      "name": "Rive",
+      "url": "https://rive.app",
+      "github": "https://github.com/rive-app/rive-wasm",
+      "framework": "Editor + runtimes (web canvas/WebGL, React, mobile)",
+      "license": "Web runtime MIT; editor is a hosted product",
+      "bestFor": "Interactive vector animation driven by state machines",
+      "caveat": "Needs .riv files made in the Rive editor, so no local study here. Name the state machine explicitly in code.",
+      "install": "npm install @rive-app/canvas",
+      "demos": [
+        {
+          "name": "State machines (web)",
+          "url": "https://rive.app/docs/runtimes/web/state-machines"
+        }
+      ]
+    },
+    {
+      "id": "unicorn-studio",
+      "name": "Unicorn Studio",
+      "url": "https://unicorn.studio",
+      "framework": "No-code WebGL editor + embed SDK",
+      "license": "Commercial; the free plan prohibits commercial use",
+      "bestFor": "Designer-built shader heroes and effects without writing GLSL",
+      "caveat": "Scenes live in an account, so no local study here. Check plan terms before client work.",
+      "install": "Embed SDK from the editor",
+      "demos": [
+        {
+          "name": "Docs",
+          "url": "https://unicorn.studio/docs"
+        }
+      ]
+    },
+    {
+      "id": "lucide",
+      "name": "Lucide",
+      "url": "https://lucide.dev",
+      "github": "https://github.com/lucide-icons/lucide",
+      "framework": "SVG icons, packages for most frameworks",
+      "license": "ISC",
+      "bestFor": "The default stroke icon set for product UI",
+      "caveat": "One stroke style; use Phosphor when you need weights.",
+      "install": "npm install lucide",
+      "githubStarsApprox": "25.8k",
+      "demos": [
+        {
+          "name": "Icon search",
+          "url": "https://lucide.dev/icons"
+        }
+      ]
+    },
+    {
+      "id": "phosphor",
+      "name": "Phosphor Icons",
+      "url": "https://phosphoricons.com",
+      "github": "https://github.com/phosphor-icons/homepage",
+      "framework": "SVG icons, React/Vue/web packages",
+      "license": "MIT",
+      "bestFor": "Icons in six weights (thin to duotone) for expressive interfaces",
+      "caveat": "Pick one weight per interface.",
+      "install": "npm install @phosphor-icons/web",
+      "demos": [
+        {
+          "name": "Icon search",
+          "url": "https://phosphoricons.com"
+        }
+      ]
+    },
+    {
+      "id": "recent-design",
+      "name": "Recent (formerly Godly)",
+      "url": "https://recent.design",
+      "framework": "Inspiration gallery",
+      "license": "Inspiration only",
+      "bestFor": "Current, ambitious web design examples",
+      "caveat": "godly.website redirects here. Look, do not copy.",
+      "install": "Browse",
+      "demos": [
+        {
+          "name": "Gallery",
+          "url": "https://recent.design"
+        }
+      ]
+    },
+    {
+      "id": "mobbin",
+      "name": "Mobbin",
+      "url": "https://mobbin.com",
+      "framework": "UI pattern library (screens and flows)",
+      "license": "Commercial service",
+      "bestFor": "Real app flows: onboarding, settings, checkout, paywalls",
+      "caveat": "Paid tiers; screenshots belong to the apps shown.",
+      "install": "Browse",
+      "demos": [
+        {
+          "name": "Library",
+          "url": "https://mobbin.com"
+        }
+      ]
+    },
+    {
+      "id": "refero",
+      "name": "Refero",
+      "url": "https://refero.design",
+      "framework": "UI reference library",
+      "license": "Commercial service",
+      "bestFor": "Searchable web app screens and components",
+      "caveat": "Paid tiers.",
+      "install": "Browse",
+      "demos": [
+        {
+          "name": "Library",
+          "url": "https://refero.design"
+        }
+      ]
+    },
+    {
+      "id": "land-book",
+      "name": "Land-book",
+      "url": "https://land-book.com",
+      "framework": "Landing page gallery",
+      "license": "Inspiration only",
+      "bestFor": "Curated landing pages by industry and style",
+      "caveat": "Look, do not copy.",
+      "install": "Browse",
+      "demos": [
+        {
+          "name": "Gallery",
+          "url": "https://land-book.com"
+        }
+      ]
+    },
+    {
+      "id": "observable-plot",
+      "name": "Observable Plot",
+      "url": "https://observablehq.com/plot",
+      "github": "https://github.com/observablehq/plot",
+      "framework": "JavaScript charting (grammar of graphics)",
+      "license": "ISC",
+      "bestFor": "Clear explanatory and exploratory charts in very little code",
+      "caveat": "Styling defaults are plain; apply your tokens and direct labels.",
+      "install": "npm install @observablehq/plot",
+      "githubStarsApprox": "5.4k",
+      "demos": [
+        {
+          "name": "Gallery",
+          "url": "https://observablehq.com/@observablehq/plot-gallery"
+        }
+      ]
+    },
+    {
+      "id": "d3",
+      "name": "D3",
+      "url": "https://d3js.org",
+      "github": "https://github.com/d3/d3",
+      "framework": "JavaScript data visualisation toolkit",
+      "license": "ISC",
+      "bestFor": "Bespoke charts, maps and diagrams with full control",
+      "caveat": "Low level; use Plot first for standard charts.",
+      "install": "npm install d3",
+      "demos": [
+        {
+          "name": "Examples",
+          "url": "https://observablehq.com/@d3/gallery"
+        }
+      ]
+    },
+    {
+      "id": "reveal-js",
+      "name": "reveal.js",
+      "url": "https://revealjs.com",
+      "github": "https://github.com/hakimel/reveal.js",
+      "framework": "HTML presentation framework",
+      "license": "MIT",
+      "bestFor": "Slide decks as web pages with notes, fragments and PDF export",
+      "caveat": "Default themes look dated; bring your own type and tokens.",
+      "install": "npm install reveal.js",
+      "demos": [
+        {
+          "name": "Demo deck",
+          "url": "https://revealjs.com/demo"
+        }
+      ]
+    },
+    {
+      "id": "satori",
+      "name": "Satori",
+      "url": "https://github.com/vercel/satori",
+      "github": "https://github.com/vercel/satori",
+      "framework": "HTML/CSS (JSX) to SVG renderer",
+      "license": "MPL-2.0",
+      "bestFor": "Generating Open Graph images per page at build or request time",
+      "caveat": "Supports a subset of CSS (flexbox only); fonts must be passed in.",
+      "install": "npm install satori",
+      "githubStarsApprox": "14.2k",
+      "demos": [
+        {
+          "name": "Playground",
+          "url": "https://og-playground.vercel.app"
+        }
+      ]
+    },
+    {
+      "id": "flow-fields-essay",
+      "name": "Tyler Hobbs: Flow Fields",
+      "url": "https://tylerxhobbs.com/words/flow-fields",
+      "framework": "Essay (generative art technique)",
+      "license": "Reading reference",
+      "bestFor": "Understanding and tuning flow-field generative art",
+      "caveat": "Technique reference; the artworks are the artist's.",
+      "install": "Read",
+      "demos": [
+        {
+          "name": "Essay",
+          "url": "https://tylerxhobbs.com/words/flow-fields"
+        }
+      ]
+    },
+    {
+      "id": "riso-inks",
+      "name": "Stencil Wiki: Riso ink colours",
+      "url": "https://www.stencil.wiki/colors",
+      "framework": "Reference list of Risograph inks",
+      "license": "Reference",
+      "bestFor": "Screen approximations (hex) of real Riso inks for two- and three-colour designs",
+      "caveat": "Hex values are approximate; ask your printer which inks they stock.",
+      "install": "Look up",
+      "demos": [
+        {
+          "name": "Colours",
+          "url": "https://www.stencil.wiki/colors"
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "liquid-glass",
+      "name": "Liquid glass",
+      "description": "Glass that bends what is behind it.",
+      "source": "liquid-glass-svg",
+      "effort": "Medium",
+      "stack": "SVG filters / WebGL",
+      "use": "One floating control over rich imagery",
+      "watch": "Refraction is Chromium-only in CSS; keep text short and high-contrast."
+    },
+    {
+      "id": "dithering",
+      "name": "Dithering",
+      "description": "Two inks, ordered dots, retro-tech texture.",
+      "source": "paper-shaders",
+      "effort": "Medium",
+      "stack": "Canvas 2D / WebGL shader",
+      "use": "Developer and AI brand moments, heroes",
+      "watch": "One per page; pause offscreen."
+    },
+    {
+      "id": "expressive",
+      "name": "Material expressive",
+      "description": "Shapes that change with state, springy motion.",
+      "source": "m3e",
+      "effort": "Low",
+      "stack": "CSS (border-radius, linear() springs)",
+      "use": "Consumer apps and Android-adjacent products",
+      "watch": "Seed colours from the brand, not Material's baseline violet."
+    },
+    {
+      "id": "typographic-poster",
+      "name": "Typographic poster",
+      "description": "Grid, scale and one colour do all the work.",
+      "source": "google-fonts-business",
+      "effort": "Low",
+      "stack": "SVG",
+      "use": "Event posters, covers, announcement images",
+      "watch": "Export text as outlines or ship the font."
+    },
+    {
+      "id": "risograph",
+      "name": "Risograph",
+      "description": "Flat inks that multiply, drift and grain.",
+      "source": "riso-inks",
+      "effort": "Low",
+      "stack": "SVG blend modes + noise",
+      "use": "Zines, gig posters, indie brands",
+      "watch": "Build per ink layer so it can really be printed."
+    },
+    {
+      "id": "generative",
+      "name": "Generative art",
+      "description": "Seeded systems that draw unique artworks.",
+      "source": "flow-fields-essay",
+      "effort": "Medium",
+      "stack": "Canvas / SVG",
+      "use": "Covers, packaging, brand textures, editions",
+      "watch": "Palette and density decide quality; store the seed."
+    },
+    {
+      "id": "data-graphics",
+      "name": "Data graphics",
+      "description": "Charts that make one point clearly.",
+      "source": "observable-plot",
+      "effort": "Medium",
+      "stack": "SVG / Observable Plot / D3",
+      "use": "Reports, articles, slides, dashboards",
+      "watch": "Title states the finding; direct labels; one highlight colour."
+    }
+  ],
+  "demos": [
+    {
+      "id": "liquid-glass",
+      "title": "Liquid glass lens",
+      "source": "liquid-glass-svg",
+      "category": "Styles",
+      "style": "liquid-glass",
+      "effort": "Medium",
+      "kind": "Original study",
+      "summary": "A draggable glass toolbar bends the stripes and type behind it.",
+      "use": "One floating control over imagery",
+      "watch": "Refraction renders in Chromium; other browsers get frosted glass.",
+      "official": "https://github.com/nikdelvin/liquid-glass"
+    },
+    {
+      "id": "dither",
+      "title": "Ordered dither",
+      "source": "paper-shaders",
+      "category": "Styles",
+      "style": "dithering",
+      "effort": "Medium",
+      "kind": "Original study",
+      "summary": "A lit sphere drawn in two inks with a Bayer matrix.",
+      "use": "Developer and AI brand heroes",
+      "watch": "Canvas 2D at low resolution; Paper Shaders has a production Dithering shader.",
+      "official": "https://shaders.paper.design/dithering"
+    },
+    {
+      "id": "m3-expressive",
+      "title": "Expressive controls",
+      "source": "m3e",
+      "category": "Components",
+      "style": "expressive",
+      "effort": "Low",
+      "kind": "Original study",
+      "summary": "Buttons and segments that change shape as you press and pick.",
+      "use": "Consumer apps with energy",
+      "watch": "Not for dense enterprise UI.",
+      "official": "https://matraic.github.io/m3e"
+    },
+    {
+      "id": "variable-type",
+      "title": "Variable-weight headline",
+      "source": "fancy-components",
+      "category": "Motion",
+      "style": "kinetic",
+      "effort": "Low",
+      "kind": "Original study",
+      "summary": "Letters thicken as the pointer comes near.",
+      "use": "One hero word on portfolios and launches",
+      "watch": "One short word; needs a variable font with a wght axis.",
+      "official": "https://fancycomponents.dev"
+    },
+    {
+      "id": "grain-gradient",
+      "title": "Grain gradient",
+      "source": "fffuel",
+      "category": "Color",
+      "style": "mesh",
+      "effort": "Low",
+      "kind": "Original study",
+      "summary": "Soft mesh colour with film grain, exported as SVG.",
+      "use": "Backgrounds, covers, slides, social cards",
+      "watch": "Grain prevents banding; keep text on a solid layer.",
+      "official": "https://fffuel.co"
+    },
+    {
+      "id": "contrast-scale",
+      "title": "Contrast-first colour scale",
+      "source": "adobe-leonardo",
+      "category": "Color",
+      "style": "",
+      "effort": "Low",
+      "kind": "Original study",
+      "summary": "Ten steps solved to exact contrast targets from one hue.",
+      "use": "Accessible design tokens for any medium",
+      "watch": "WCAG 2 ratios; copy the generated CSS variables.",
+      "official": "https://leonardocolor.io"
+    },
+    {
+      "id": "swiss-poster",
+      "title": "Swiss event poster",
+      "source": "google-fonts-business",
+      "category": "Graphics",
+      "style": "typographic-poster",
+      "effort": "Low",
+      "kind": "Original study",
+      "summary": "An A-ratio poster on a 6×8 grid with three compositions.",
+      "use": "Posters, covers, announcement images",
+      "watch": "Toggle the grid to see how everything snaps.",
+      "official": "https://fonts.google.com/specimen/Inter+Tight"
+    },
+    {
+      "id": "riso-poster",
+      "title": "Two-ink riso poster",
+      "source": "riso-inks",
+      "category": "Graphics",
+      "style": "risograph",
+      "effort": "Low",
+      "kind": "Original study",
+      "summary": "Fluorescent inks overlap, drift and pick up paper grain.",
+      "use": "Zines, gig posters, indie brands",
+      "watch": "Hex inks are screen approximations.",
+      "official": "https://www.stencil.wiki/colors"
+    },
+    {
+      "id": "flow-field",
+      "title": "Flow field artwork",
+      "source": "flow-fields-essay",
+      "category": "Graphics",
+      "style": "generative",
+      "effort": "Medium",
+      "kind": "Original study",
+      "summary": "Seeded curves follow a noise field in a limited palette.",
+      "use": "Covers, packaging, hero imagery",
+      "watch": "Store the seed to reproduce a piece.",
+      "official": "https://tylerxhobbs.com/words/flow-fields"
+    },
+    {
+      "id": "truchet-pattern",
+      "title": "Truchet pattern",
+      "source": "fffuel",
+      "category": "Graphics",
+      "style": "generative",
+      "effort": "Low",
+      "kind": "Original study",
+      "summary": "Rotated tiles join into continuous woven paths.",
+      "use": "Packaging, textures, backgrounds",
+      "watch": "Stroke about a sixth of the tile size.",
+      "official": "https://fffuel.co"
+    },
+    {
+      "id": "annotated-chart",
+      "title": "Annotated line chart",
+      "source": "observable-plot",
+      "category": "Graphics",
+      "style": "data-graphics",
+      "effort": "Medium",
+      "kind": "Original study",
+      "summary": "The title states the finding; one line is highlighted and labelled.",
+      "use": "Reports, articles, slides",
+      "watch": "Illustrative data; direct labels instead of a legend.",
+      "official": "https://observablehq.com/plot"
+    }
+  ]
+}

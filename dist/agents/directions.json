@@ -1,0 +1,1191 @@
+{
+  "about": "Design directions: complete starting systems (tokens, type, shape, layout, motion, copy) with the atlas studies that suit each. Study ids resolve in catalog.json and studies.md.",
+  "directions": [
+    {
+      "id": "quiet-product",
+      "name": "Quiet product",
+      "oneLine": "Neutral, precise software UI where the product itself is the hero.",
+      "fits": [
+        "saas",
+        "b2b",
+        "dashboard",
+        "app",
+        "startup",
+        "developer",
+        "api",
+        "productivity",
+        "analytics",
+        "crm",
+        "platform",
+        "tool",
+        "settings",
+        "admin",
+        "workspace",
+        "ai",
+        "assistant"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#fbfbfa",
+        "surface": "#ffffff",
+        "ink": "#111214",
+        "muted": "#5d6168",
+        "line": "#e5e5e2",
+        "accent": "#0f6e64",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Geist",
+        "body": "Geist",
+        "mono": "Geist Mono",
+        "scale": "14/15 body, 13 UI labels, 20 / 28 / 44 / 64 headings, tight -0.02em on headings",
+        "notes": "One family in two or three weights. Mono for numbers, ids, keyboard hints and code only."
+      },
+      "shape": {
+        "radius": "8px controls, 12px cards",
+        "border": "1px hairlines carry structure; shadows only on floating layers",
+        "density": "Comfortable: 8px grid, 40px tall controls"
+      },
+      "layout": [
+        "Show the real product UI big in the first screen, inside a framed app window, working on believable data.",
+        "Feature sections pair one sentence with one real UI fragment each; vary the fragment, never repeat an icon grid.",
+        "Left-aligned text on a 12-column grid; centre only the closing call to action."
+      ],
+      "motion": "Micro only: tab indicators that slide, 150-200ms ease-out on hover and press, number tickers. Content stays still while scrolling.",
+      "studies": {
+        "signature": [
+          "sc-workspace",
+          "command-palette"
+        ],
+        "components": [
+          "contrast-scale",
+          "sc-animated-tabs",
+          "command-palette",
+          "onboarding",
+          "contextual-ai",
+          "live-chart",
+          "hold-action",
+          "drawer"
+        ],
+        "motion": [
+          "motion-spring"
+        ]
+      },
+      "sources": [
+        "shadcn-ui",
+        "animate-ui",
+        "kibo-ui",
+        "motion",
+        "bklit",
+        "tabler-icons"
+      ],
+      "references": [
+        "shadcn.html"
+      ],
+      "copy": "Plain verbs and specifics: what it does, for whom, one measurable fact. Buttons say verb + object (Start a trial, Invite your team).",
+      "keep": [
+        "Swap the accent for the brand colour but keep one accent only.",
+        "Every number on the page is real or clearly a product mock."
+      ]
+    },
+    {
+      "id": "dark-technical",
+      "name": "Dark technical",
+      "oneLine": "Dark, exact and a little cinematic, for infrastructure, AI and developer tools.",
+      "fits": [
+        "ai",
+        "llm",
+        "model",
+        "infrastructure",
+        "devtools",
+        "developer",
+        "cli",
+        "security",
+        "cloud",
+        "database",
+        "gpu",
+        "crypto",
+        "terminal",
+        "observability",
+        "launch",
+        "agent"
+      ],
+      "mode": "dark",
+      "tokens": {
+        "bg": "#0b0d0c",
+        "surface": "#141716",
+        "ink": "#ecefea",
+        "muted": "#9aa19b",
+        "line": "#262a28",
+        "accent": "#c6f36b",
+        "onAccent": "#10140b"
+      },
+      "type": {
+        "display": "Inter Tight",
+        "body": "Inter",
+        "mono": "JetBrains Mono",
+        "scale": "15 body, 12 mono labels in caps with 0.08em tracking, 56-88 hero",
+        "notes": "Mono labels and code blocks give it texture; headings stay sans and tight."
+      },
+      "shape": {
+        "radius": "6px, sharp-leaning",
+        "border": "1px lines at ~10% white; glow only on the one accent element",
+        "density": "Generous section spacing, dense inside panels"
+      },
+      "layout": [
+        "Hero: one-line claim, a terminal or code sample that really runs, and one signature visual behind or beside it.",
+        "Diagrams of how data flows (beams, circuit lines) explain the product better than icon cards.",
+        "Changelog-style proof: versions, latency numbers, regions, commands."
+      ],
+      "motion": "One ambient visual in the hero, paused offscreen; everything else static or 150ms. Respect reduced motion.",
+      "studies": {
+        "signature": [
+          "dither",
+          "paper-neuro-noise",
+          "componentry-circuit",
+          "ascii-orbit",
+          "vanta-net",
+          "wire-orbit"
+        ],
+        "components": [
+          "beam-network",
+          "command-palette",
+          "spotlight-card",
+          "split-display",
+          "colour-themes"
+        ],
+        "motion": [
+          "te-letters",
+          "su-text-scroll"
+        ]
+      },
+      "sources": [
+        "paper-shaders",
+        "componentry",
+        "magic-ui",
+        "react-bits",
+        "shadcn-ui",
+        "atlas-colours"
+      ],
+      "references": [
+        "colour-themes.html",
+        "neuro-noise.html"
+      ],
+      "copy": "Terse and technical. Show the command, the number, the guarantee. No hype words.",
+      "keep": [
+        "Use dist/colour-themes.html to pick semantic dark colours with measured contrast.",
+        "Pick exactly one signature visual; the rest of the page is type, code and lines."
+      ]
+    },
+    {
+      "id": "editorial-catalogue",
+      "name": "Editorial catalogue",
+      "oneLine": "Warm paper, a serif display face and mono catalogue labels, like a museum catalogue.",
+      "fits": [
+        "portfolio",
+        "gallery",
+        "archive",
+        "collection",
+        "catalogue",
+        "library",
+        "directory",
+        "museum",
+        "studio",
+        "designer",
+        "photographer",
+        "curated",
+        "index",
+        "resource",
+        "showcase"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#f6f3ec",
+        "surface": "#fffdf8",
+        "ink": "#1b1e19",
+        "muted": "#5f6458",
+        "line": "#e1dccf",
+        "accent": "#b23e22",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Instrument Serif",
+        "body": "Geist",
+        "mono": "Geist Mono",
+        "scale": "15 body, 11 mono labels, 44 section heads, 72-92 hero; serif at regular weight, italic for one emphasised word",
+        "notes": "Serif only for display. Numbered items (No 001) in mono with the accent colour."
+      },
+      "shape": {
+        "radius": "16px cards, pill buttons and filters",
+        "border": "1px warm lines, dashed dividers inside cards",
+        "density": "Airy; cards with an inner mat around images"
+      },
+      "layout": [
+        "Treat each item as a numbered plate: mounted image, number, title, one line, metadata row.",
+        "Large serif section heads left-aligned with a short sans line under them.",
+        "Filters as pill rows above the grid; detail opens as a large stage with a spec sheet beside it."
+      ],
+      "motion": "Cards lift 2px and images zoom 1.03 on hover; dialogs rise in once. Nothing animates on scroll.",
+      "studies": {
+        "signature": [
+          "componentry-hover",
+          "horizontal-scroll",
+          "tx-clip"
+        ],
+        "components": [
+          "variable-type",
+          "am-spread",
+          "su-expand",
+          "sc-comparison",
+          "rb-tilted-card"
+        ],
+        "motion": [
+          "im-reveal",
+          "im-fade"
+        ]
+      },
+      "sources": [
+        "componentry",
+        "motion",
+        "kibo-ui",
+        "gsap"
+      ],
+      "references": [
+        "index.html",
+        "atlas-refresh.css"
+      ],
+      "copy": "Curatorial and specific: say what each thing is and why it was chosen, in one line.",
+      "keep": [
+        "The atlas home page itself is the reference build of this direction."
+      ]
+    },
+    {
+      "id": "newsprint",
+      "name": "Newsprint",
+      "oneLine": "Columns, rules and strong serif headlines for reading-first sites.",
+      "fits": [
+        "blog",
+        "news",
+        "newsletter",
+        "magazine",
+        "journal",
+        "essay",
+        "publication",
+        "writing",
+        "article",
+        "editorial",
+        "media",
+        "podcast",
+        "review",
+        "zine"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#f4f1ea",
+        "surface": "#fbf9f4",
+        "ink": "#16130f",
+        "muted": "#5a554c",
+        "line": "#1613101f",
+        "accent": "#b3261e",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Newsreader",
+        "body": "Newsreader",
+        "mono": "IBM Plex Mono",
+        "scale": "18-19 body at 1.6 line height and 65ch measure; 40-110 headlines in bold serif; small caps for kickers",
+        "notes": "Serif body is fine here because reading is the job. Sans only for UI chrome."
+      },
+      "shape": {
+        "radius": "0",
+        "border": "Hairline and double rules between sections, column rules between columns",
+        "density": "Dense front page, spacious article page"
+      },
+      "layout": [
+        "Front page as a multi-column grid with a lead story, secondary stories and a briefs column.",
+        "Article page: one column, generous margins, pull quotes and figure captions.",
+        "Section filters as a text row under the masthead."
+      ],
+      "motion": "Almost none: underline draws on links, dialogs fade. Reading wins.",
+      "studies": {
+        "signature": [
+          "dp-newsprint"
+        ],
+        "components": [
+          "annotated-chart",
+          "halftone-poster",
+          "te-lines"
+        ],
+        "motion": []
+      },
+      "sources": [
+        "design-prompts",
+        "google-fonts-business"
+      ],
+      "references": [
+        "design-prompts.html?demo=newsprint"
+      ],
+      "copy": "Headlines that state the news; standfirsts that add the second fact. Bylines and dates are real.",
+      "keep": [
+        "Rules and columns do the decorating, so imagery can be sparse and black-and-white or halftone."
+      ]
+    },
+    {
+      "id": "swiss-grid",
+      "name": "Swiss grid",
+      "oneLine": "Strict grid, big grotesk type, one red, lots of white.",
+      "fits": [
+        "agency",
+        "architecture",
+        "architect",
+        "studio",
+        "design studio",
+        "conference",
+        "exhibition",
+        "museum",
+        "typography",
+        "consultancy",
+        "index",
+        "projects",
+        "event",
+        "schedule"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#ffffff",
+        "surface": "#f2f2f2",
+        "ink": "#0a0a0a",
+        "muted": "#555555",
+        "line": "#0a0a0a",
+        "accent": "#d71921",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Inter Tight",
+        "body": "Inter",
+        "mono": "JetBrains Mono",
+        "scale": "Huge contrast: 15 body, 120+ display in 600 weight, -0.04em tracking; numbers set large",
+        "notes": "One grotesk family. Hierarchy from size and position, never from colour."
+      },
+      "shape": {
+        "radius": "0",
+        "border": "Solid 1-2px black rules",
+        "density": "Strict 12-column grid with visible alignment; asymmetric white space"
+      },
+      "layout": [
+        "Project index as a table: number, name, year, discipline, with hover image preview.",
+        "Asymmetric compositions: text hangs from the grid lines, images bleed to one column edge.",
+        "Toggle between list and grid views of work."
+      ],
+      "motion": "Instant or 120ms. A single geometric interaction is enough.",
+      "studies": {
+        "signature": [
+          "swiss-poster",
+          "dp-swiss",
+          "bauhaus-layout"
+        ],
+        "components": [
+          "componentry-hover",
+          "su-expand",
+          "split-display"
+        ],
+        "motion": [
+          "tx-clip"
+        ]
+      },
+      "sources": [
+        "design-prompts",
+        "css-doodle",
+        "componentry"
+      ],
+      "references": [
+        "design-prompts.html?demo=swiss"
+      ],
+      "copy": "Short labels, numbers and facts. Let the grid speak.",
+      "keep": [
+        "Red marks one thing per screen: the active item, the date, the main action."
+      ]
+    },
+    {
+      "id": "operational-enterprise",
+      "name": "Operational enterprise",
+      "oneLine": "Dense, calm and keyboard-friendly UI for people who work in it all day.",
+      "fits": [
+        "internal",
+        "enterprise",
+        "operations",
+        "ops",
+        "admin",
+        "back office",
+        "inventory",
+        "logistics",
+        "erp",
+        "transactions",
+        "finance",
+        "banking",
+        "data table",
+        "monitoring",
+        "fleet",
+        "compliance"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#f4f4f4",
+        "surface": "#ffffff",
+        "ink": "#161616",
+        "muted": "#525252",
+        "line": "#e0e0e0",
+        "accent": "#0f62fe",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "IBM Plex Sans",
+        "body": "IBM Plex Sans",
+        "mono": "IBM Plex Mono",
+        "scale": "14 body, 12 table and label text, 20 / 28 page titles; tabular numbers everywhere",
+        "notes": "Plex throughout. Tabular figures for any column of numbers."
+      },
+      "shape": {
+        "radius": "0-4px",
+        "border": "Hairlines and zebra-free tables; status shown with colour plus icon plus word",
+        "density": "Compact: 32px rows, 8px grid, persistent side navigation"
+      },
+      "layout": [
+        "Shell: side navigation, breadcrumb header, page title with primary action at the right.",
+        "Tables with sticky headers, filters, bulk actions and a detail side panel.",
+        "Status, owner and next step visible on every record."
+      ],
+      "motion": "Functional only: panel slides, row highlight, progress. Nothing decorative.",
+      "studies": {
+        "signature": [
+          "business-operations"
+        ],
+        "components": [
+          "contrast-scale",
+          "svelte-pattern",
+          "sc-workspace",
+          "command-palette",
+          "hold-action",
+          "live-chart"
+        ],
+        "motion": []
+      },
+      "sources": [
+        "carbon-business",
+        "shadcn-ui",
+        "shadcn-svelte",
+        "tabler-icons"
+      ],
+      "references": [
+        "business-styles.html"
+      ],
+      "copy": "Labels say exactly what the field holds. Errors say what happened and what to do next.",
+      "keep": [
+        "Design the empty, loading and error states with the same care as the full table."
+      ]
+    },
+    {
+      "id": "casework-service",
+      "name": "Casework and service",
+      "oneLine": "Clear, trustworthy flows for forms, cases and public or support services.",
+      "fits": [
+        "form",
+        "service",
+        "government",
+        "public",
+        "council",
+        "healthcare",
+        "clinic",
+        "patient",
+        "support",
+        "helpdesk",
+        "claims",
+        "insurance",
+        "application",
+        "booking",
+        "case",
+        "nonprofit",
+        "charity"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#ffffff",
+        "surface": "#f3f5f7",
+        "ink": "#0f1419",
+        "muted": "#4b5560",
+        "line": "#d5dbe1",
+        "accent": "#0b5cad",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Public Sans",
+        "body": "Public Sans",
+        "mono": "IBM Plex Mono",
+        "scale": "16-17 body (never smaller), 19 labels in 600, 32 / 48 headings",
+        "notes": "Readable before stylish. Large tap targets and visible labels."
+      },
+      "shape": {
+        "radius": "4px",
+        "border": "2px borders on inputs, thick focus rings in a high-contrast colour",
+        "density": "One question or one task per screen"
+      },
+      "layout": [
+        "Step-by-step flows with a progress indicator and a check-your-answers page before submit.",
+        "Case pages: status timeline, what happens next, who to contact.",
+        "Content pages use a 65ch column with clear headings and summary boxes."
+      ],
+      "motion": "Practically none. Confirmation states and focus moves must be obvious.",
+      "studies": {
+        "signature": [
+          "business-casework"
+        ],
+        "components": [
+          "contrast-scale",
+          "onboarding",
+          "drawer",
+          "hold-action"
+        ],
+        "motion": []
+      },
+      "sources": [
+        "cloudscape-business",
+        "shadcn-ui",
+        "vaul",
+        "humanizer"
+      ],
+      "references": [
+        "business-styles.html"
+      ],
+      "copy": "Plain English at reading age 9-12. Tell people what they need before they start and how long it takes.",
+      "keep": [
+        "Every error message names the field and how to fix it, next to the field."
+      ]
+    },
+    {
+      "id": "warm-consumer",
+      "name": "Warm consumer",
+      "oneLine": "Rounded, friendly and tactile for apps people use on their phones.",
+      "fits": [
+        "consumer",
+        "mobile",
+        "fitness",
+        "health",
+        "habit",
+        "personal finance",
+        "budget",
+        "education",
+        "learning",
+        "kids",
+        "family",
+        "pets",
+        "social",
+        "wellbeing",
+        "meditation",
+        "recipes"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#fff8f1",
+        "surface": "#ffffff",
+        "ink": "#2a1d14",
+        "muted": "#6e5e52",
+        "line": "#f0e2d4",
+        "accent": "#c2410c",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Bricolage Grotesque",
+        "body": "Figtree",
+        "mono": "Geist Mono",
+        "scale": "16 body, 600 weight UI, 32 / 48 / 64 headings with slight negative tracking",
+        "notes": "Characterful display face, plain body face."
+      },
+      "shape": {
+        "radius": "16-24px cards, fully rounded buttons",
+        "border": "Soft fills over borders; one soft shadow level",
+        "density": "Roomy, thumb-sized controls (44px+)"
+      },
+      "layout": [
+        "Show the app in a phone frame on the first screen, mid-task, with real-looking content.",
+        "Sections pair a short benefit with one screen of the app or one illustration.",
+        "Bottom sheets and big toggles on mobile; one main action per screen."
+      ],
+      "motion": "Springy and short: switches, rings filling, sheets snapping. 200-350ms springs.",
+      "studies": {
+        "signature": [
+          "m3-expressive",
+          "activity-rings",
+          "clay-toggle"
+        ],
+        "components": [
+          "grain-gradient",
+          "motion-spring",
+          "drawer",
+          "glass-player",
+          "onboarding",
+          "su-icons",
+          "sc-animated-tabs"
+        ],
+        "motion": [
+          "rb-blur-text"
+        ]
+      },
+      "sources": [
+        "motion",
+        "kokonut",
+        "vaul",
+        "uiverse",
+        "animate-ui"
+      ],
+      "references": [],
+      "copy": "Second person, warm and specific. Name the outcome the person gets this week.",
+      "keep": [
+        "Change the accent to the brand colour, keeping the warm off-white ground."
+      ]
+    },
+    {
+      "id": "organic-botanical",
+      "name": "Organic botanical",
+      "oneLine": "Earthy colour, serif warmth and natural imagery for lifestyle and food brands.",
+      "fits": [
+        "wellness",
+        "spa",
+        "cafe",
+        "bakery",
+        "restaurant",
+        "food",
+        "plants",
+        "florist",
+        "garden",
+        "skincare",
+        "beauty",
+        "yoga",
+        "farm",
+        "shop",
+        "boutique",
+        "candles",
+        "tea",
+        "coffee"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#f3efe6",
+        "surface": "#fbf8f2",
+        "ink": "#22301f",
+        "muted": "#59644f",
+        "line": "#dcd5c4",
+        "accent": "#7a4b2a",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Fraunces",
+        "body": "Karla",
+        "mono": "DM Mono",
+        "scale": "16-17 body, 40-96 display in Fraunces with soft optical size",
+        "notes": "Fraunces at low weight with italic accents; Karla keeps body text calm."
+      },
+      "shape": {
+        "radius": "Organic: 24px, arched image frames for one feature",
+        "border": "Thin warm lines; no hard shadows",
+        "density": "Relaxed, photograph-led"
+      },
+      "layout": [
+        "Real photographs lead: produce, rooms, hands at work. Square or arched frames.",
+        "Menu, products or treatments as a calm list with prices, not as cards with icons.",
+        "Visit block early: hours, street and booking in one place."
+      ],
+      "motion": "Image crossfades and gentle hover zoom only.",
+      "studies": {
+        "signature": [
+          "dp-botanical"
+        ],
+        "components": [
+          "variable-type",
+          "truchet-pattern",
+          "wave-assets",
+          "im-fade",
+          "componentry-hover",
+          "liquid-morph"
+        ],
+        "motion": [
+          "im-push"
+        ]
+      },
+      "sources": [
+        "design-prompts",
+        "haikei",
+        "anime-js",
+        "motion"
+      ],
+      "references": [
+        "design-prompts.html?demo=botanical"
+      ],
+      "copy": "Sensory and concrete: name the ingredient, the place, the hour.",
+      "keep": [
+        "Photography carries this style. Use real or clearly labelled stand-in photographs."
+      ]
+    },
+    {
+      "id": "bold-maximal",
+      "name": "Bold maximal",
+      "oneLine": "Loud colour, huge type and collage for events, music and campaigns.",
+      "fits": [
+        "festival",
+        "music",
+        "concert",
+        "event",
+        "party",
+        "campaign",
+        "launch",
+        "fashion",
+        "streetwear",
+        "club",
+        "art",
+        "poster",
+        "tickets",
+        "gaming community",
+        "creator"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#fff3d6",
+        "surface": "#ffffff",
+        "ink": "#1a0f2e",
+        "muted": "#4a3d5c",
+        "line": "#1a0f2e",
+        "accent": "#ff4d1f",
+        "onAccent": "#1a0f2e"
+      },
+      "type": {
+        "display": "Anton",
+        "body": "Space Grotesk",
+        "mono": "Space Mono",
+        "scale": "16 body; display 120-240 uppercase, condensed, tight leading",
+        "notes": "Condensed display at poster sizes. Mix in one script or serif word only if the brand has one."
+      },
+      "shape": {
+        "radius": "Mixed on purpose: pills, circles and hard rectangles",
+        "border": "2-3px ink outlines, offset shadows",
+        "density": "Layered and packed, but one clear action per screen"
+      },
+      "layout": [
+        "Poster-like hero: date, place and line-up set as huge type, layered with cut-out imagery.",
+        "Line-up or schedule as giant typographic lists.",
+        "Ticket builder or tier picker as the main interaction."
+      ],
+      "motion": "Kinetic headlines and marquee once per page; parallax limited to poster layers.",
+      "studies": {
+        "signature": [
+          "riso-poster",
+          "dp-maximalism",
+          "kinetic-headline"
+        ],
+        "components": [
+          "grain-gradient",
+          "comic-badge",
+          "neon-button",
+          "vhs-title",
+          "halftone-poster",
+          "deco-ticket"
+        ],
+        "motion": [
+          "su-text-scroll",
+          "rb-rotating-text",
+          "gsap-stagger"
+        ]
+      },
+      "sources": [
+        "design-prompts",
+        "magic-ui",
+        "react-bits",
+        "gsap",
+        "uiverse"
+      ],
+      "references": [
+        "design-prompts.html?demo=maximalism"
+      ],
+      "copy": "Punchy and factual: what, when, where, who, how much. Energy comes from type, not adjectives.",
+      "keep": [
+        "Pick the palette from the brand or the poster art; keep body text dark on light for reading."
+      ]
+    },
+    {
+      "id": "neo-brutal",
+      "name": "Neo brutal",
+      "oneLine": "Flat colour blocks, thick outlines and hard shadows for opinionated indie products.",
+      "fits": [
+        "indie",
+        "creator",
+        "hackathon",
+        "side project",
+        "newsletter tool",
+        "no-code",
+        "template",
+        "student",
+        "pricing",
+        "waitlist",
+        "community",
+        "open source"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#fdf6e3",
+        "surface": "#ffffff",
+        "ink": "#000000",
+        "muted": "#3d3d3d",
+        "line": "#000000",
+        "accent": "#ffd23f",
+        "onAccent": "#000000"
+      },
+      "type": {
+        "display": "Space Grotesk",
+        "body": "Space Grotesk",
+        "mono": "Space Mono",
+        "scale": "16 body, 700 headings, 48-96 display",
+        "notes": "One quirky grotesk. Mono for prices and tags."
+      },
+      "shape": {
+        "radius": "0-8px",
+        "border": "3px black borders on everything interactive; 4px offset hard shadows",
+        "density": "Chunky"
+      },
+      "layout": [
+        "Cards and buttons with hard shadows that press down on click.",
+        "Pricing as three bold blocks in different flat colours, with the honest limits listed.",
+        "Sticker-like badges for status and highlights."
+      ],
+      "motion": "Press and lift on buttons (translate 2-4px with the shadow). Nothing floaty.",
+      "studies": {
+        "signature": [
+          "brutal-pricing"
+        ],
+        "components": [
+          "riso-poster",
+          "brutal-button",
+          "sketch-card",
+          "comic-badge",
+          "pixel-loader"
+        ],
+        "motion": []
+      },
+      "sources": [
+        "neobrutalism-components",
+        "rough-js",
+        "magic-ui"
+      ],
+      "references": [],
+      "copy": "Blunt and funny where honest. Say the limits out loud.",
+      "keep": [
+        "Use two or three flat block colours beside the accent, each with black text."
+      ]
+    },
+    {
+      "id": "luxury-deco",
+      "name": "Luxury deco",
+      "oneLine": "Deep colour, fine gold lines and high-contrast serifs for hospitality and luxury.",
+      "fits": [
+        "hotel",
+        "luxury",
+        "jewellery",
+        "jewelry",
+        "fine dining",
+        "wine",
+        "gala",
+        "wedding",
+        "cocktail",
+        "bar",
+        "theatre",
+        "spa resort",
+        "perfume",
+        "watch",
+        "estate"
+      ],
+      "mode": "dark",
+      "tokens": {
+        "bg": "#0f1d18",
+        "surface": "#162822",
+        "ink": "#f3ead7",
+        "muted": "#b7ab92",
+        "line": "#c9a96155",
+        "accent": "#c9a961",
+        "onAccent": "#0f1d18"
+      },
+      "type": {
+        "display": "Cormorant Garamond",
+        "body": "Jost",
+        "mono": "Jost",
+        "scale": "16 body in Jost with wide tracked caps labels (0.2em), 48-110 display in Cormorant 500",
+        "notes": "High-contrast serif display; geometric sans for small caps labels."
+      },
+      "shape": {
+        "radius": "0, or arched tops for one frame",
+        "border": "Fine 1px gold rules, stepped deco corners, symmetrical frames",
+        "density": "Spacious and centred"
+      },
+      "layout": [
+        "Symmetrical, centred compositions with framed photography.",
+        "Reservation or enquiry block always one step away.",
+        "Menus, rooms or collections as elegant lists with fine rules."
+      ],
+      "motion": "Slow fades (400-600ms) and line draws; nothing bouncy.",
+      "studies": {
+        "signature": [
+          "deco-ticket",
+          "deco-mark"
+        ],
+        "components": [
+          "grain-gradient",
+          "fluted-glass",
+          "componentry-hover",
+          "im-fade"
+        ],
+        "motion": [
+          "tx-clip"
+        ]
+      },
+      "sources": [
+        "framer",
+        "paper-shaders",
+        "componentry"
+      ],
+      "references": [],
+      "copy": "Understated and exact. Fewer words, specific nouns, no superlatives.",
+      "keep": [
+        "Gold is for lines and small marks; large areas stay deep colour or photograph."
+      ]
+    },
+    {
+      "id": "retro-playful",
+      "name": "Retro playful",
+      "oneLine": "Pixel art, old desktops and 8-bit feedback for games and nostalgic microsites.",
+      "fits": [
+        "game",
+        "gaming",
+        "retro",
+        "arcade",
+        "pixel",
+        "fan site",
+        "nostalgia",
+        "jam",
+        "toy",
+        "quiz",
+        "8-bit",
+        "mod",
+        "discord"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#e8e3d3",
+        "surface": "#ffffff",
+        "ink": "#1d1b26",
+        "muted": "#4e4a5c",
+        "line": "#1d1b26",
+        "accent": "#c42d36",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Press Start 2P",
+        "body": "Space Grotesk",
+        "mono": "VT323",
+        "scale": "16 body; pixel font only for short headings and labels at 12-24px",
+        "notes": "Pixel fonts are hard to read; keep body text in a normal sans."
+      },
+      "shape": {
+        "radius": "0",
+        "border": "Pixel borders (box-shadow steps) or bevelled windows",
+        "density": "Chunky, playful"
+      },
+      "layout": [
+        "UI as a game screen or old desktop: windows, panels, status bars.",
+        "Pixel loaders and pixel reveals for transitions.",
+        "Scores, levels and progress as the main visual language."
+      ],
+      "motion": "Stepped (steps() easing), short, with sound off by default.",
+      "studies": {
+        "signature": [
+          "pixel-console",
+          "retro-window"
+        ],
+        "components": [
+          "dither",
+          "pixel-loader",
+          "rb-pixel-transition",
+          "retro-grid",
+          "split-display"
+        ],
+        "motion": [
+          "su-preloader"
+        ]
+      },
+      "sources": [
+        "nes-css",
+        "98-css",
+        "css-doodle",
+        "react-bits"
+      ],
+      "references": [],
+      "copy": "Game-like and short: verbs, scores, levels.",
+      "keep": [
+        "Keep a non-pixel font for anything longer than a phrase."
+      ]
+    },
+    {
+      "id": "immersive-showcase",
+      "name": "Immersive showcase",
+      "oneLine": "One 3D or shader centrepiece and scroll-told chapters, for launches with budget.",
+      "fits": [
+        "product launch",
+        "hardware",
+        "device",
+        "car",
+        "creative studio",
+        "3d",
+        "award",
+        "immersive",
+        "experience",
+        "campaign site",
+        "portfolio wow",
+        "interactive",
+        "webgl"
+      ],
+      "mode": "dark",
+      "tokens": {
+        "bg": "#0a0b10",
+        "surface": "#13151d",
+        "ink": "#f2f3f7",
+        "muted": "#a1a5b3",
+        "line": "#272a36",
+        "accent": "#ff6a3d",
+        "onAccent": "#0a0b10"
+      },
+      "type": {
+        "display": "Inter Tight",
+        "body": "Inter",
+        "mono": "JetBrains Mono",
+        "scale": "16 body, 72-160 display, chapter numbers in mono",
+        "notes": "Type stays simple so the scene carries the drama."
+      },
+      "shape": {
+        "radius": "12px",
+        "border": "Minimal; the scene is the frame",
+        "density": "One idea per screen"
+      },
+      "layout": [
+        "Hero is the object or scene, big and whole, with one line of copy and one action.",
+        "Chapters advance with scroll, each showing a different view or part.",
+        "Specs and buying or contact details in a calm, static final section."
+      ],
+      "motion": "Scroll-linked inside the story section only; provide a static fallback and pause controls.",
+      "studies": {
+        "signature": [
+          "liquid-glass",
+          "3d-sculpture",
+          "helmet-hover",
+          "cinematic-chapters",
+          "shadergradient-scroll",
+          "rb-silk"
+        ],
+        "components": [
+          "pinned-story",
+          "componentry-scroll",
+          "tx-zoom"
+        ],
+        "motion": [
+          "lenis-flow",
+          "page-shutter",
+          "osmo-stack"
+        ]
+      },
+      "sources": [
+        "drei-react-three-fiber",
+        "shadergradient",
+        "gsap",
+        "lenis",
+        "barba",
+        "react-bits"
+      ],
+      "references": [
+        "shadergradient-scroll.html",
+        "journey.html",
+        "scroll-lab.html"
+      ],
+      "copy": "Short lines per chapter, each naming one feature and one number.",
+      "keep": [
+        "Budget: one WebGL context in view at a time, disposed offscreen, with a still image fallback."
+      ]
+    },
+    {
+      "id": "data-report",
+      "name": "Data report",
+      "oneLine": "Editorial reporting that leads with the finding and supports it with clear charts.",
+      "fits": [
+        "report",
+        "annual report",
+        "research",
+        "survey",
+        "results",
+        "board",
+        "executive",
+        "kpi",
+        "metrics",
+        "data story",
+        "insights",
+        "investor",
+        "impact",
+        "climate"
+      ],
+      "mode": "light",
+      "tokens": {
+        "bg": "#fafaf8",
+        "surface": "#ffffff",
+        "ink": "#171717",
+        "muted": "#545454",
+        "line": "#e3e3df",
+        "accent": "#1f5f8b",
+        "onAccent": "#ffffff"
+      },
+      "type": {
+        "display": "Source Serif 4",
+        "body": "Source Sans 3",
+        "mono": "IBM Plex Mono",
+        "scale": "17 body, 40-64 serif headlines that state the finding; big numbers 64-120 in sans with tabular figures",
+        "notes": "Serif for findings, sans for data and labels."
+      },
+      "shape": {
+        "radius": "4px",
+        "border": "Light rules; charts without boxes",
+        "density": "Reading column plus wide chart breakouts"
+      },
+      "layout": [
+        "Each section opens with the finding as a sentence, then the chart, then the caveat.",
+        "Key numbers in a row with what changed and over what period.",
+        "Charts direct-labelled, one highlighted series, the rest grey."
+      ],
+      "motion": "Charts draw once when shown; numbers do not tick on every scroll.",
+      "studies": {
+        "signature": [
+          "annotated-chart",
+          "business-report"
+        ],
+        "components": [
+          "live-chart",
+          "color-scale",
+          "activity-rings"
+        ],
+        "motion": []
+      },
+      "sources": [
+        "carbon-business",
+        "bklit",
+        "colorkit"
+      ],
+      "references": [
+        "business-styles.html"
+      ],
+      "copy": "Lead with the number and what it means. Give the period, the sample and the source.",
+      "keep": [
+        "One highlight colour per chart; label series directly instead of a legend."
+      ]
+    }
+  ]
+}

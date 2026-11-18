@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- ATLAS STUDY · swiss-poster
+What: an International Typographic Style event poster on an A-series sheet (1:√2), with three grid compositions and a visible-grid toggle.
+Use for: event and lecture posters, exhibition graphics, covers, announcement images. Also a model for any print layout.
+Technique: one SVG at 1190×1684 (A-ratio). 6-column, 8-row modular grid; everything snaps to it. One grotesk, two weights, one red.
+Rules: hierarchy from size and position, never from extra colours. Info block (date, place, time) always in the same corner of the grid.
+Reuse: change DATA; pick a layout; Download SVG. Exported text needs the font installed (Inter Tight) or convert to outlines in a vector tool.
+-->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiss poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&display=swap" rel="stylesheet">
+<script>{const p=new URLSearchParams(location.search),c=document.documentElement.classList;if(p.has('embedded'))c.add('embedded');if(p.has('capture'))c.add('embedded','capture');}</script><style>.capture .bar,.capture .tabs,.capture .thumb{display:none!important}</style>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:#d9d9d6;font:13px 'Inter Tight',system-ui,sans-serif;display:grid;grid-template-rows:1fr auto}
+.stage{min-height:0;display:grid;place-items:center;padding:16px}
+svg#art{height:100%;max-width:100%;box-shadow:0 20px 50px #0003;background:#fff}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:10px 14px;background:#fff;border-top:1px solid #0001}
+button{font:inherit;border:1px solid #0a0a0a;background:#fff;padding:6px 12px;cursor:pointer}button[aria-pressed=true]{background:#0a0a0a;color:#fff}
+</style></head><body>
+<div class="stage"><svg id="art" viewBox="0 0 1190 1684" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Poster"></svg></div>
+<div class="bar"><span>Layout</span><button data-l="0" aria-pressed="true">Stack</button><button data-l="1">Diagonal</button><button data-l="2">Circle</button>
+<button id="grid">Show grid</button><button id="dl">Download SVG</button></div>
+<script>
+const DATA={title:['Form','und','Raster'],kicker:'Lecture series 06',date:'14.11',time:'19:00',place:'Hall B, School of Design',lines:['Josef Lenz','on grids, chance','and the page']};
+const W=1190,H=1684,M=70,cols=6,rows=8,gw=(W-2*M)/cols,gh=(H-2*M)/rows,RED='#d71921',INK='#0a0a0a';
+const X=c=>M+c*gw,Y=r=>M+r*gh;let layout=0,showGrid=false;
+const t=(x,y,s,txt,{w=800,fill=INK,anchor='start',ls=-.04}={})=>`<text x="${x}" y="${y}" font-family="Inter Tight, Helvetica, Arial, sans-serif" font-weight="${w}" font-size="${s}" letter-spacing="${s*ls}" fill="${fill}" text-anchor="${anchor}">${txt}</text>`;
+function info(){return t(X(0),Y(7)+40,26,DATA.kicker.toUpperCase(),{w:600,ls:.06})+t(X(0),Y(7)+80,26,DATA.place,{w:400,ls:0})
+ +t(X(4),Y(7)+40,64,DATA.date,{w:800,fill:RED})+t(X(4),Y(7)+92,26,DATA.time+' Uhr',{w:400,ls:0})
+ +DATA.lines.map((l,i)=>t(X(3),Y(6)+30+i*34,28,l,{w:i?400:600,ls:0})).join('');}
+const L=[
+ ()=>DATA.title.map((w,i)=>t(X(0)-8,Y(1+i*1.65)+190,250,w,{fill:i===1?RED:INK})).join('')+`<rect x="${X(0)}" y="${Y(6)-6}" width="${W-2*M}" height="6" fill="${INK}"/>`,
+ ()=>`<g transform="rotate(-90 ${X(1)} ${Y(6)})">${t(X(1),Y(6),300,DATA.title[0])}${t(X(1),Y(6)+250,300,DATA.title[2],{fill:RED})}</g>`+t(X(4),Y(1),120,DATA.title[1],{w:400}),
+ ()=>`<circle cx="${X(4)}" cy="${Y(2.4)}" r="${gw*2.3}" fill="${RED}"/>`+DATA.title.map((w,i)=>t(X(0),Y(3.6+i*.8)+60,150,w,{w:i===1?400:800,fill:INK})).join('')
+];
+function draw(){let g='';if(showGrid){for(let c=0;c<=cols;c++)g+=`<line x1="${X(c)}" y1="${M}" x2="${X(c)}" y2="${H-M}" stroke="#00a2ff" stroke-width="1"/>`;for(let r=0;r<=rows;r++)g+=`<line x1="${M}" y1="${Y(r)}" x2="${W-M}" y2="${Y(r)}" stroke="#00a2ff" stroke-width="1"/>`;}
+ document.getElementById('art').innerHTML=`<rect width="${W}" height="${H}" fill="#fff"/>`+L[layout]()+info()+g;}
+document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{layout=+b.dataset.l;document.querySelectorAll('[data-l]').forEach(o=>o.setAttribute('aria-pressed',o===b));draw();});
+const gb=document.getElementById('grid');gb.onclick=()=>{showGrid=!showGrid;gb.setAttribute('aria-pressed',showGrid);draw();};
+document.getElementById('dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(document.getElementById('art'))],{type:'image/svg+xml'}));a.download='swiss-poster.svg';a.click();};
+document.fonts.ready.then(draw);draw();
+</script></body></html>
